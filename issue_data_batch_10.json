@@ -1,0 +1,122 @@
+{
+  "BIP-30531": {
+    "created": "2026-01-23T07:58:59.388000-05:00",
+    "resolution_date": "2026-02-06T13:01:17.836000-05:00",
+    "first_active": "2026-01-27T17:20:05.867000-05:00",
+    "done_at": "2026-02-06T13:01:17.844000-05:00",
+    "backlog_minutes": 6321,
+    "in_progress_minutes": 12548,
+    "in_testing_minutes": 460,
+    "peer_review_minutes": 1132,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30555": {
+    "created": "2026-01-23T07:59:10.756000-05:00",
+    "resolution_date": "2026-01-30T09:27:42.440000-05:00",
+    "first_active": "2026-01-26T09:33:51.830000-05:00",
+    "done_at": "2026-01-30T09:27:42.444000-05:00",
+    "backlog_minutes": 4414,
+    "in_progress_minutes": 1476,
+    "in_testing_minutes": 4276,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30584": {
+    "created": "2026-01-23T07:59:28.621000-05:00",
+    "resolution_date": "2026-01-30T10:34:29.797000-05:00",
+    "first_active": "2026-01-27T10:51:52.461000-05:00",
+    "done_at": "2026-01-30T10:34:29.803000-05:00",
+    "backlog_minutes": 5932,
+    "in_progress_minutes": 4302,
+    "in_testing_minutes": 0,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30523": {
+    "created": "2026-01-23T07:58:55.613000-05:00",
+    "resolution_date": "2026-02-06T10:41:51.093000-05:00",
+    "first_active": "2026-01-30T10:18:12.866000-05:00",
+    "done_at": "2026-02-06T10:41:51.097000-05:00",
+    "backlog_minutes": 10219,
+    "in_progress_minutes": 2,
+    "in_testing_minutes": 0,
+    "peer_review_minutes": 10100,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30939": {
+    "created": "2026-02-06T07:20:51.507000-05:00",
+    "resolution_date": "2026-02-13T10:28:33.055000-05:00",
+    "first_active": "2026-02-09T10:36:45.062000-05:00",
+    "done_at": "2026-02-13T10:28:33.059000-05:00",
+    "backlog_minutes": 4515,
+    "in_progress_minutes": 3263,
+    "in_testing_minutes": 2487,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30951": {
+    "created": "2026-02-06T07:20:56.789000-05:00",
+    "resolution_date": "2026-02-20T14:40:21.336000-05:00",
+    "first_active": "2026-02-09T10:37:07.851000-05:00",
+    "done_at": "2026-02-20T14:40:21.342000-05:00",
+    "backlog_minutes": 4516,
+    "in_progress_minutes": 1440,
+    "in_testing_minutes": 14642,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30911": {
+    "created": "2026-02-06T07:20:37.342000-05:00",
+    "resolution_date": "2026-02-20T14:14:19.267000-05:00",
+    "first_active": "2026-02-09T10:33:46.798000-05:00",
+    "done_at": "2026-02-20T14:14:19.271000-05:00",
+    "backlog_minutes": 4513,
+    "in_progress_minutes": 15719,
+    "in_testing_minutes": 341,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30897": {
+    "created": "2026-02-06T07:20:30.189000-05:00",
+    "resolution_date": "2026-02-20T10:01:46.394000-05:00",
+    "first_active": "2026-02-17T10:30:34.077000-05:00",
+    "done_at": "2026-02-20T10:01:46.401000-05:00",
+    "backlog_minutes": 16030,
+    "in_progress_minutes": 301,
+    "in_testing_minutes": 3989,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30907": {
+    "created": "2026-02-06T07:20:35.252000-05:00",
+    "resolution_date": "2026-02-20T16:01:12.468000-05:00",
+    "first_active": "2026-02-09T10:36:05.220000-05:00",
+    "done_at": "2026-02-20T16:01:12.470000-05:00",
+    "backlog_minutes": 4515,
+    "in_progress_minutes": 15844,
+    "in_testing_minutes": 320,
+    "peer_review_minutes": 0,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  },
+  "BIP-30978": {
+    "created": "2026-02-06T12:04:01.826000-05:00",
+    "resolution_date": "2026-02-18T09:56:48.192000-05:00",
+    "first_active": "2026-02-09T17:46:36.065000-05:00",
+    "done_at": "2026-02-18T09:56:48.197000-05:00",
+    "backlog_minutes": 4662,
+    "in_progress_minutes": 3889,
+    "in_testing_minutes": 332,
+    "peer_review_minutes": 8267,
+    "blocked_minutes": 0,
+    "canceled_minutes": 0
+  }
+}

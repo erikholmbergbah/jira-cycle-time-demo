@@ -1,0 +1,1477 @@
+{
+  "overall": {
+    "sample_size": 97,
+    "with_cycle": 94,
+    "skipped": 3,
+    "cycle_median": 5.01,
+    "cycle_mean": 5.29,
+    "cycle_p85": 8.2,
+    "cycle_p95": 9.15,
+    "cycle_min": 0.01,
+    "cycle_max": 18.04,
+    "lead_median": 9.25,
+    "lead_mean": 8.59,
+    "active_median": 7.07,
+    "active_mean": 6.63
+  },
+  "sprint_order": [
+    "BIP AI FY25Q4.1",
+    "BIP AI FY25Q4.2",
+    "BIP AI FY25Q4.3",
+    "BIP AI FY25Q4.4",
+    "BIP AI FY25Q4.5",
+    "BIP AI FY25Q4.6",
+    "BIP AI FY25Q4.7",
+    "BIP AI FY26Q1.1",
+    "BIP AI FY26Q1.2",
+    "BIP AI FY26Q1.3",
+    "BIP AI FY26Q1.4",
+    "BIP AI FY26Q1.5",
+    "BIP AI FY26Q1.6",
+    "BIP AI FY26Q1.7",
+    "BIP AI FY26Q2.1",
+    "BIP AI FY26Q2.2",
+    "BIP AI FY26Q2.3"
+  ],
+  "sprint_data": {
+    "BIP AI FY25Q4.1": {
+      "sample_count": 4,
+      "with_cycle": 4,
+      "throughput": 63,
+      "cycle_median": 3.4,
+      "cycle_mean": 3.51,
+      "cycle_p85": 4.73,
+      "avg_ip_days": 2.32,
+      "avg_test_days": 2.69,
+      "avg_pr_days": 0.0,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY25Q4.2": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 61,
+      "cycle_median": 3.34,
+      "cycle_mean": 4.81,
+      "cycle_p85": 8.32,
+      "avg_ip_days": 4.04,
+      "avg_test_days": 0.76,
+      "avg_pr_days": 0.0,
+      "avg_blocked_days": 0.82
+    },
+    "BIP AI FY25Q4.3": {
+      "sample_count": 3,
+      "with_cycle": 2,
+      "throughput": 76,
+      "cycle_median": 7.84,
+      "cycle_mean": 7.84,
+      "cycle_p85": 8.07,
+      "avg_ip_days": 6.08,
+      "avg_test_days": 0.0,
+      "avg_pr_days": 3.75,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY25Q4.4": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 69,
+      "cycle_median": 4.01,
+      "cycle_mean": 5.71,
+      "cycle_p85": 8.16,
+      "avg_ip_days": 6.31,
+      "avg_test_days": 0.03,
+      "avg_pr_days": 1.4,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY25Q4.5": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 70,
+      "cycle_median": 6.06,
+      "cycle_mean": 5.85,
+      "cycle_p85": 7.61,
+      "avg_ip_days": 5.26,
+      "avg_test_days": 0.52,
+      "avg_pr_days": 1.74,
+      "avg_blocked_days": 2.15
+    },
+    "BIP AI FY25Q4.6": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 63,
+      "cycle_median": 4.58,
+      "cycle_mean": 4.86,
+      "cycle_p85": 9.02,
+      "avg_ip_days": 4.47,
+      "avg_test_days": 0.02,
+      "avg_pr_days": 1.37,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY25Q4.7": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 53,
+      "cycle_median": 6.17,
+      "cycle_mean": 7.08,
+      "cycle_p85": 11.95,
+      "avg_ip_days": 7.56,
+      "avg_test_days": 1.19,
+      "avg_pr_days": 0.66,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.1": {
+      "sample_count": 6,
+      "with_cycle": 5,
+      "throughput": 66,
+      "cycle_median": 6.3,
+      "cycle_mean": 5.83,
+      "cycle_p85": 8.24,
+      "avg_ip_days": 5.96,
+      "avg_test_days": 0.0,
+      "avg_pr_days": 1.67,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.2": {
+      "sample_count": 6,
+      "with_cycle": 5,
+      "throughput": 62,
+      "cycle_median": 6.27,
+      "cycle_mean": 6.14,
+      "cycle_p85": 7.97,
+      "avg_ip_days": 5.73,
+      "avg_test_days": 1.61,
+      "avg_pr_days": 0.59,
+      "avg_blocked_days": 0.2
+    },
+    "BIP AI FY26Q1.3": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 70,
+      "cycle_median": 5.39,
+      "cycle_mean": 5.53,
+      "cycle_p85": 7.48,
+      "avg_ip_days": 5.22,
+      "avg_test_days": 1.69,
+      "avg_pr_days": 0.85,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.4": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 62,
+      "cycle_median": 3.18,
+      "cycle_mean": 4.78,
+      "cycle_p85": 7.54,
+      "avg_ip_days": 3.25,
+      "avg_test_days": 0.04,
+      "avg_pr_days": 0.33,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.5": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 70,
+      "cycle_median": 5.55,
+      "cycle_mean": 6.11,
+      "cycle_p85": 9.02,
+      "avg_ip_days": 5.66,
+      "avg_test_days": 0.36,
+      "avg_pr_days": 1.41,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.6": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 61,
+      "cycle_median": 2.72,
+      "cycle_mean": 3.67,
+      "cycle_p85": 6.61,
+      "avg_ip_days": 3.48,
+      "avg_test_days": 0.0,
+      "avg_pr_days": 1.52,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q1.7": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 56,
+      "cycle_median": 4.48,
+      "cycle_mean": 4.43,
+      "cycle_p85": 5.53,
+      "avg_ip_days": 4.69,
+      "avg_test_days": 1.02,
+      "avg_pr_days": 0.05,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q2.1": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 61,
+      "cycle_median": 5.08,
+      "cycle_mean": 4.97,
+      "cycle_p85": 8.15,
+      "avg_ip_days": 6.05,
+      "avg_test_days": 0.38,
+      "avg_pr_days": 0.03,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q2.2": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 67,
+      "cycle_median": 3.62,
+      "cycle_mean": 4.03,
+      "cycle_p85": 5.72,
+      "avg_ip_days": 2.55,
+      "avg_test_days": 0.74,
+      "avg_pr_days": 1.41,
+      "avg_blocked_days": 0.0
+    },
+    "BIP AI FY26Q2.3": {
+      "sample_count": 6,
+      "with_cycle": 6,
+      "throughput": 65,
+      "cycle_median": 6.91,
+      "cycle_mean": 6.2,
+      "cycle_p85": 8.18,
+      "avg_ip_days": 4.68,
+      "avg_test_days": 2.56,
+      "avg_pr_days": 0.96,
+      "avg_blocked_days": 0.0
+    }
+  },
+  "histogram": [
+    {
+      "label": "0-1d",
+      "count": 4
+    },
+    {
+      "label": "1-2d",
+      "count": 8
+    },
+    {
+      "label": "2-5d",
+      "count": 35
+    },
+    {
+      "label": "5-10d",
+      "count": 44
+    },
+    {
+      "label": "10-20d",
+      "count": 3
+    },
+    {
+      "label": "20-30d",
+      "count": 0
+    },
+    {
+      "label": "30d+",
+      "count": 0
+    }
+  ],
+  "status_totals": {
+    "In Progress": 459.2,
+    "In Testing": 74.5,
+    "Peer Review": 89.2,
+    "Blocked": 18.8
+  },
+  "status_pct": {
+    "In Progress": 71.6,
+    "In Testing": 11.6,
+    "Peer Review": 13.9,
+    "Blocked": 2.9
+  },
+  "top_longest": [
+    {
+      "key": "BIP-27314",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle_days": 18.04,
+      "ip": 23.9,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-26538",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle_days": 17.22,
+      "ip": 22.0,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-28723",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle_days": 15.27,
+      "ip": 3.25,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-27305",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle_days": 9.93,
+      "ip": 10.21,
+      "test": 0.03,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-28424",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle_days": 9.28,
+      "ip": 4.31,
+      "test": 6.96,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-29115",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle_days": 9.08,
+      "ip": 11.08,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-27273",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle_days": 9.07,
+      "ip": 8.98,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-29101",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle_days": 9.0,
+      "ip": 4.0,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-27311",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle_days": 9.0,
+      "ip": 11.0,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-26275",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle_days": 8.95,
+      "ip": 7.99,
+      "test": 0.0,
+      "blocked": 2.96
+    }
+  ],
+  "top_blocked": [
+    {
+      "key": "BIP-26769",
+      "sprint": "BIP AI FY25Q4.5",
+      "blocked_days": 12.92,
+      "cycle_days": 5.22
+    },
+    {
+      "key": "BIP-26275",
+      "sprint": "BIP AI FY25Q4.2",
+      "blocked_days": 2.96,
+      "cycle_days": 8.95
+    },
+    {
+      "key": "BIP-28475",
+      "sprint": "BIP AI FY26Q1.2",
+      "blocked_days": 1.0,
+      "cycle_days": 6.27
+    },
+    {
+      "key": "BIP-26265",
+      "sprint": "BIP AI FY25Q4.2",
+      "blocked_days": 1.0,
+      "cycle_days": 3.02
+    },
+    {
+      "key": "BIP-26319",
+      "sprint": "BIP AI FY25Q4.2",
+      "blocked_days": 0.97,
+      "cycle_days": 3.19
+    }
+  ],
+  "insights": [
+    "Across 94 sampled issues, the median cycle time (In Progress &rarr; Done) is <strong>5.01 days</strong>, with a mean of 5.29 days. The 85th percentile is 8.2 days and 95th percentile is 9.15 days.",
+    "Cycle times range from 0.01 to 18.04 days (spread of 18.0 days), indicating significant variability. High variability reduces predictability of delivery commitments.",
+    "<strong>5 issues</strong> spent more than half a day blocked. Among those, the average blocked time was <strong>3.8 days</strong>. Reducing blocked time is one of the highest-leverage improvements.",
+    "3 issue(s) went directly from Backlog to Done without entering In Progress (BIP-26741, BIP-28166, BIP-28438). These were excluded from cycle time calculations.",
+    "Cycle times increased over time: the first 4 sprints averaged 4.6-day median vs 5.0 days in the last 4 (~8% increase). Investigate growing complexity or WIP limits.",
+    "Average throughput: first 4 sprints = 67.0 issues/sprint, last 4 sprints = 62.0 issues/sprint.",
+    "Flow efficiency (active work / lead time): median <strong>78%</strong>. Lead time includes backlog wait before work starts. Higher efficiency means less waiting. World-class teams target &gt;40%.",
+    "Median lead time (9.25d) exceeds median cycle time (5.01d) by <strong>4.2 days</strong>, meaning issues sit in Backlog for a median of ~4.2 days before work begins."
+  ],
+  "all_issues": [
+    {
+      "key": "BIP-26056",
+      "sprint": "BIP AI FY25Q4.1",
+      "cycle": 4.27,
+      "lead": 6.28,
+      "ip": 6.0,
+      "test": 1.28,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.01
+    },
+    {
+      "key": "BIP-26081",
+      "sprint": "BIP AI FY25Q4.1",
+      "cycle": 5.1,
+      "lead": 5.74,
+      "ip": 1.25,
+      "test": 6.85,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 2.64
+    },
+    {
+      "key": "BIP-26028",
+      "sprint": "BIP AI FY25Q4.1",
+      "cycle": 2.52,
+      "lead": 8.51,
+      "ip": 1.97,
+      "test": 0.55,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 11.0
+    },
+    {
+      "key": "BIP-26025",
+      "sprint": "BIP AI FY25Q4.1",
+      "cycle": 2.15,
+      "lead": 8.07,
+      "ip": 0.08,
+      "test": 2.07,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.93
+    },
+    {
+      "key": "BIP-26275",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 8.95,
+      "lead": 10.39,
+      "ip": 7.99,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 2.96,
+      "backlog": 3.44
+    },
+    {
+      "key": "BIP-26267",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 3.5,
+      "lead": 4.98,
+      "ip": 2.2,
+      "test": 1.29,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.49
+    },
+    {
+      "key": "BIP-26319",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 3.19,
+      "lead": 10.06,
+      "ip": 2.99,
+      "test": 0.2,
+      "pr": 0.0,
+      "blocked": 0.97,
+      "backlog": 9.9
+    },
+    {
+      "key": "BIP-26265",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 3.02,
+      "lead": 10.45,
+      "ip": 0.0,
+      "test": 3.02,
+      "pr": 0.0,
+      "blocked": 1.0,
+      "backlog": 10.44
+    },
+    {
+      "key": "BIP-26311",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 8.11,
+      "lead": 10.59,
+      "ip": 10.08,
+      "test": 0.03,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.48
+    },
+    {
+      "key": "BIP-26471",
+      "sprint": "BIP AI FY25Q4.2",
+      "cycle": 2.12,
+      "lead": 3.03,
+      "ip": 0.96,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 0.91
+    },
+    {
+      "key": "BIP-26583",
+      "sprint": "BIP AI FY25Q4.3",
+      "cycle": 7.51,
+      "lead": 8.27,
+      "ip": 2.0,
+      "test": 0.0,
+      "pr": 7.51,
+      "blocked": 0.0,
+      "backlog": 2.76
+    },
+    {
+      "key": "BIP-26554",
+      "sprint": "BIP AI FY25Q4.3",
+      "cycle": 8.17,
+      "lead": 10.18,
+      "ip": 10.16,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.02
+    },
+    {
+      "key": "BIP-26741",
+      "sprint": "BIP AI FY25Q4.3",
+      "cycle": null,
+      "lead": 0.0,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 0.0
+    },
+    {
+      "key": "BIP-26783",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 3.86,
+      "lead": 8.98,
+      "ip": 5.77,
+      "test": 0.0,
+      "pr": 0.08,
+      "blocked": 0.0,
+      "backlog": 7.12
+    },
+    {
+      "key": "BIP-26786",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 5.13,
+      "lead": 7.09,
+      "ip": 0.3,
+      "test": 0.0,
+      "pr": 6.97,
+      "blocked": 0.0,
+      "backlog": 3.96
+    },
+    {
+      "key": "BIP-26929",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 0.05,
+      "lead": 0.05,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.05,
+      "blocked": 0.0,
+      "backlog": 0.0
+    },
+    {
+      "key": "BIP-26538",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 17.22,
+      "lead": 20.98,
+      "ip": 22.0,
+      "test": 0.0,
+      "pr": 1.23,
+      "blocked": 0.0,
+      "backlog": 5.75
+    },
+    {
+      "key": "BIP-26781",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 3.86,
+      "lead": 8.98,
+      "ip": 5.77,
+      "test": 0.0,
+      "pr": 0.08,
+      "blocked": 0.0,
+      "backlog": 7.12
+    },
+    {
+      "key": "BIP-26815",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle": 4.16,
+      "lead": 10.19,
+      "ip": 4.0,
+      "test": 0.16,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.03
+    },
+    {
+      "key": "BIP-26980",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 5.95,
+      "lead": 8.93,
+      "ip": 7.96,
+      "test": 0.99,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.98
+    },
+    {
+      "key": "BIP-27039",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 6.18,
+      "lead": 9.13,
+      "ip": 9.18,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.95
+    },
+    {
+      "key": "BIP-26988",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 8.17,
+      "lead": 10.18,
+      "ip": 9.99,
+      "test": 1.18,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.01
+    },
+    {
+      "key": "BIP-26769",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 5.22,
+      "lead": 20.13,
+      "ip": 2.14,
+      "test": 0.0,
+      "pr": 1.09,
+      "blocked": 12.92,
+      "backlog": 12.98
+    },
+    {
+      "key": "BIP-26970",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 7.42,
+      "lead": 9.3,
+      "ip": 1.1,
+      "test": 0.0,
+      "pr": 9.32,
+      "blocked": 0.0,
+      "backlog": 3.88
+    },
+    {
+      "key": "BIP-27034",
+      "sprint": "BIP AI FY25Q4.5",
+      "cycle": 2.14,
+      "lead": 4.04,
+      "ip": 1.21,
+      "test": 0.93,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.9
+    },
+    {
+      "key": "BIP-27279",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 3.09,
+      "lead": 10.81,
+      "ip": 2.99,
+      "test": 0.11,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 11.71
+    },
+    {
+      "key": "BIP-27273",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 9.07,
+      "lead": 10.85,
+      "ip": 8.98,
+      "test": 0.0,
+      "pr": 2.09,
+      "blocked": 0.0,
+      "backlog": 3.78
+    },
+    {
+      "key": "BIP-27264",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 6.06,
+      "lead": 7.78,
+      "ip": 2.05,
+      "test": 0.0,
+      "pr": 6.01,
+      "blocked": 0.0,
+      "backlog": 3.72
+    },
+    {
+      "key": "BIP-27268",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 1.93,
+      "lead": 10.87,
+      "ip": 1.8,
+      "test": 0.0,
+      "pr": 0.13,
+      "blocked": 0.0,
+      "backlog": 12.94
+    },
+    {
+      "key": "BIP-27311",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 9.0,
+      "lead": 10.78,
+      "ip": 11.0,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.77
+    },
+    {
+      "key": "BIP-27767",
+      "sprint": "BIP AI FY25Q4.6",
+      "cycle": 0.02,
+      "lead": 0.02,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.02,
+      "blocked": 0.0,
+      "backlog": 0.0
+    },
+    {
+      "key": "BIP-27314",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 18.04,
+      "lead": 20.91,
+      "ip": 23.9,
+      "test": 0.0,
+      "pr": 0.14,
+      "blocked": 0.0,
+      "backlog": 4.87
+    },
+    {
+      "key": "BIP-27305",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 9.93,
+      "lead": 19.71,
+      "ip": 10.21,
+      "test": 0.03,
+      "pr": 3.68,
+      "blocked": 0.0,
+      "backlog": 10.69
+    },
+    {
+      "key": "BIP-27704",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 2.14,
+      "lead": 10.83,
+      "ip": 0.0,
+      "test": 2.0,
+      "pr": 0.14,
+      "blocked": 0.0,
+      "backlog": 12.68
+    },
+    {
+      "key": "BIP-28248",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 0.01,
+      "lead": 0.05,
+      "ip": 0.0,
+      "test": 0.01,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 0.04
+    },
+    {
+      "key": "BIP-27702",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 6.22,
+      "lead": 7.9,
+      "ip": 4.03,
+      "test": 4.19,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.68
+    },
+    {
+      "key": "BIP-27907",
+      "sprint": "BIP AI FY25Q4.7",
+      "cycle": 6.11,
+      "lead": 6.22,
+      "ip": 7.22,
+      "test": 0.89,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 0.1
+    },
+    {
+      "key": "BIP-28199",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": 8.29,
+      "lead": 9.4,
+      "ip": 3.0,
+      "test": 0.0,
+      "pr": 8.29,
+      "blocked": 0.0,
+      "backlog": 3.11
+    },
+    {
+      "key": "BIP-28164",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": 6.3,
+      "lead": 9.41,
+      "ip": 9.29,
+      "test": 0.0,
+      "pr": 0.01,
+      "blocked": 0.0,
+      "backlog": 5.11
+    },
+    {
+      "key": "BIP-28243",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": 3.09,
+      "lead": 8.95,
+      "ip": 3.09,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.86
+    },
+    {
+      "key": "BIP-28201",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": 8.2,
+      "lead": 9.35,
+      "ip": 11.14,
+      "test": 0.02,
+      "pr": 0.04,
+      "blocked": 0.0,
+      "backlog": 3.15
+    },
+    {
+      "key": "BIP-28166",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": null,
+      "lead": 5.21,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 7.21
+    },
+    {
+      "key": "BIP-28244",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle": 3.26,
+      "lead": 9.08,
+      "ip": 3.26,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.82
+    },
+    {
+      "key": "BIP-28424",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": 9.28,
+      "lead": 10.99,
+      "ip": 4.31,
+      "test": 6.96,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.71
+    },
+    {
+      "key": "BIP-28399",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": 5.0,
+      "lead": 10.89,
+      "ip": 5.11,
+      "test": 0.0,
+      "pr": 1.88,
+      "blocked": 0.0,
+      "backlog": 7.9
+    },
+    {
+      "key": "BIP-28438",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": null,
+      "lead": 10.97,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 14.97
+    },
+    {
+      "key": "BIP-28414",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": 3.05,
+      "lead": 6.8,
+      "ip": 4.95,
+      "test": 0.0,
+      "pr": 0.1,
+      "blocked": 0.0,
+      "backlog": 5.75
+    },
+    {
+      "key": "BIP-28475",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": 6.27,
+      "lead": 7.21,
+      "ip": 6.29,
+      "test": 0.0,
+      "pr": 0.97,
+      "blocked": 1.0,
+      "backlog": 2.94
+    },
+    {
+      "key": "BIP-28446",
+      "sprint": "BIP AI FY26Q1.2",
+      "cycle": 7.09,
+      "lead": 10.84,
+      "ip": 8.0,
+      "test": 1.09,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 5.74
+    },
+    {
+      "key": "BIP-28716",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 7.23,
+      "lead": 8.29,
+      "ip": 2.0,
+      "test": 8.23,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.1
+    },
+    {
+      "key": "BIP-28689",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 4.94,
+      "lead": 9.27,
+      "ip": 6.03,
+      "test": 1.91,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 6.38
+    },
+    {
+      "key": "BIP-28669",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 5.17,
+      "lead": 6.23,
+      "ip": 3.0,
+      "test": 0.0,
+      "pr": 4.18,
+      "blocked": 0.0,
+      "backlog": 3.1
+    },
+    {
+      "key": "BIP-28666",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 2.0,
+      "lead": 3.06,
+      "ip": 2.0,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.1
+    },
+    {
+      "key": "BIP-28698",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 8.24,
+      "lead": 9.25,
+      "ip": 11.24,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.06
+    },
+    {
+      "key": "BIP-28706",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle": 5.61,
+      "lead": 6.62,
+      "ip": 7.04,
+      "test": 0.0,
+      "pr": 0.94,
+      "blocked": 0.0,
+      "backlog": 3.05
+    },
+    {
+      "key": "BIP-28723",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 15.27,
+      "lead": 16.32,
+      "ip": 3.25,
+      "test": 0.0,
+      "pr": 0.02,
+      "blocked": 0.0,
+      "backlog": 22.09
+    },
+    {
+      "key": "BIP-28936",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 2.23,
+      "lead": 3.19,
+      "ip": 1.99,
+      "test": 0.24,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 2.96
+    },
+    {
+      "key": "BIP-28894",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 4.96,
+      "lead": 6.96,
+      "ip": 6.05,
+      "test": 0.0,
+      "pr": 0.91,
+      "blocked": 0.0,
+      "backlog": 4.0
+    },
+    {
+      "key": "BIP-28937",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 4.12,
+      "lead": 9.16,
+      "ip": 6.99,
+      "test": 0.0,
+      "pr": 0.13,
+      "blocked": 0.0,
+      "backlog": 7.04
+    },
+    {
+      "key": "BIP-28884",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 1.22,
+      "lead": 2.26,
+      "ip": 1.22,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.04
+    },
+    {
+      "key": "BIP-28904",
+      "sprint": "BIP AI FY26Q1.4",
+      "cycle": 0.9,
+      "lead": 2.08,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 0.9,
+      "blocked": 0.0,
+      "backlog": 3.17
+    },
+    {
+      "key": "BIP-29091",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 5.26,
+      "lead": 11.09,
+      "ip": 7.26,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 8.83
+    },
+    {
+      "key": "BIP-29115",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 9.08,
+      "lead": 11.83,
+      "ip": 11.08,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 5.75
+    },
+    {
+      "key": "BIP-29102",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 4.21,
+      "lead": 11.97,
+      "ip": 2.99,
+      "test": 1.18,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 12.76
+    },
+    {
+      "key": "BIP-29075",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 3.25,
+      "lead": 12.0,
+      "ip": 2.0,
+      "test": 0.0,
+      "pr": 1.25,
+      "blocked": 0.0,
+      "backlog": 13.75
+    },
+    {
+      "key": "BIP-29103",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 5.84,
+      "lead": 10.83,
+      "ip": 6.65,
+      "test": 0.95,
+      "pr": 0.24,
+      "blocked": 0.0,
+      "backlog": 7.99
+    },
+    {
+      "key": "BIP-29101",
+      "sprint": "BIP AI FY26Q1.5",
+      "cycle": 9.0,
+      "lead": 11.75,
+      "ip": 4.0,
+      "test": 0.0,
+      "pr": 7.0,
+      "blocked": 0.0,
+      "backlog": 5.75
+    },
+    {
+      "key": "BIP-29474",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 8.19,
+      "lead": 9.25,
+      "ip": 11.19,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.06
+    },
+    {
+      "key": "BIP-29514",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 4.0,
+      "lead": 6.15,
+      "ip": 1.1,
+      "test": 0.0,
+      "pr": 4.9,
+      "blocked": 0.0,
+      "backlog": 4.15
+    },
+    {
+      "key": "BIP-29482",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 1.27,
+      "lead": 2.3,
+      "ip": 1.0,
+      "test": 0.0,
+      "pr": 0.27,
+      "blocked": 0.0,
+      "backlog": 3.03
+    },
+    {
+      "key": "BIP-29516",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 1.45,
+      "lead": 3.02,
+      "ip": 0.09,
+      "test": 0.0,
+      "pr": 1.36,
+      "blocked": 0.0,
+      "backlog": 3.57
+    },
+    {
+      "key": "BIP-29515",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 1.01,
+      "lead": 2.03,
+      "ip": 0.55,
+      "test": 0.0,
+      "pr": 0.46,
+      "blocked": 0.0,
+      "backlog": 3.02
+    },
+    {
+      "key": "BIP-29513",
+      "sprint": "BIP AI FY26Q1.6",
+      "cycle": 6.08,
+      "lead": 9.13,
+      "ip": 6.97,
+      "test": 0.0,
+      "pr": 2.11,
+      "blocked": 0.0,
+      "backlog": 5.05
+    },
+    {
+      "key": "BIP-29903",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 5.04,
+      "lead": 11.27,
+      "ip": 7.73,
+      "test": 0.0,
+      "pr": 0.31,
+      "blocked": 0.0,
+      "backlog": 9.23
+    },
+    {
+      "key": "BIP-29971",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 2.77,
+      "lead": 11.89,
+      "ip": 1.71,
+      "test": 1.05,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 15.12
+    },
+    {
+      "key": "BIP-29973",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 3.97,
+      "lead": 11.89,
+      "ip": 2.92,
+      "test": 1.05,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 13.92
+    },
+    {
+      "key": "BIP-29910",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 7.01,
+      "lead": 11.97,
+      "ip": 8.07,
+      "test": 1.94,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 7.96
+    },
+    {
+      "key": "BIP-29967",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 2.77,
+      "lead": 11.89,
+      "ip": 1.71,
+      "test": 1.05,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 15.13
+    },
+    {
+      "key": "BIP-29979",
+      "sprint": "BIP AI FY26Q1.7",
+      "cycle": 5.0,
+      "lead": 11.83,
+      "ip": 6.0,
+      "test": 1.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.83
+    },
+    {
+      "key": "BIP-30271",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 8.02,
+      "lead": 9.75,
+      "ip": 11.0,
+      "test": 0.02,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.73
+    },
+    {
+      "key": "BIP-30265",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 2.08,
+      "lead": 3.81,
+      "ip": 2.08,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.73
+    },
+    {
+      "key": "BIP-30286",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 2.13,
+      "lead": 3.81,
+      "ip": 2.01,
+      "test": 0.12,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.67
+    },
+    {
+      "key": "BIP-30281",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 8.3,
+      "lead": 9.99,
+      "ip": 9.99,
+      "test": 1.16,
+      "pr": 0.15,
+      "blocked": 0.0,
+      "backlog": 3.69
+    },
+    {
+      "key": "BIP-30273",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 8.1,
+      "lead": 9.83,
+      "ip": 11.0,
+      "test": 0.1,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.73
+    },
+    {
+      "key": "BIP-30300",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle": 1.16,
+      "lead": 2.81,
+      "ip": 0.2,
+      "test": 0.9,
+      "pr": 0.06,
+      "blocked": 0.0,
+      "backlog": 3.65
+    },
+    {
+      "key": "BIP-30554",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 3.24,
+      "lead": 9.3,
+      "ip": 2.26,
+      "test": 0.98,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 10.06
+    },
+    {
+      "key": "BIP-30571",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 1.1,
+      "lead": 9.22,
+      "ip": 0.31,
+      "test": 0.15,
+      "pr": 0.65,
+      "blocked": 0.0,
+      "backlog": 12.12
+    },
+    {
+      "key": "BIP-30531",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 7.82,
+      "lead": 10.21,
+      "ip": 8.71,
+      "test": 0.32,
+      "pr": 0.79,
+      "blocked": 0.0,
+      "backlog": 4.39
+    },
+    {
+      "key": "BIP-30555",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 4.0,
+      "lead": 5.06,
+      "ip": 1.02,
+      "test": 2.97,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.07
+    },
+    {
+      "key": "BIP-30584",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 2.99,
+      "lead": 5.11,
+      "ip": 2.99,
+      "test": 0.0,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 4.12
+    },
+    {
+      "key": "BIP-30523",
+      "sprint": "BIP AI FY26Q2.2",
+      "cycle": 5.02,
+      "lead": 10.11,
+      "ip": 0.0,
+      "test": 0.0,
+      "pr": 7.01,
+      "blocked": 0.0,
+      "backlog": 7.1
+    },
+    {
+      "key": "BIP-30939",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 3.99,
+      "lead": 5.13,
+      "ip": 2.27,
+      "test": 1.73,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.14
+    },
+    {
+      "key": "BIP-30951",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 8.17,
+      "lead": 9.31,
+      "ip": 1.0,
+      "test": 10.17,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.14
+    },
+    {
+      "key": "BIP-30911",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 8.15,
+      "lead": 9.29,
+      "ip": 10.92,
+      "test": 0.24,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.13
+    },
+    {
+      "key": "BIP-30897",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 2.98,
+      "lead": 9.11,
+      "ip": 0.21,
+      "test": 2.77,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 11.13
+    },
+    {
+      "key": "BIP-30907",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 8.23,
+      "lead": 9.36,
+      "ip": 11.0,
+      "test": 0.22,
+      "pr": 0.0,
+      "blocked": 0.0,
+      "backlog": 3.14
+    },
+    {
+      "key": "BIP-30978",
+      "sprint": "BIP AI FY26Q2.3",
+      "cycle": 5.67,
+      "lead": 6.91,
+      "ip": 2.7,
+      "test": 0.23,
+      "pr": 5.74,
+      "blocked": 0.0,
+      "backlog": 3.24
+    }
+  ]
+}

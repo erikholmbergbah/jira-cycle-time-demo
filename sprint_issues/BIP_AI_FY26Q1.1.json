@@ -1,0 +1,2197 @@
+[
+  {
+    "id": "4883262",
+    "key": "BIP-27277",
+    "summary": "Develop API Gateway IaC for Self-Service API Management",
+    "description": "### Summary\r\nAs a BIP-AI tenant, I need a Crossplane composition for AWS API Gateway REST APIs to deploy and manage APIs for models and applications with Lambda, HTTP, and AWS service integrations.\r\n\r\n### Acceptance Criteria\r\n\r\n**Functional Requirements**\r\n- Crossplane composition provisions:\r\n\u00a0 - REST API with resources, methods, and deployments\r\n\u00a0 - Multiple stages (dev, test, prod)\r\n\u00a0 - IAM execution roles\r\n\u00a0 - Lambda proxy/custom integrations\r\n\u00a0 - HTTP/AWS service integrations\r\n\u00a0 - Request/response models and validators\r\n\u00a0 - Authorizers (IAM, Lambda, Cognito)\r\n- Per-request resource creation for tenant flexibility\r\n- CRD with clear field descriptions",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Kurt Stohrer",
+      "name": "Kurt Stohrer",
+      "email": "Kurt.Stohrer@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER13239&avatarId=50210"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-09-04T16:31:04.000-0400",
+    "updated": "2025-12-03T08:59:21.000-0500"
+  },
+  {
+    "id": "4975775",
+    "key": "BIP-28159",
+    "summary": "Identify and transfer common ARIA features to MLKit",
+    "description": "As a ML engineer I want to identify and move common functions and classes that aria is using to interact with bedrock into MLKit under a RAF section so code can be reused by team members and tenants AC: Common interaction patterns identified in ARIA New RAF class created with code moved over to MLKit",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:39.000-0400",
+    "updated": "2025-10-17T15:31:55.000-0400"
+  },
+  {
+    "id": "4975777",
+    "key": "BIP-28161",
+    "summary": "Work with Harness team to add SE's to respective tenant projects",
+    "description": "As a BIP AI Engineer, I want to collaborate with the Harness team to add Solution Engineers (SEs) as admin users to their respective tenant projects, so that SEs have the appropriate permissions to manage, troubleshoot, and support the projects they are responsible for. AC: Identify all tenant projects and the corresponding Solution Engineers who support them. Coordinate with the Harness team to ensure SEs are assigned to the correct projects. Add each SE to their respective tenant project with admin-level permissions. Verify that SEs have full administrative access and can perform necessary actions within the project. Document the process for future onboarding of SEs to tenant projects. Notify SEs and relevant stakeholders once access is provisioned.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:40.000-0400",
+    "updated": "2025-10-10T12:03:26.000-0400"
+  },
+  {
+    "id": "4975778",
+    "key": "BIP-28162",
+    "summary": "Harness Training, learning, research",
+    "description": "As a BIP AI engineer, I want to dedicate time to learn the Harness platform, so that I can become proficient in its usage, understand its core concepts, and proactively identify and research any potential challenges or common problems I may encounter during setup and integration. AC: - Use this time to work through harness related problems and research/learn any harness capabilities that will be important to the story assigned.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOPs_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:40.000-0400",
+    "updated": "2025-10-09T13:23:54.000-0400"
+  },
+  {
+    "id": "4975779",
+    "key": "BIP-28163",
+    "summary": "Harness Training, learning, research",
+    "description": "As a BIP AI engineer, I want to dedicate time to learn the Harness platform, so that I can become proficient in its usage, understand its core concepts, and proactively identify and research any potential challenges or common problems I may encounter during setup and integration. AC: - Use this time to work through harness related problems and research/learn any harness capabilities that will be important to the story assigned.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:41.000-0400",
+    "updated": "2025-10-15T10:37:05.000-0400"
+  },
+  {
+    "id": "4975780",
+    "key": "BIP-28164",
+    "summary": "Work with system team to enable user groups mappings in harness",
+    "description": "As a member of the BIP-AI team, I want to collaborate with the systems team to set up account-level user group mappings in Harness, so that we can control which users are permitted to execute deployment pipelines for dev, stage, preprod, and prod environments across tenant projects. AC: Meet with the systems team to review requirements for user groups and their environment mappings. Systems team creates the following account-level user groups and mappings: bip-dev-ai-admins \u2192 bip-ai-dev-pipeline-executor bip-stage-ai-admins \u2192 bip-ai-stage-pipeline-executor bip-preprod-ai-admins \u2192 bip-ai-preprod-pipeline-executor bip-prod-ai-admins \u2192 bip-ai-prod-pipeline-executor Confirm that the mappings enforce correct execution permissions for each environment type. Ensure BIP-AI team has access to manage user group membership and pipeline execution policies going forward. Validate that tenant teams retain dev pipeline access, while BIP-AI controls stage, preprod, and prod pipeline executions.\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:41.000-0400",
+    "updated": "2025-10-17T16:46:33.000-0400"
+  },
+  {
+    "id": "4975781",
+    "key": "BIP-28165",
+    "summary": "Golden set pipeline for lambda code deployment",
+    "description": "As a BIP AI engineer, I want the Lambda Deployment pipeline currently implemented in Jenkins to be migrated to Harness as a Harness-managed pipeline AC: Harness pipeline is managed as YAML in the bip-ai-harness repo. All Jenkins pipeline stages and parameters are replicated, with any redesign needed to work smoothly with the IaC for lambda creation implemented. Final YAML is documented for usage and triggers. Pipeline passes tests and matches Jenkins logic.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:42.000-0400",
+    "updated": "2025-10-17T13:31:21.000-0400"
+  },
+  {
+    "id": "4975782",
+    "key": "BIP-28166",
+    "summary": "Host Training Session: Exploring Pipeline Configurations in Harness",
+    "description": "As a BIP AI engineer, I want to host a training session that covers the different pipeline configurations available within Harness, so that I can teach the various ways to configure, customize, and optimize pipelines for my team\u2019s deployment and automation needs. AC: Schedule and announce a training session focused on Harness pipeline configurations. Prepare an agenda covering pipeline basics, branching strategies, approval flows, triggers, stages, and integration options.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:42.000-0400",
+    "updated": "2025-10-10T12:03:45.000-0400"
+  },
+  {
+    "id": "4975783",
+    "key": "BIP-28167",
+    "summary": "Host Training Session: Enabling Slack Alerting in Harness",
+    "description": "As a BIP AI engineer, I want to host a session that demonstrates how to enable Slack alerting in Harness, so that I can configure notifications and alerts for my pipelines and deployments and keep relevant stakeholders informed in real-time. Acceptance Criteria: - Demonstrate how to create and configure notification rules for pipelines and deployments. - Share troubleshooting tips for common issues encountered during Slack integration. - Provide example use cases or scenarios where Slack alerts are valuable for team collaboration and incident response.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:43.000-0400",
+    "updated": "2025-10-14T15:41:39.000-0400"
+  },
+  {
+    "id": "4975785",
+    "key": "BIP-28169",
+    "summary": "Transition Jenkins Role to Harness mgmt",
+    "description": "As a BIP AI engineer, I want the existing Crossplane composition for Jenkins IRSA roles to be adapted for Harness, so that Harness jobs can use IRSA in a consistent, manageable, and secure way in our application clusters. AC: - Resource names, descriptions, and tags in the composition are updated to reference Harness instead of Jenkins (e.g., `project-bip-ai-harness-<env>-role`). - OIDC trust policy is scoped to the Harness service account(s) (e.g., `system:serviceaccount:<namespace>:<harness-sa>`). - All IAM policies, permissions, and resource blocks remain unchanged, unless additional permissions are identified for Harness workflows. - A Kubernetes ServiceAccount manifest is created/updated to reference the Harness IRSA role using the `eks.amazonaws.com/role-arn` annotation. - Documentation is updated to clarify the IRSA workflow for Harness, including instructions for ServiceAccount creation and usage in Harness pipelines. Link to Composition: https://github.com/department-of-veterans-affairs/bip-ai-infrastructure/blob/main/charts/compositions/templates/foundation/foundation-jenkins-support-composition.yaml",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Youssef El Alamy",
+      "name": "Youssef El Alamy",
+      "email": "Youssef.Elalamy@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10350"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:44.000-0400",
+    "updated": "2025-10-17T11:28:33.000-0400"
+  },
+  {
+    "id": "4975786",
+    "key": "BIP-28170",
+    "summary": "Build image promotion pipeline",
+    "description": "As a BIP AI engineer, I want an automated image promotion pipeline so that container images can be reliably promoted from one environment to another using Harness.\r\n----\r\nh3. *Acceptance Criteria:*\r\n * \u00a0Tag-based image promotion between Nexus registries (dev \u2192 stage)\r\n * \u00a0Docker-in-Docker pipeline implementation replicating Jenkins behavior\r\n * \u00a0Input validation and error handling\r\n * \u00a0Configurable source/target registries via Input Sets\r\n * \u00a0Pipeline YAML and documentation complete\r\n\r\n----\r\nh3. *Summary:*\r\n\r\nBuilt fully functional image promotion pipeline using Docker-in-Docker approach. Pipeline pulls images from source Nexus registry, re-tags, and pushes to target registry using configurable Input Sets.\r\n\r\n*Deliverables:*\r\n * Pipeline YAML with reusable variables\r\n * Input Set template for dev\u2192stage promotions\r\n * Documentation and configuration examples",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Youssef El Alamy",
+      "name": "Youssef El Alamy",
+      "email": "Youssef.Elalamy@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10350"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:44.000-0400",
+    "updated": "2025-10-31T12:35:27.000-0400"
+  },
+  {
+    "id": "4975787",
+    "key": "BIP-28171",
+    "summary": "Migrate MLkit release pipeline",
+    "description": "As a BIP AI engineer, I want the ML KIT Release pipeline currently implemented in Jenkins to be migrated to Harness as a Harness-managed pipeline AC: Harness pipeline is managed as YAML in the bip-ai-harness repo. All Jenkins pipeline stages and parameters are replicated, including: Branch selection, integration testing, skip failures, deploy to Nexus, and image build. Secure credential handling for Git, Nexus, and Docker/ECR. Conditional execution of stages based on parameters/environment. Final YAML is documented for usage and triggers. Pipeline passes tests and matches Jenkins logic.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:45.000-0400",
+    "updated": "2025-10-17T15:32:58.000-0400"
+  },
+  {
+    "id": "4975789",
+    "key": "BIP-28173",
+    "summary": "Create batch inference tutorial notebook",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer who optimizes inference calls from bedrock, I need the ability to reference a functional Jupyter notebook demonstrating batch inference usage so that I can efficiently onboard users and validate batch inference capabilities. Acceptance Criteria: - When a tutorial notebook demonstrating batch inference usage is created, users are able to learn and validate batch inference functionality. - A functional Jupyter notebook demonstrates batch inference usage \r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Stefan Znam",
+      "name": "Stefan Znam",
+      "email": "Stefan.Znam@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER78776&avatarId=53952"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:46.000-0400",
+    "updated": "2025-10-17T11:22:02.000-0400"
+  },
+  {
+    "id": "4975790",
+    "key": "BIP-28174",
+    "summary": "Test out IaC bedrock Agent",
+    "description": "Value Statement: As a MLOps engineer who validates infrastructure-provisioned Bedrock agents, I need the ability to confirm that an agent created via IaC is functional and accessible so that tenants can reliably use it through notebooks or Aria. Acceptance Criteria: - When an agent is provisioned by the IaC pipeline, the user has the ability to validate its functionality and readiness. - The agent can be invoked successfully through a Jupyter notebook and via Aria, returning expected responses. - Required IAM roles, policies, and secrets are correctly configured and accessible.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:46.000-0400",
+    "updated": "2025-10-17T14:00:26.000-0400"
+  },
+  {
+    "id": "4975793",
+    "key": "BIP-28177",
+    "summary": "Add Bedrock Monitoring Metrics: requests per minute, total requests made per inference profile",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer who updates Grafana with additional Bedrock monitoring metrics, I need the capability to achieve enhanced observability in Grafana regarding Bedrock model usage so that I can accurately monitor resource utilization and increase awareness. Acceptance Criteria: - When a user views the Grafana dashboard across tenants utilizing Bedrock, the user has the ability to see both requests per minute and total requests made by inference profile. - Grafana dashboards reliably and accurately display Bedrock request metrics segmented by inference profile. - Documentation is updated in Grafana documentation.\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:48.000-0400",
+    "updated": "2025-10-10T09:39:56.000-0400"
+  },
+  {
+    "id": "4975794",
+    "key": "BIP-28178",
+    "summary": "Add Bedrock Monitoring Metrics: Input tokens per minute and output tokens per minute per inference profile",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer who updates Grafana with additional Bedrock monitoring metrics, I need the capability to achieve enhanced observability in Grafana regarding Bedrock token usage so that I can accurately monitor resource utilization and increase awareness. Acceptance Criteria: - When a user views the Grafana dashboard across tenants utilizing Bedrock, the user has the ability to see input tokens and output tokens per minute per inference - Grafana dashboards reliably and accurately display Bedrock token metrics segmented by inference profile. - Documentation is updated in Grafana documentation.\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:48.000-0400",
+    "updated": "2025-10-10T09:39:57.000-0400"
+  },
+  {
+    "id": "4975795",
+    "key": "BIP-28179",
+    "summary": "Create RAF section in MLKIT",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer working with MLKIT, I need a dedicated RAF section that includes bedrock agent modules and strands functionality so that I can run a notebook without manually installing necessary tools. Acceptance Criteria: - A new RAF section is created within MLKIT - Bedrock agent module is implemented with shortcuts to create agent action groups - Strands-agents, strands-agents-tools module is added to the RAF section and installed by LCCs - All modules are properly documented and accessible within MLKIT - The RAF section integrates seamlessly with existing MLKIT functionality - New shortcuts and modules for RAF development are made available for use in an .ipynb - May involve new release to MLKIT",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:49.000-0400",
+    "updated": "2025-10-17T16:40:47.000-0400"
+  },
+  {
+    "id": "4975796",
+    "key": "BIP-28180",
+    "summary": "Test MLKit JupyterLab image on BIP AI domain",
+    "description": "Value Statement As a BIP AI Engineer/Tenant, I need the ability to use the mlkit custom JupyterLab image on the BIP AI domains so that the space starts up faster and the environment is more customizable to our liking AC When a user attaches an image, they're able to fully use mlkit (might need to make this more specific) mlkit image can be successfully used in all domains, and this can be tested by running the tenant_resources notebooks that use mlkit",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Vedant Prasad",
+      "name": "Vedant Prasad",
+      "email": "Vedant.Prasad@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER52403&avatarId=53907"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:49.000-0400",
+    "updated": "2025-10-17T15:51:13.000-0400"
+  },
+  {
+    "id": "4975797",
+    "key": "BIP-28181",
+    "summary": "Update existing dashboards with inference profile logs",
+    "description": "Value Statement: As a BIP-AI Mlops Engineer who monitors Bedrock model invocations through inference profiles, I need the ability to have panels currently configured for model arns pointing to inference profile arns so that the BIP-AI team can accurately track inference profile usage. Acceptance Criteria: - Model invocation panels are configured to inference profiles instead. - Changes should be done across all tenant dashboards. - Documentation is updated yes, the grafana documentation in confluence\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:50.000-0400",
+    "updated": "2025-10-15T14:03:41.000-0400"
+  },
+  {
+    "id": "4975798",
+    "key": "BIP-28182",
+    "summary": "Create confluence documentation in RAF page for Strands usage",
+    "description": "Value Statement As a BIP-AI MLOps Engineer working with the Reusable Agentic Framework (RAF) and Strands, I need comprehensive confluence documentation on the RAF page specifically for Strands usage. This will ensure that all team members can easily reference up-to-date information and guidelines on how Strands is utilized within RAF, promoting consistency and reducing onboarding time for new engineers. Acceptance Criteria - Confluence documentation exists on the RAF page covering Strands usage - Documentation provides clear instructions and context for Strands integration and application - Documentation is accessible to team members",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:50.000-0400",
+    "updated": "2025-10-17T16:06:21.000-0400"
+  },
+  {
+    "id": "4975900",
+    "key": "BIP-28184",
+    "summary": "Update confluence with existing Grafana assets",
+    "description": "Value Statement As a BIP-AI Mlops Engineer who monitors tenants reource usage and service activity in grafana, I need the ability to reference updated confluence documents with up to date context with what currently exists in grafana so that the BIP-AI team can quickly reference what the team currenly has in place in grafana. Acceptance Criteria - When a user views the confluence documentation, the user has the ability to see an updated confluence document. - Coherent and correct updated documentation with current grafana assets such as alerts or dashboards \r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:51.000-0400",
+    "updated": "2025-10-10T09:39:59.000-0400"
+  },
+  {
+    "id": "4975901",
+    "key": "BIP-28185",
+    "summary": "Create Example Strands notebook and prototype for creating agent with an existing lambda",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer learning to implement strands and bedrock agents, I need a comprehensive example notebook and prototype that demonstrates how to create an agent using an existing lambda function, so that I can understand the integration patterns and demonstrate/document how to quickly implement similar solutions for other engineers. Acceptance Criteria: - When a user accesses the example materials, there is a complete strands notebook demonstrating agent creation. - The notebook includes step-by-step instructions for integrating an existing lambda function. - A working prototype is available that shows the end-to-end process- - The example covers common use cases and integration patterns. - Code is well-documented and includes explanatory comments - The example can be easily adapted for different lambda functions and use cases",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:52.000-0400",
+    "updated": "2025-10-17T16:38:53.000-0400"
+  },
+  {
+    "id": "4975902",
+    "key": "BIP-28186",
+    "summary": "Add to Bedrock Confluence Document for BDA Project creation via console",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer who assists tenants, I need the ability to have updated documentation on how to create Bedrock Data Automation projects on AWS console so that the BIP-AI team can receive clear guidance on how to create projects Acceptance Criteria: - When a user requires guidance on creating Bedrock Data Automation projects in AWS console, the user has the ability to find clear and correct guidance in Confluence",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:52.000-0400",
+    "updated": "2025-10-17T11:32:20.000-0400"
+  },
+  {
+    "id": "4975903",
+    "key": "BIP-28187",
+    "summary": "Fix LCC pipeline in order to prevent re-applying legacy lifecycle configurations",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer I need the ability to attach LCCs but not have the domain go into update failed. The LCC attachment script should have checks to make sure no legacy LCCs or deleted LCCs are attached if possible Acceptance Criteria: - Update the LCC attachment script to not allow legacy or deleted LCCs if possible",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:53.000-0400",
+    "updated": "2025-10-17T15:27:22.000-0400"
+  },
+  {
+    "id": "4975904",
+    "key": "BIP-28188",
+    "summary": "Investigate js package codeQL issue",
+    "description": "\u00a0## Value Statement As a infra engineer who investigates the best way to resolve the system.js codeql issue by either trying to add it to the build package or host the packages on nexus as a CDN, I need the ability to future state is the codeql tool in github is no longer reporting this issue so that the codebase meets security standards. ## Acceptance Criteria When a user runs CodeQL security scans on the bip-ai-gateway repo, the user has the ability to see that the CodeQL scan no longer reports the critical systemjs error. None Documentation is updated None Automated or manual tests were added None\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Kurt Stohrer",
+      "name": "Kurt Stohrer",
+      "email": "Kurt.Stohrer@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER13239&avatarId=50210"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:53.000-0400",
+    "updated": "2025-10-17T16:03:25.000-0400"
+  },
+  {
+    "id": "4975905",
+    "key": "BIP-28189",
+    "summary": "Research workflow to display gateway logs in Grafana",
+    "description": "Value Statement As a BIP AI infra engineer who design gateway app, I need the ability to research log forwarding approaches so that I can design gateway log forwarding to Grafana for display. Acceptance Criteria 1 Research and recommend gateway app log forward approach to Grafana. 2. Generate or update related architecture diagram.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Qiao Chen",
+      "name": "Qiao Chen",
+      "email": "Qiao.Chen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER60431&avatarId=43618"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:54.000-0400",
+    "updated": "2025-10-17T09:45:16.000-0400"
+  },
+  {
+    "id": "4975906",
+    "key": "BIP-28190",
+    "summary": "Add audit logging to crossplane API to improve traceability",
+    "description": "Value Statement As a BIP AI infra engineer who design gateway app, I need the ability to add audit logs on the crossplane api so that mlops resource management activities through gateway app can be logged and traced to particular user. Acceptance Criteria 1 Add well formatted audit logs to each and every crossplane api. 2. Logs are stored in an audit log file. 3. Look into whether ARIA needs audit logging.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Qiao Chen",
+      "name": "Qiao Chen",
+      "email": "Qiao.Chen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER60431&avatarId=43618"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:54.000-0400",
+    "updated": "2025-10-14T14:49:37.000-0400"
+  },
+  {
+    "id": "4975907",
+    "key": "BIP-28191",
+    "summary": "Automate production IP policy creation to mirror lower environment permissions",
+    "description": "## Story As a BIP-AI tenant, I want automated creation of inference profile policies for production roles so that I have mirrored permissions to access knowledge base resources and invoke inference profiles without manual policy configuration. ## Acceptance Criteria - Given a production environment deployment when tenant resources are created then an IP policy is automatically generated mirroring lower environment permissions - Given a production role without standard SageMaker domain resources when the composition processes then the IP policy provides equivalent access to knowledge base resources and inference profiles - Given lower environment IP policy permissions when production deployment occurs then the same permission set is replicated for production-specific resources - Given a sandbox environment when production resource creation is simulated then the IP policy creation logic functions correctly - Given production IP policies when created then they include permissions for inference profile invocation and knowledge base access matching lower environments - Given future agent functionality when implemented then the IP policy structure supports adding agent permissions without breaking changes - Given existing production deployments when IP policy automation is enabled then no current functionality is disrupted ## Definition of Done - All acceptance criteria met - Tests added/updated for production IP policy creation in sandbox environment - Documentation updated to reflect automated production IP policy creation - Production composition updated with IP policy automation logic - Sandbox testing completed with simulated production resource scenarios - Permission parity verified between lower and production environments - Future agent permission structure prepared",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:55.000-0400",
+    "updated": "2025-10-17T12:54:47.000-0400"
+  },
+  {
+    "id": "4975908",
+    "key": "BIP-28192",
+    "summary": "Configure automated AOSS collection permissions for knowledge base operations",
+    "description": "## Story As a BIP-AI tenant, I want automated permissions to access my AOSS collections so that I can perform knowledge base operations seamlessly without manual IAM configuration. ## Acceptance Criteria - Given a tenant intake claim with collection IDs specified when processed then AOSS collection permissions are added to the bedrock inference profile policy - Given a tenant with both knowledge base IDs and collection IDs when the composition processes then both permission sets are included in the bedrock-ip policy - Given existing tenants with knowledge base permissions when the update deploys then no current functionality is broken and no resources are recreated or deleted - Given the bedrock-ip policy when updated then it supports both inference profiles and collection/knowledge base resource permissions - Given a production environment deployment when collection permissions are configured then the production composition supports collection IDs in addition to knowledge base IDs - Given a sandbox deployment with collection permissions when tested then tenants can successfully access their assigned AOSS collections for knowledge base operations - Given the intake definitions when updated then collection IDs are properly defined as an optional array parameter alongside existing knowledge base IDs ## Definition of Done - All acceptance criteria met - Tests added/updated for collection permissions in sandbox environment - Documentation updated to reflect new collection ID parameter support - Intake definition schema updated with collection ID support - Composition logic updated to migrate KB and collection permissions to bedrock-ip policy - Claim templates updated to support collection ID specification - Production composition updated with collection ID support - Backward compatibility verified for existing deployments",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:55.000-0400",
+    "updated": "2025-10-17T12:52:53.000-0400"
+  },
+  {
+    "id": "4975909",
+    "key": "BIP-28193",
+    "summary": "Track EntraID Group to manage access control and permissions",
+    "description": "Value Statement:\r\n\r\n**As an BIP-AI member, I need a new EntraID Group created for the RBAC Saga to properly manage access control and permissions for BIP infrastructure components.**\r\n\r\n**A/C:** - Track a new EntraID Group from VA, which will form the basis for cluster permissions for the infra team. Follow the established naming convention and be integrated with the existing RBAC framework for BIP infrastructure. - When the EntraID Group are provisioned, more work will be done to integrate teh EntraID group in following stories.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:56.000-0400",
+    "updated": "2025-10-17T15:59:20.000-0400"
+  },
+  {
+    "id": "4975910",
+    "key": "BIP-28194",
+    "summary": "Prototype Knowledge Base Provider to perform CRUD operations",
+    "description": "Value Statement: As a Infra engineer I need to prototype the setup and deployment of the KB provider, so that we can perform CRUD operations on KBs with Crossplane\r\n\r\nA/C: - Adapt and setup KB provider with custom providerConfig - Test KB provider with our architecture",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:56.000-0400",
+    "updated": "2025-10-16T11:45:11.000-0400"
+  },
+  {
+    "id": "4975912",
+    "key": "BIP-28196",
+    "summary": "Update adfs-mlos-admins policy to have access to guard duty",
+    "description": "Value Statement: As a Infra engineer I need to update the adfs-mlops-admins policies to include guarduty access so mlops-admins can research how gaurduty can be used with ai resources\r\n\r\nA/C: The adfs-mlops-admins role in dev have the ability to access guardduty\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Kurt Stohrer",
+      "name": "Kurt Stohrer",
+      "email": "Kurt.Stohrer@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER13239&avatarId=50210"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:57.000-0400",
+    "updated": "2025-10-16T22:18:29.000-0400"
+  },
+  {
+    "id": "4975913",
+    "key": "BIP-28197",
+    "summary": "Refactor IAM policies to provide capacity headroom for tenant customization",
+    "description": "## Story As an ML engineer, I want the default IAM policies applied to SageMaker execution roles to be logically split and refined so that I have sufficient character capacity to customize and test tenant-specific permissions without hitting AWS policy size limits. ## Acceptance Criteria - Given the current foundation sagemaker-primary policy when I measure its size then it is below 80% of AWS IAM policy limits (below 4,915 characters for inline, 8,192 for managed) - Given the current foundation sagemaker-aux-services policy when I measure its size then it is below 80% of AWS IAM policy limits - Given the current foundation bedrock-primary policy when I measure its size then it is below 80% of AWS IAM policy limits - Given the inline policy in sagemaker-domain-role-composition when I measure its size then it is below 80% of the 6,144 character AWS inline policy limit (below 4,915 characters) - Given any custom tenant policies when I measure their combined size with base policies then total policy attachment count remains within AWS limits (10 managed policies per role) - Given the refactored policies when applied to existing SageMaker execution roles then all current functionality is preserved - Given a tenant customization scenario when I add permissions to test new services then I have at least 20% capacity remaining in the relevant policy ## Definition of Done - All acceptance criteria met - Tests added/updated (unit + integration) - Documentation updated with new policy structure - Policy validation scripts added to measure current sizes - Security and access controls reviewed - All existing tenant deployments verified functional after policy changes",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:58.000-0400",
+    "updated": "2025-10-17T15:59:24.000-0400"
+  },
+  {
+    "id": "4975915",
+    "key": "BIP-28199",
+    "summary": "Adapt service account to work with Bedrock Knowledge Base Provider",
+    "description": "As a Infra engineer I need to adapt the AWS Service account (SA) to work with our Bedrock KB Provider A/C: - Adapt the SA for the provider-aws-family to work with our custom Bedrock KB Provider - If unable to adapt the available SA, then create a new SA that will give AWS access to our Bedrock KB Provider - Test that Bedrock KB Provider works with the assigned SQ\r\n\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:01:59.000-0400",
+    "updated": "2025-10-17T16:46:40.000-0400"
+  },
+  {
+    "id": "4975917",
+    "key": "BIP-28201",
+    "summary": "identify usecases for agent to oracle mcp",
+    "description": "Value Statement: As an MLE who wants to create an Oracle MCP used by tenants across the platform, I want to identify what use cases are applicable for the MCP use so that I can start building out an MCP.\r\n\r\nAC: Documentation created that identifies which tenants are currently using the oracle DB, what they are using it for, and which have existing agentic workflows or are planning on incorporating them.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:00.000-0400",
+    "updated": "2025-12-03T12:09:04.000-0500"
+  },
+  {
+    "id": "4975918",
+    "key": "BIP-28202",
+    "summary": "Facilitate knowledge transfer with Claims Evidence team for additional tooling requirements",
+    "description": "Value Statement: As an MLOps engineer building out the claims evidence API MCP, I want to facilitate a meeting with the Claims Evidence team in order to understand the full functionality of the API and any gaps with existing MCP.\r\n\r\nAC: Documentation created of gaps between existing tools and potential tools, use cases for each of the tools, and tickets created to fill those gaps.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:00.000-0400",
+    "updated": "2025-12-03T12:09:07.000-0500"
+  },
+  {
+    "id": "4975919",
+    "key": "BIP-28203",
+    "summary": "Add alerts for SPA deployed Lambda/Gateway",
+    "description": "Value Statement As a support engineer who operates SPA\u2019s serverless endpoints, I need the ability to receive timely alerts on Lambda and API Gateway health so that I can respond quickly to errors, latency spikes, and throttling before users are impacted.\r\n\r\nAcceptance Criteria - When a Lambda function deployed by SPA in dev, test, and prod experiences Errors, an alert is sent to the designated notification channel. - When a Lambda function\u2019s Duration exceeds a configured threshold, an alert is sent. When a Lambda function encounters Throttles, an alert is sent. - When API Gateway reports errors, an alert is sent. - When API Gateway reports Latency exceeding a baseline, an alert is sent. - Alerts are delivered to an SNS topic wired to: Slack This story is dependent on the completion of: \u201cSPA monitoring\u201d (baseline dashboards/metrics discovery) and a KT on tenant alerts as done on team.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:01.000-0400",
+    "updated": "2025-10-17T12:37:32.000-0400"
+  },
+  {
+    "id": "4975924",
+    "key": "BIP-28208",
+    "summary": "Research eMPWR usecase to provide efficient support",
+    "description": "Value Statement As a BIP AI Solutions Engineer, I want to research and document the eMPWR Intelligent Automation use case for Limited Pay letter processing so that I can provide a comprehensive technical solution using Bedrock Data Automation (BDA) that reduces manual processing time, improves accuracy, and enables automated document field extraction for the eMPWR tenant.\r\n\r\nAcceptance Criteria:\r\n\r\nDocument the following in Confluence:\r\n * eMPWR Limited Pay letter automation use case and workflow analysis\r\n * Bedrock Data Automation technical solution architecture and API specifications\r\n * Cost analysis comparing Nova Pro vs Claude 3.5 Sonnet models with recommendations\r\n * Step-by-step BDA project creation guide via AWS console\r\n * Implementation roadmap and deployment steps for eMPWR team",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:03.000-0400",
+    "updated": "2025-10-17T10:33:44.000-0400"
+  },
+  {
+    "id": "4975925",
+    "key": "BIP-28209",
+    "summary": "Validate eMPWR Dev Domain to  confirm that eMPWR team members have access.",
+    "description": "Value Statement: As a Solution Engineer in MLOPS, I need to validate access to eMPWR dev domain and confirm that eMPWR team members have access.\r\n\r\nAcceptance Criteria: Successfully validate access to eMPWR dev domain and confirm that eMPWR team members have access.\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:04.000-0400",
+    "updated": "2025-10-14T08:56:22.000-0400"
+  },
+  {
+    "id": "4975926",
+    "key": "BIP-28210",
+    "summary": "Create Lambda with IaC in preprod to test and deploy function code to",
+    "description": "Value Statement: As a BIP AI Tenant/SE, I would like to test the creation of Lambdas using IaC so that Lambdas can be created in a more efficient manner (instead of using Console)\r\n\r\nAC: The created Lambda functions as it does in lower environments",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Vedant Prasad",
+      "name": "Vedant Prasad",
+      "email": "Vedant.Prasad@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER52403&avatarId=53907"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:04.000-0400",
+    "updated": "2025-10-17T15:41:34.000-0400"
+  },
+  {
+    "id": "4975927",
+    "key": "BIP-28211",
+    "summary": "Create EVA non-IaC resources in PreProd to allow development in PreProd domain",
+    "description": "Value Statement: As a MLOps engineer, I need to create AWS resources in the EVA PreProd domain so that the EVA team can continue begin development in the PreProd Sagemaker environment.\r\n\r\nAC: All necessary EVA resources are created in PreProd. Resources have been tested with EVA scripts. Permissions and other settings are configured to allow resources to function",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Elise Hooker",
+      "name": "Elise Hooker",
+      "email": "Elise.Hooker@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10337"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:05.000-0400",
+    "updated": "2025-10-17T14:06:47.000-0400"
+  },
+  {
+    "id": "4975928",
+    "key": "BIP-28212",
+    "summary": "Implement github releases and deployment strategy for SPA, document deployment strategy in deployment plans",
+    "description": "Value Statement: As a ml engineer, I want to create a release and deployment strategy for SPA so that a clear guideline is in place for the first deployment so both teams are on the same page.\r\n\r\nAC: Release created and BIP AI deployment guideline is documented for SPA team.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:05.000-0400",
+    "updated": "2025-10-15T10:34:30.000-0400"
+  },
+  {
+    "id": "4975929",
+    "key": "BIP-28213",
+    "summary": "Create and add tests for CI/CD for SPA prod lambda",
+    "description": "Value Statement: As a ML engineer I want to add pytests to the SPA CI/CD pipeline to create automatic testing for the lambda work being done so changes will be tested before release.\r\n\r\nAC: Pytest for the lambda added to be run during github CI/CD.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:06.000-0400",
+    "updated": "2025-10-17T10:34:41.000-0400"
+  },
+  {
+    "id": "4975932",
+    "key": "BIP-28216",
+    "summary": "Research Monitoring / Alerting set up for TERA endpoints",
+    "description": "Value statement: As a MLOps developer I need to be able to monitor the health and performance of the TERA endpoints. Since TERA has had to remove much of their logging for performance considerations this ticket is to look at how the endpoints can be monitored with little to no logging. This may be similar to how SPA is setting up their monitoring as well.\r\n\r\nAC: - Try to set up some test monitoring and alerting in the dev or preprod environment - Document what monitoring of the API gateway /endpoints is possible",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:07.000-0400",
+    "updated": "2025-10-17T11:45:05.000-0400"
+  },
+  {
+    "id": "4975934",
+    "key": "BIP-28218",
+    "summary": "Send Slack notifications to SRI channel once pipelines have executed",
+    "description": "Value Statement: As a MLOps developer, I need to configure slack notification to the SRI's team channel so that they are aware when their pipeline is done running daily. \r\nAC: Ensure that SRI is able to receive real time notifications in their slack channel once the pipeline has run. Verify that this is correctly configured and that the message is clear once the pipeline has ran indicating if it was successful or if it failed.\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Mark Zhang",
+      "name": "Mark Zhang",
+      "email": "Mark.Zhang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10338"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:08.000-0400",
+    "updated": "2025-10-10T16:46:07.000-0400"
+  },
+  {
+    "id": "4975936",
+    "key": "BIP-28220",
+    "summary": "Determine capability to write back to VBMS for GenAnn",
+    "description": "Value Statement: As a BIP-AI Mlops Engineer who is automating pulling in and writing back data into VBMS, I need the ability to have the Automated Document Annotations team view an updated table with bert scores so that they gain awareness on the quality of generated summaries.\r\n\r\nAcceptance Criteria:\u00a0\r\n * A viable solution for writing the BERT similarity score back to the originating VBMS database is identified and documented.\r\n * The solution demonstrates technical capability to update the VBMS database table with the calculated BERT similarity score.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:09.000-0400",
+    "updated": "2025-10-17T16:06:56.000-0400"
+  },
+  {
+    "id": "4975937",
+    "key": "BIP-28221",
+    "summary": "Evaluate Exam Verification Agent repository for PreProd promotion readiness to prepare for PreProd promotion",
+    "description": "Value Statement: As a MLOps developer, I need to ensure that EVA's repository and development progress meet the criteria for PreProd promotion to avoid obstacles in the transition to the PreProd domain.\r\n AC: Ensure that the EVA codebase and other tooling meets the requirements listed in the PreProd deployment readiness checklist. Some criteria may not apply to EVA, so best judgement should be used to determine what needs to be met.\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Elise Hooker",
+      "name": "Elise Hooker",
+      "email": "Elise.Hooker@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10337"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:09.000-0400",
+    "updated": "2025-10-17T14:08:20.000-0400"
+  },
+  {
+    "id": "4975938",
+    "key": "BIP-28222",
+    "summary": "Validate EVA PreProd domain to prepare for domain use by exam team",
+    "description": "Value statement: As a MLOps developer and tenant, I need to ensure that the Exam Verification Domain in PreProd is fully operational so that users can develop on SageMaker.\r\n\r\nAC: Ensure that the PreProd domain passes the validation script. Run the LCC attachment script, then run the domain validation tests. All tests relevant for EVA should pass.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Elise Hooker",
+      "name": "Elise Hooker",
+      "email": "Elise.Hooker@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10337"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:10.000-0400",
+    "updated": "2025-10-17T14:07:48.000-0400"
+  },
+  {
+    "id": "4975939",
+    "key": "BIP-28223",
+    "summary": "1.1 - Provide adhoc support to Smart Ratings Rec team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the SRR team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from SRR requests support, the support team responds and assists as needed Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Vedant Prasad",
+      "name": "Vedant Prasad",
+      "email": "Vedant.Prasad@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER52403&avatarId=53907"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:10.000-0400",
+    "updated": "2025-10-17T10:29:23.000-0400"
+  },
+  {
+    "id": "4975940",
+    "key": "BIP-28224",
+    "summary": "1.1  - Provide adhoc support to empwr team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the eMPWR team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from eMPWR requests support, the support team responds and assists as needed Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:11.000-0400",
+    "updated": "2025-10-17T14:10:59.000-0400"
+  },
+  {
+    "id": "4975941",
+    "key": "BIP-28225",
+    "summary": "1.1 - Provide adhoc support to Exam Verification team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the Exam Verification Agents team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from Exam Verification Agents requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Elise Hooker",
+      "name": "Elise Hooker",
+      "email": "Elise.Hooker@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10337"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:11.000-0400",
+    "updated": "2025-10-17T14:08:39.000-0400"
+  },
+  {
+    "id": "4975942",
+    "key": "BIP-28226",
+    "summary": "1.1 - Provide adhoc support to Ratings Summary team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the Ratings Summary team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from Ratings Summary requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:12.000-0400",
+    "updated": "2025-10-17T10:37:51.000-0400"
+  },
+  {
+    "id": "4975943",
+    "key": "BIP-28227",
+    "summary": "1.1 - Provide adhoc support to TERA team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the TERA team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from TERA requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:12.000-0400",
+    "updated": "2025-10-17T13:55:11.000-0400"
+  },
+  {
+    "id": "4975945",
+    "key": "BIP-28229",
+    "summary": "1.1 - Provide adhoc support to SPA team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the SPA team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from SPA requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:13.000-0400",
+    "updated": "2025-10-17T12:37:38.000-0400"
+  },
+  {
+    "id": "4975946",
+    "key": "BIP-28230",
+    "summary": "1.1 - Provide adhoc support to Innovation team to resolve technical issues",
+    "description": "Value Statement: As a BIP AI Tenant on the Innovation team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from Innovation requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:14.000-0400",
+    "updated": "2025-12-01T12:08:02.000-0500"
+  },
+  {
+    "id": "4975947",
+    "key": "BIP-28231",
+    "summary": "1.1 - Provide adhoc support to SRI team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the SRI team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from SRI requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:14.000-0400",
+    "updated": "2025-10-17T10:36:54.000-0400"
+  },
+  {
+    "id": "4975948",
+    "key": "BIP-28232",
+    "summary": "1.1 - Provide adhoc support to Smart Claim Check team to resolve technical issues",
+    "description": "Value Statement:\r\n\r\nAs a BIP AI Tenant on the SCC team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user from SCC requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved. Update deployment dates in Confluence for each support ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Stefan Znam",
+      "name": "Stefan Znam",
+      "email": "Stefan.Znam@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER78776&avatarId=53952"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T07:02:15.000-0400",
+    "updated": "2025-10-17T10:37:24.000-0400"
+  },
+  {
+    "id": "4977444",
+    "key": "BIP-28242",
+    "summary": " 1.1 A - On Call MLEng Service Desk ",
+    "description": "Value Statement: As a BIP AI engineer I need to be On Call so that any service desk tickets that are submitted are addressed in a timely manner.\r\nAC: # Be available and monitor the Service Desk ticket board\r\n # Address any tickets that come in and begin support\r\n # Provide continual updates to tickets\r\n # Reassign to developers as needed",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T14:00:36.000-0400",
+    "updated": "2025-10-15T10:34:44.000-0400"
+  },
+  {
+    "id": "4977445",
+    "key": "BIP-28243",
+    "summary": "1.1 B - On Call MLEng Service Desk ",
+    "description": "Value Statement: As a BIP AI engineer I need to be On Call so that any service desk tickets that are submitted are addressed in a timely manner.\r\nAC: # Be available and monitor the Service Desk ticket board\r\n # Address any tickets that come in and begin support\r\n # Provide continual updates to tickets\r\n # Reassign to developers as needed",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-03T14:01:44.000-0400",
+    "updated": "2025-10-17T15:56:05.000-0400"
+  },
+  {
+    "id": "4977454",
+    "key": "BIP-28244",
+    "summary": "1.1 B - On Call Infra Service Desk",
+    "description": "Value Statement: As a BIP AI engineer I need to be On Call so that any service desk tickets that are submitted are addressed in a timely manner.\r\nAC: # Be available and monitor the Service Desk ticket board\r\n # Address any tickets that come in and begin support\r\n # Provide continual updates to tickets\r\n # Reassign to developers as needed",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T14:02:37.000-0400",
+    "updated": "2025-10-23T09:33:16.000-0400"
+  },
+  {
+    "id": "4977456",
+    "key": "BIP-28245",
+    "summary": "1.1 A - On Call Infra Service Desk",
+    "description": "Value Statement: As a BIP AI engineer I need to be On Call so that any service desk tickets that are submitted are addressed in a timely manner.\r\nAC: # Be available and monitor the Service Desk ticket board\r\n # Address any tickets that come in and begin support\r\n # Provide continual updates to tickets\r\n # Reassign to developers as needed",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-10-03T14:03:30.000-0400",
+    "updated": "2025-11-03T14:21:25.000-0500"
+  },
+  {
+    "id": "4978992",
+    "key": "BIP-28253",
+    "summary": "Determine Intranet Scraping for m21 feasibility for SCC",
+    "description": "Value Statement: As a BIP-AI MLOps Engineer who is experimenting and evaluating different methods to scrape the VA intranet for M21-1 documentation, I need a verified way to scrape for m21 so that I have the ability to programmatically parse and ingest the m21 document for future Knowledge Base refreshing\u2014starting with scraping.\r\n\r\nAcceptance Criteria: The user can scrape the intranet for m21. - Confluence documentation is updated in on different methods -Manual tests were added: manual tests in sagemaker Assumptions: Scraping is feasible with at least one method Notes: Context on existing MCP work can assist with finding a solution and determining feasibility to scrape the VA intranet.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Stefan Znam",
+      "name": "Stefan Znam",
+      "email": "Stefan.Znam@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER78776&avatarId=53952"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-06T09:44:37.000-0400",
+    "updated": "2025-10-17T09:22:43.000-0400"
+  },
+  {
+    "id": "4983345",
+    "key": "BIP-28290",
+    "summary": "1.1 Provide adhoc support to Gen Ann team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the Generative Annotations team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from Generative Annotations requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-07T11:01:16.000-0400",
+    "updated": "2025-10-17T15:57:21.000-0400"
+  },
+  {
+    "id": "4991559",
+    "key": "BIP-28304",
+    "summary": "Complete testing on lambda deployment pipeline for container based deployments",
+    "description": "Value Statement: As a MLOps Engineer who deploys lambda functions for tenants, I need the ability to complete testing on the Jenkins lambda deployment pipeline so that lambdas can be deployed via .zip or container based deployments.\r\n\r\nA/C: When a user triggers the jenkins lambda deployment pipeline, the user has the ability to deploy via containers instead of just .zip based deployments\r\nfully tested for container based deployments\r\nExisting features updated to work smoothly w/ IaC lambda provisioning\r\n-Separate pipelines able to be spawned for each lambda similar to the image builder pipeline-\u00a0will be handled in Harness templates, this is just to make sure we have everything in Jenkins as a fallback",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-10T11:56:20.000-0400",
+    "updated": "2025-10-17T13:01:20.000-0400"
+  },
+  {
+    "id": "5004192",
+    "key": "BIP-28488",
+    "summary": "TERA testing the cool-down period for the prototype TERA NRT endpoint in preprod",
+    "description": "Value statement: \"As a MLOps engineer I want to better understand the cool down time observed when trying to query a single veteran in preprod using the prototype endpoint\"\r\nAC:\r\nA list of the testing times and latency periods observed while querying a single veteran attached as a comment to the ticket.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "BIPAI_Tenant",
+      "FY26Q1",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-10-17T13:56:26.000-0400",
+    "updated": "2025-10-17T15:15:47.000-0400"
+  },
+  {
+    "id": "5004944",
+    "key": "BIP-28498",
+    "summary": "1.1 - Bi-Weekly Deliverables",
+    "description": "Value Statement: As a team lead, I need to produce biweekly reports to satisfy VA requirements and ensure communication on team updates.\r\n\r\nWorking with other leads, we will ensure these reports are submitted by the expected due dates.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Erik Holmberg",
+      "name": "Erik Holmberg",
+      "email": "Erik.Holmberg@va.gov",
+      "avatar_url": "https://www.gravatar.com/avatar/032f1bba74b4115d15e450cef8665f24?d=mm&s=48"
+    },
+    "reporter": {
+      "display_name": "Philip Buys",
+      "name": "Philip Buys",
+      "email": "Philip.Buys@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10335"
+    },
+    "labels": [
+      "FY26Q1",
+      "MLOps_Eng"
+    ],
+    "created": "2025-10-17T16:25:10.000-0400",
+    "updated": "2025-10-17T16:25:48.000-0400"
+  }
+]

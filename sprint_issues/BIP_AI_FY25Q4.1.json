@@ -1,0 +1,2077 @@
+[
+  {
+    "id": "4694671",
+    "key": "BIP-25880",
+    "summary": "Update Screen Scraper with AI and Puppeteer to Collect Pricing Data Since Major Changes to the Bedrock Pricing Dynamic HTML",
+    "description": "Value Statement\r\n * As a ML Engineer who calculates model invocation costs per 1000 input/output tokens from the Bedrock pricing web page, I need the ability to track Bedrock invocation costs from real-time/current model token pricing data so that I get accurate cost tracking and reporting to discern if users are over budget.\r\n\r\nAcceptance Criteria\r\n * Develop and deploy a container running Node.js and Puppeteer to filter the dynamic HTML on 'AWS GovCloud'\r\n * Scrape the pricing data into the schema:\r\n\r\n{code:java}\r\n{\r\n\u00a0 \u00a0 \"model_family\": \"Anthropic\",\r\n\u00a0 \u00a0 \"model_name\": \"Claude Sonnet 4\",\r\n\u00a0 \u00a0 \"price_per_1000_input_tokens\": 0.003,\r\n\u00a0 \u00a0 \"price_per_1000_output_tokens\": 0.015\r\n\u00a0 }{code}\r\n * Version controlled pricing and model ID data is inserted into the PostgreSQL database from the Python API.\r\n * Documentation is updated here: Comments in Python code and high-level overview in README markdown document in the Git repository.\r\n * Automated or manual tests were added here: Automated integration tests.\r\n\r\nAssumptions\r\nNone\r\n\r\nDependencies\r\n * None\r\n\r\nNotes\r\n * Per our conversations with the client, the following information may be useful: The tenants will start using Bedrock model families other than Anthropic, including but limited to Meta Llama models.\r\n\r\nOut of Scope\r\nN/A",
+    "status": {
+      "name": "Backlog",
+      "category": "To Do",
+      "color": "default"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "John Bonfardeci",
+      "name": "John Bonfardeci",
+      "email": "JOHN.BONFARDECI@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER71651&avatarId=53504"
+    },
+    "reporter": {
+      "display_name": "John Bonfardeci",
+      "name": "John Bonfardeci",
+      "email": "JOHN.BONFARDECI@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER71651&avatarId=53504"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-24T17:06:47.000-0400",
+    "updated": "2025-07-25T16:59:25.000-0400"
+  },
+  {
+    "id": "4704612",
+    "key": "BIP-26005",
+    "summary": "Facilitate meeting with Playwright users to increase understanding of the requirements",
+    "description": "As a MLE, I want to set up a meeting with Playwright users to get a better idea of the requirements\r\n\r\nAC: Meeting set up and documentation created regarding Playwright uses and possible MCP avenues",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:14.000-0400",
+    "updated": "2025-07-10T17:26:50.000-0400"
+  },
+  {
+    "id": "4704614",
+    "key": "BIP-26007",
+    "summary": "define instructions for enabling Playwright MCP",
+    "description": "As a MLE I want to define instructions for enabling the Playwright MCP\r\n\r\nAC:\r\n\r\nCreate documentation on how a playwright user would enable the MCP locally to connect to Copilot",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:16.000-0400",
+    "updated": "2025-07-11T16:21:22.000-0400"
+  },
+  {
+    "id": "4704615",
+    "key": "BIP-26008",
+    "summary": "Obtain access to Figma to begin investigating and developing Model Context Protocol (MCP) integrations",
+    "description": "As a MLE, I want to get access to Figma so I can begin investigating and developing Model Context Protocol (MCP) integrations for it.\r\n\r\nAC:\r\n\r\nAble to log in to Figma using SSO or designated credentials",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:17.000-0400",
+    "updated": "2025-07-11T16:33:17.000-0400"
+  },
+  {
+    "id": "4704616",
+    "key": "BIP-26009",
+    "summary": "research possible mcps for Figma to identify and evaluate opportunities for integration",
+    "description": "As a MLE, I want to reasearch possible MCPs for Figma so I can identify opportunities for integration and evaluate their feasibility.\r\n\r\nAC:\r\n\r\nSummary of existing Figma APIs, plugins, or integration points that could support MCP development.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "James Plager",
+      "name": "James Plager",
+      "email": "James.Plager@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77325&avatarId=54243"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:18.000-0400",
+    "updated": "2025-07-11T16:33:31.000-0400"
+  },
+  {
+    "id": "4704617",
+    "key": "BIP-26010",
+    "summary": "Research microsoft playwright mcp",
+    "description": "As a MLE I want to research the Playwright MCP\r\n\r\nAC:\r\n\r\nCreate documentation existing implementation of Playwright MCP, use cases, limitations",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Anthony Tran",
+      "name": "Anthony Tran",
+      "email": "Anthony.Tran7@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77225&avatarId=54007"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:19.000-0400",
+    "updated": "2025-07-11T16:20:38.000-0400"
+  },
+  {
+    "id": "4704618",
+    "key": "BIP-26011",
+    "summary": "Facilitate meeting with UX designers to better understand Figma MCP requirements",
+    "description": "As a MLE, I want to set up a meeting with UX Designers to get a better idea of the Figma MCP requirements\r\n\r\nAC:\r\n\r\nMeeting set up and documentation created regarding possible MCP avenues",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:19.000-0400",
+    "updated": "2025-07-10T17:26:52.000-0400"
+  },
+  {
+    "id": "4704619",
+    "key": "BIP-26012",
+    "summary": "Create ARIA and RAF Confluence Documentation Page so that users can easily understand and reference the system",
+    "description": "Create ARIA and RAF Confluence Documentation Page Value Statement As a MLE who creates documentation, I need the ability to ensure communication about ARIA is well documented and supported with architectures and design plans so that users can easily understand and reference the system.\r\n\r\nAcceptance Criteria\r\n * When a user wants to learn about ARIA or RAF, they can study the architecture for better understanding.\r\n * - Documentation is created and updated with proper architectures, design, and plan in Confluence.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:20.000-0400",
+    "updated": "2025-10-02T12:17:23.000-0400"
+  },
+  {
+    "id": "4704620",
+    "key": "BIP-26013",
+    "summary": "Create data pipeline to refresh github file in s3",
+    "description": "As an MLE I want to create a data pipeline that will take the files from the GitHub repo for the BIP platform and refresh it into the knowledge base\r\n\r\nAC:\r\n\r\nA SageMaker pipeline to pull the files from GitHub. The pipeline will then put the files into the s3 knowledge base and resync the knowledge base\r\n\r\n****\r\n # grab the github files and upload to the s3 bucket\r\n # sync the bedrock knowledge base so the new files can be used\r\n\r\n\u00a0\r\n\r\nGithub repo:\r\n\r\n[https://github.com/department-of-veterans-affairs/bip-platform-docs/tree/master/docs]\r\n\r\n\u00a0\r\n\r\ns3 bucket:\r\n\r\ns3://project-bip-ai-dev-usgw1-core/bedrock/bippy/knowledgebase/\r\n\r\n\u00a0\r\n\r\nKnowledge base id: RPZNY9J6XY\r\n\r\n\u00a0\r\n * duplicate files will be overwritten.\r\n * This process only copy .md files\r\n\r\n\u00a0\r\n\r\n\u00a0\r\n\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Mehdi Zare",
+      "name": "Mehdi Zare",
+      "email": "Mehdi.Zare@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10349"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:21.000-0400",
+    "updated": "2025-07-07T20:29:47.000-0400"
+  },
+  {
+    "id": "4704621",
+    "key": "BIP-26014",
+    "summary": "Document how role-based access will work for ARIA",
+    "description": "As a MLE I want to finalize and document the process of how we will use user roles in ARIA\r\n\r\nAC:\r\n\r\nMeeting and document set for how we will design ARIA interaction workflow\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:22.000-0400",
+    "updated": "2025-06-30T14:09:11.000-0400"
+  },
+  {
+    "id": "4704622",
+    "key": "BIP-26015",
+    "summary": "Explore LangChain and DSPy with any difference in conversation history capabilities",
+    "description": "As a MLE I want to choose the best library to fill in the gaps Bedrock has\r\n\r\nAC: Explore both LangChain and DSPy to find which best suits the teams needs Document sent to leads for final decision",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jared Ross",
+      "name": "Jared Ross",
+      "email": "Jared.Ross@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:23.000-0400",
+    "updated": "2025-07-11T14:55:45.000-0400"
+  },
+  {
+    "id": "4704623",
+    "key": "BIP-26016",
+    "summary": "Ensure LCC is available and functional in all domains in preprod",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who uses SageMaker Studio, I need the Lifecycle Configuration (LCC) to be available and working in my preprod domain so that my environment is set up correctly and consistently every time I launch Studio.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user launches SageMaker Studio in any preprod domain, the LCC is attached and functions as expected. The environment is configured automatically according to the LCC without manual intervention. Manual validation: Confirm LCC presence and correct environment setup in all preprod domains.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:23.000-0400",
+    "updated": "2025-07-11T16:14:26.000-0400"
+  },
+  {
+    "id": "4704624",
+    "key": "BIP-26017",
+    "summary": "Ensure LCC is available and functional in all domains in dev to ensure environment consistency",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who uses SageMaker Studio, I need the Lifecycle Configuration (LCC) to be available and working in my dev domain so that my environment is set up correctly and consistently every time I launch Studio.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user launches SageMaker Studio in any dev domain, the LCC is attached and functions as expected. The environment is configured automatically according to the LCC without manual intervention. Manual validation: Confirm LCC presence and correct environment setup in all dev domains.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jee Vang",
+      "name": "Jee Vang",
+      "email": "Jee.Vang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER63239&avatarId=50218"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:24.000-0400",
+    "updated": "2025-07-11T14:27:06.000-0400"
+  },
+  {
+    "id": "4704625",
+    "key": "BIP-26018",
+    "summary": "Determine automated agent promotion strategy to increase consistency, efficiency, and reduce errors in releases",
+    "description": "Value Statement As a BIP AI MLOps Engineer who manages code promotion for tenants, I need the ability to define and document an automated strategy for promoting AWS Bedrock agent code from dev to preprod so that releases are consistent, efficient, and less error-prone.\r\n\r\nAcceptance Criteria When a user reviews the documentation, there is a clear strategy for automated promotion of AWS Bedrock agent code from dev to preprod. The strategy includes recommended tools, workflows, and any prerequisites.\r\n\r\nManual validation: Confirm the strategy is documented and reviewed by the team.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Saumil Dave",
+      "name": "Saumil Dave",
+      "email": "Saumil.Dave@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57884&avatarId=50306"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:25.000-0400",
+    "updated": "2025-07-09T15:05:06.000-0400"
+  },
+  {
+    "id": "4704628",
+    "key": "BIP-26021",
+    "summary": "identify documentation in code that can be improved and fix it",
+    "description": "Value Statement As a BIP AI MLOps Engineer who maintains platform code, I need to review and enhance in-code documentation in key repositories so that the codebase is easier to understand and maintain for all contributors.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user reviews the code in {-}bip-ai-kit{-}, tenant resources, or bip mlops template, in-code documentation (comments, docstrings) is clear, accurate, and helpful. Areas with missing or unclear documentation are identified and improved. Functionality that will validate that this story is complete: Manual review confirms in-code documentation is improved and up to date in all three repos.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:28.000-0400",
+    "updated": "2025-07-11T16:55:01.000-0400"
+  },
+  {
+    "id": "4704630",
+    "key": "BIP-26023",
+    "summary": "Clean up stale branches in bip-ai-kit, tenant resources, mlops template repos so that the repositories remain organized and easy to maintain",
+    "description": "Value Statement\r\n\r\nAs a BIP AI MLOps Engineer who manages platform repositories, I need to identify and remove stale branches in key repos so that the repositories remain organized and easy to maintain.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user reviews the repos, stale or unused branches in bip-ai-kit, tenant resources, and mlops template are identified and deleted as appropriate. No unnecessary or outdated branches remain in these repositories. Functionality that will validate that this story is complete: Manual review confirms stale branches have been cleaned up.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Seth Hill",
+      "name": "Seth Hill",
+      "email": "Seth.Hill1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER77243&avatarId=53910"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:30.000-0400",
+    "updated": "2025-07-11T16:33:26.000-0400"
+  },
+  {
+    "id": "4704632",
+    "key": "BIP-26025",
+    "summary": "Update READMEs in relevant repos to ensure clear and relevant documentation",
+    "description": "Title\r\n\r\nUpdate READMEs in bip-ai-kit, tenant resources, and bip mlops template repos for clear and up-to-date documentation Value Statement As a BIP AI MLOps Engineer who maintains platform resources, I need the documentation in key repositories to be clear, intuitive, and current so that users can easily understand and use the resources without confusion.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user reviews the README in bip-ai-kit, tenant resources, or bip mlops template, the documentation is clear, accurate, and up to date. Outdated or unclear information is revised or removed. Functionality that will validate that this story is complete: Manual review confirms all README files are clear, intuitive, and reflect the latest platform standards.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jee Vang",
+      "name": "Jee Vang",
+      "email": "Jee.Vang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER63239&avatarId=50218"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:34.000-0400",
+    "updated": "2025-07-10T12:34:52.000-0400"
+  },
+  {
+    "id": "4704633",
+    "key": "BIP-26026",
+    "summary": "Find and remove mlmats references in relevant repos so that terminology is consistent",
+    "description": "Title: Remove mlmats references from BIP AI repos for consistency Value Statement\r\n\r\nAs a BIP AI MLOps Engineer who maintains platform code and documentation, I need the ability to find and remove all references to \"mlmats\" in BIP AI repositories so that terminology is consistent across all code and documentation.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user searches the repos, all instances of \"mlmats\" are identified and replaced with \"BIP AI\" or the appropriate current term. No outdated \"mlmats\" references remain in code, documentation, or configuration files. Functionality that will validate that this story is complete: Manual review or automated search confirms all references have been updated for consistency.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jee Vang",
+      "name": "Jee Vang",
+      "email": "Jee.Vang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER63239&avatarId=50218"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:35.000-0400",
+    "updated": "2025-07-11T10:45:39.000-0400"
+  },
+  {
+    "id": "4704635",
+    "key": "BIP-26028",
+    "summary": "Testing (pytests) audit on relevant repos to identify areas needing additional automated tests and improved code reliability",
+    "description": "\u00a0Value Statement As a BIP AI MLOps Engineer who maintains platform code, I need the ability to review existing pytest coverage in key repositories so that I can identify areas needing additional automated tests and improve code reliability.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user completes the audit, they have a summary of current pytest coverage and identified gaps in the mlkit, tenant resources, and mlops template repositories. Recommendations for additional tests are documented and shared with the team. Manual validation: Review audit findings and confirm recommendations are actionable.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:37.000-0400",
+    "updated": "2025-07-10T23:12:00.000-0400"
+  },
+  {
+    "id": "4704636",
+    "key": "BIP-26029",
+    "summary": "Verify LCC works in Jupterlab shared spaces so that the LCC can be used in a shared space",
+    "description": "Value Statement: As a BIP AI team member who wants to validate that the LCC is working in jupyter lab shared spaces, I need to test that it is working so that the LCC can be used in a Shared space\r\n\r\nAC:\r\n * Test that the LCC is able to be used in a jupyter shared space.\r\n * - Test in all three stages.\r\n\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Mark Zhang",
+      "name": "Mark Zhang",
+      "email": "Mark.Zhang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10338"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:37.000-0400",
+    "updated": "2025-07-11T15:45:38.000-0400"
+  },
+  {
+    "id": "4704638",
+    "key": "BIP-26030",
+    "summary": "Creates and attaches a LCC to SM Editor to enable the application for development on BIP AI",
+    "description": "\u00a0Value Statement\r\n\r\nAs a BIP AI Tenant who uses the SageMaker Studio code editor, I need the environment to be configured seamlessly through updated Lifecycle Configuration (LCC) so that I can start working efficiently without manual setup or troubleshooting. As well as investigating Editor extensions.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user launches the SageMaker Studio code editor, the updated LCC is automatically applied for a ready-to-use environment. The LCC changes address issues or improvements identified in previous investigations. Documentation is updated here: [link to LCC or environment setup documentation] Manual validation: Confirm the updated LCC is applied and the environment is configured as expected for tenants.\r\n\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "John Bonfardeci",
+      "name": "John Bonfardeci",
+      "email": "JOHN.BONFARDECI@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER71651&avatarId=53504"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:38.000-0400",
+    "updated": "2025-07-10T16:13:14.000-0400"
+  },
+  {
+    "id": "4704639",
+    "key": "BIP-26031",
+    "summary": "Create Prompt Library for AI-Assisted Test Case Generation to quickly generate cases for code using GitHub Copilot",
+    "description": "As a developer working on BIP AI, I need to create a reusable prompt library for test generation So that I can quickly generate accurate test cases for my code using GitHub Copilot or any integrated LLM Without manually crafting prompts each time.\r\n\r\nAcceptance Criteria: When a developer opens the testing repository, they can find a prompt-library/folder containing multiple tested prompt templates.\r\n\r\nEach prompt template includes: A short description of its intended use An example snippet of code to pair with the prompt Guidance on how to paste and use it with GitHub Copilot The prompt library includes templates for: Unit testing Python functions API endpoint testing with pytest Edge case generation A README.md in the prompt library explains how to use the prompts, where to paste them, and which tools they\u2019re optimized for.\r\n\r\nImpact Statement: Enables all tenants and engineers on BIP AI to accelerate test development Maintains quality and improves onboarding by providing standard prompt templates ready for AI-assisted workflows",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Harmit Singh",
+      "name": "Harmit Singh",
+      "email": "Harmit.Singh@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57967&avatarId=50500"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:39.000-0400",
+    "updated": "2025-07-14T09:30:13.000-0400"
+  },
+  {
+    "id": "4704641",
+    "key": "BIP-26033",
+    "summary": "Detach PVC creation from mlflow chart to ensure immutable storage outside of helm chart",
+    "description": "As a tenant of BIP-AI, I want my MLFlow instance to have immutable storage via a PVC that is not part of the helm chart so it remains if the chart is uninstalled.\r\n\r\n- When we deploy MLFlow for tenants, then the PVC should be created/managed by Crossplane and detached from the helm chart so that if the chart has to be replaced/uninstalled the storage remains which keeps the MLFlow instances ephemeral without losing storage.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:41.000-0400",
+    "updated": "2025-07-02T09:29:01.000-0400"
+  },
+  {
+    "id": "4704642",
+    "key": "BIP-26034",
+    "summary": "Prototype using Crossplane Grafana provider in local environment to allow dashboards to be deployed using IaC and Automation",
+    "description": "As an infra engineer I need to research and protype using the Grafana crossplane provider , so that dashboards can be deployed using IaC and Automation\r\n\r\nA/C:\r\n\r\n- Setup a local instance of grafana\r\n\r\n- Deploy the Grafana crossplane provider https://marketplace.upbound.io/providers/grafana/provider-grafana/v0.30.0 - Use the grafana provider deploy an dashboard to your local grafana instance\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Youssef El Alamy",
+      "name": "Youssef El Alamy",
+      "email": "Youssef.Elalamy@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10350"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:42.000-0400",
+    "updated": "2025-07-11T13:32:52.000-0400"
+  },
+  {
+    "id": "4704643",
+    "key": "BIP-26035",
+    "summary": "Configure JupyterLabApp / CodeEditor autoshutdown in sagemaker-domain composition to enhance cost saving and resource utilization",
+    "description": "As a tenant of BIP-AI, I need my JupyterLab and CodeEditor apps to automatically shutdown when idle for too long to save on costs.\r\n\r\nA/C:\r\n * When a Jupyter Lab or CodeEditor app is left idle for 120 minutes, then it should automatically shutdown.\r\n * - When we need to manage the autoshutdown and idle configuration for JupyterLab Apps and CodeEditor then it should be done via IaC. This should be part of the default Sagemaker Domain configuration in the XSagemakerDomain composition so it applies to all domains. The parameter should be adjustable via the claim, but default to 120 minutes.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:42.000-0400",
+    "updated": "2025-07-07T14:39:42.000-0400"
+  },
+  {
+    "id": "4704644",
+    "key": "BIP-26036",
+    "summary": "Research IaC Providers for Bedrock (Crossplane/Terraform) to support self-service Agents and Knowledge Bases",
+    "description": "As a tenant of BIP-AI, I want to be able to provision Bedrock Agents and Knowledge Bases.\r\n * When tenants want to provision Bedrock Agents and KBs then we should have a self-service method which requires the use of IaC. We need to research the available providers for Crossplane and/or Terraform and test methods for deploying these resources.\r\n * - When we decide on the way forward, then we should have a plan documented and possible alternatives like API calls/boto3 in Confluence as an ADR.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:43.000-0400",
+    "updated": "2025-07-17T14:14:27.000-0400"
+  },
+  {
+    "id": "4704645",
+    "key": "BIP-26037",
+    "summary": "Detach values for BIP-AI claims to allow values updates without a full deployment release",
+    "description": "As the BIP-AI team, I want to be able to deploy Crossplane claims for our application and domain resources with detached values from bip-ai-infrastructure to allow for easier updates without having to create releases.\r\n\r\n- When our team deploys Crossplane claims then a helm template should exist in the bip-ai-infrastructure repository under the compositions or gateway app (depending on use-case) and allow for values to be detached coming from the bip-ai-infrastructure-values repository",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:44.000-0400",
+    "updated": "2025-07-09T13:33:12.000-0400"
+  },
+  {
+    "id": "4704646",
+    "key": "BIP-26038",
+    "summary": "Create bip-ai tenants app to support migration from mlmats claims app",
+    "description": "As a tenant of BIP-AI, I want my Crossplane claims to be deployed via the BIP-AI tenant app until support exists for us to deploy our own claims to AI resources.\r\n - When a tenants claim is deployed, then it should be deployed via the BIP-AI tenants app in -tenant- tooling ArgoCD under the bip-ai AppSet.\r\n - To support this effort, we need to create the bip-ai-claims app\r\n - This ticket has a follow-on to prototype and develop a migration script that handles moving claims safely.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:45.000-0400",
+    "updated": "2025-07-08T09:35:16.000-0400"
+  },
+  {
+    "id": "4704647",
+    "key": "BIP-26039",
+    "summary": "Have initial brainstorm session to discuss python development integration ideas",
+    "description": "Value Statement As a cloud infra engineer who managed python package repo artifactory, I need the ability to sync up with other BIP teams so that we can have requirement, best practice and future tasks identified and documented.\r\n\r\nAcceptance Criteria\r\n\r\n1. When the cloud infra engineer brainstorm with other BIP teams for how to use python package repo artifactory in python development, requirement, best practice and future tasks are identified and documented.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Qiao Chen",
+      "name": "Qiao Chen",
+      "email": "Qiao.Chen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER60431&avatarId=43618"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:46.000-0400",
+    "updated": "2025-07-09T09:18:10.000-0400"
+  },
+  {
+    "id": "4704650",
+    "key": "BIP-26042",
+    "summary": "Support WASA assessment to obtain test accounts",
+    "description": "Value Statement As a cloud infra engineer who prepares test environment for WASA assessment, I need the ability to validate new test service accounts so that these test accounts are ready to be used by WASA pen testing team.\r\n\r\nAcceptance Criteria\r\n\r\n1. When the cloud infra engineers receives test accounts detail, the cloud infra engineer has the ability to create BOSD ticket to request accounts added to proper BIP groups.\r\n\r\n2. When BIP groups are added to the test accounts, the cloud infra engineer can use them to login BIP AI gateway app.\r\n\r\n\u00a0\r\n\r\nAssumption We'll get accounts detail next sprint from request [https://jira.devops.va.gov/servicedesk/customer/portal/89/ICMO-2421]\r\n\r\nNote We'll need to create a bip-ai-blue domain for internal testing (also for this WASA)",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Qiao Chen",
+      "name": "Qiao Chen",
+      "email": "Qiao.Chen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER60431&avatarId=43618"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:48.000-0400",
+    "updated": "2025-07-10T12:57:22.000-0400"
+  },
+  {
+    "id": "4704653",
+    "key": "BIP-26045",
+    "summary": "Build Domain Access Wizard to consolidate support efforts",
+    "description": "As a BIP AI Gateway user, I want to be guided on how to gain access to a domain, so that I can request access without reaching out to BIP-AI support.\r\n\r\nAcceptance Criteria\r\n * When a user logs into the gateway and doesn't see any domains, there will be new UI text saying \"Don't see a domain? Click here for help\"\r\n * - Clicking this text will bring up a wizard to guide users to BOSD to get the correct groups\r\n * - If a domain does appear (which means they have the correct role) but the user doesn't have a user profile, the connect button will become a \"Request Access\" button\r\n * - Clicking the \"Request Access\" button will pull up a wizard to submit a BIP-AI support ticket\r\n\r\n\u00a0",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Kurt Stohrer",
+      "name": "Kurt Stohrer",
+      "email": "Kurt.Stohrer@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER13239&avatarId=50210"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:51.000-0400",
+    "updated": "2025-07-11T16:14:58.000-0400"
+  },
+  {
+    "id": "4704654",
+    "key": "BIP-26046",
+    "summary": "Setup configurations and access in innovation sbx",
+    "description": "As a MLE I need to setup the innovation sandbox for rapid development like LCCs. Work with lead or Infra to set permissions",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:52.000-0400",
+    "updated": "2025-07-11T14:29:58.000-0400"
+  },
+  {
+    "id": "4704655",
+    "key": "BIP-26047",
+    "summary": "Document custom model hosting architecture in Bedrock",
+    "description": "As a MLE I want to know how to host custom models\r\n\r\nAC: Creation of documentation that would show how to host a custom model, and any difference in tools needed",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:52.000-0400",
+    "updated": "2025-07-10T17:26:55.000-0400"
+  },
+  {
+    "id": "4704656",
+    "key": "BIP-26048",
+    "summary": "Provide adhoc support to Gen Ann team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the Generative Annotations team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from Generative Annotations requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:53.000-0400",
+    "updated": "2025-10-07T11:01:17.000-0400"
+  },
+  {
+    "id": "4704657",
+    "key": "BIP-26049",
+    "summary": "Provide adhoc support to SCC team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the SRI team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from SRI requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:54.000-0400",
+    "updated": "2025-09-09T14:05:01.000-0400"
+  },
+  {
+    "id": "4704658",
+    "key": "BIP-26050",
+    "summary": "Enabling Access - Deploy SCC KB to preprod to validate knowledge retrieval and integration before production use",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who manages SCC applications, I need the ability to deploy an AWS Bedrock Knowledge Base in the preprod environment so that I can validate knowledge retrieval and integration before production use.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user initiates deployment, an AWS Bedrock Knowledge Base for SCC is created and available in the preprod environment. The knowledge base is accessible for testing by the tenant team. Documentation is updated here: [link to deployment or KB documentation] Manual validation: Confirm the knowledge base is present and accessible in preprod via the AWS Bedrock console or API.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:55.000-0400",
+    "updated": "2025-07-10T16:16:14.000-0400"
+  },
+  {
+    "id": "4704659",
+    "key": "BIP-26051",
+    "summary": "Provide adhoc support to TERA team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the TERA team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from TERA requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Julia Young",
+      "name": "Julia Young",
+      "email": "Julia.Young@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10336"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:56.000-0400",
+    "updated": "2025-10-02T11:04:22.000-0400"
+  },
+  {
+    "id": "4704660",
+    "key": "BIP-26052",
+    "summary": "Provide adhoc support to Innovation team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the Innovation team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from Innovation requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:57.000-0400",
+    "updated": "2025-07-11T14:14:59.000-0400"
+  },
+  {
+    "id": "4704661",
+    "key": "BIP-26053",
+    "summary": "Provide adhoc support to Ratings Summary team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the Ratings Summary team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from Ratings Summary requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jee Vang",
+      "name": "Jee Vang",
+      "email": "Jee.Vang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER63239&avatarId=50218"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:58.000-0400",
+    "updated": "2025-07-11T17:10:51.000-0400"
+  },
+  {
+    "id": "4704662",
+    "key": "BIP-26054",
+    "summary": "Provide adhoc support to SPA team to resolve technical issues",
+    "description": "\u00a0Value Statement\r\n\r\nAs a BIP AI Tenant on the SPA team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from SPA requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Saumil Dave",
+      "name": "Saumil Dave",
+      "email": "Saumil.Dave@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER57884&avatarId=50306"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:58.000-0400",
+    "updated": "2025-10-02T10:55:41.000-0400"
+  },
+  {
+    "id": "4704663",
+    "key": "BIP-26055",
+    "summary": "Provide adhoc support to SRI team to resolve technical issues",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant on the SRI team, I need the ability to receive timely support so that I can resolve issues and continue my work without unnecessary delays.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user from SRI requests support, the support team responds and assists as needed. Manual validation: Confirm support requests are tracked and resolved.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Mark Zhang",
+      "name": "Mark Zhang",
+      "email": "Mark.Zhang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10338"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:51:59.000-0400",
+    "updated": "2025-07-11T10:17:50.000-0400"
+  },
+  {
+    "id": "4704664",
+    "key": "BIP-26056",
+    "summary": "Prepare BIP AI intro session",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who is new to the platform, I need the ability to attend an introductory session so that I can understand platform features, workflows, and best practices to accelerate onboarding and effective use.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user attends the internal run-through, the session covers key platform features, workflows, and hands-on examples. The session agenda and materials are prepared and reviewed internally before the actual tenant session. Manual validation: Internal team completes a run-through and confirms readiness for the tenant session.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:00.000-0400",
+    "updated": "2025-07-08T17:53:46.000-0400"
+  },
+  {
+    "id": "4704665",
+    "key": "BIP-26057",
+    "summary": "Deliver BIP AI intro session to accelerate understanding of features and workflows for adoption",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who is onboarding to the platform, I need the ability to attend a finalized intro session during the Tenant Support Forum so that I can gain a clear understanding of platform features and workflows to accelerate my adoption and success.\r\n\r\nAcceptance Criteria\r\n\r\nWhen the Tenant Support Forum is held, the BIP AI intro session is delivered with finalized content and materials. Any final edits or updates to the session materials are completed before delivery. Manual validation: Confirm the session is delivered and materials are shared with attendees.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:01.000-0400",
+    "updated": "2025-07-09T15:47:37.000-0400"
+  },
+  {
+    "id": "4704666",
+    "key": "BIP-26058",
+    "summary": "Add section to solution engineer guide for commonly-faced issues and how to address them to resolve tenant problems more efficiently and consistently",
+    "description": "Value Statement\r\n\r\nAs a BIP AI MLOps Engineer who supports tenant teams, I need the ability to reference and contribute to a guide section on commonly-faced issues and their solutions so that I can resolve tenant problems more efficiently and consistently.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a solution engineer encounters a common issue, they have access to a documented section in the guide with troubleshooting steps and resolutions. The guide is updated to include at least several frequently encountered issues and their solutions. Manual validation: Review the guide to confirm the new section is present and contains relevant content.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:02.000-0400",
+    "updated": "2025-07-11T10:43:30.000-0400"
+  },
+  {
+    "id": "4704667",
+    "key": "BIP-26059",
+    "summary": "Create Confluence Document for GenAnn promotion and deployment processes efficiently and correctly promote and deploy application with minimal confusion or error",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who manages Gen Ann applications, I need the ability to access clear documentation on promotion and deployment processes so that I can efficiently and correctly promote and deploy my application with minimal confusion or errors.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a user accesses the Confluence space, the Gen Ann promotion and deployment process is documented in a dedicated page. The documentation includes step-by-step instructions and any required prerequisites. Manual validation: Review Confluence page to confirm the process is clearly documented.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:03.000-0400",
+    "updated": "2025-09-09T14:35:54.000-0400"
+  },
+  {
+    "id": "4704668",
+    "key": "BIP-26060",
+    "summary": "Provide GenAnn deployment dates to confluence calendar so that team members and stakeholders can easily view and plan around scheduled deployments",
+    "description": "Value Statement: As a BIP AI MLOps Engineer who supports tenant teams like Gen Ann, I need the ability to log upcoming Gen Ann deployment dates in Confluence documentation so that team members and stakeholders can easily view and plan around scheduled deployments.\r\n\r\nAcceptance Criteria:\r\n\r\nWhen a Gen Ann deployment is scheduled, the upcoming deployment date is added to the designated Confluence documentation page. The documentation is updated promptly when new deployment dates are confirmed or changed. Deployment entries include the date and a brief description if available. Documentation is updated here: [link to Confluence page] Manual validation: Review Confluence page to confirm upcoming deployment dates are listed.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:04.000-0400",
+    "updated": "2025-07-11T15:45:10.000-0400"
+  },
+  {
+    "id": "4704669",
+    "key": "BIP-26061",
+    "summary": "Provide SCC deployment dates to confluence calendar so that stakeholders can view and plan around scheduled deployments",
+    "description": "Title Log SCC upcoming deployment dates in Confluence documentation for team awareness Value Statement As a BIP AI MLOps Engineer who supports tenant teams like SCC, I need the ability to log upcoming SCC deployment dates in Confluence documentation so that team members and stakeholders can easily view and plan around scheduled deployments.\r\n\r\nAcceptance Criteria\r\n\r\nWhen an SCC deployment is scheduled, the upcoming deployment date is added to the designated Confluence documentation page. The documentation is updated promptly when new deployment dates are confirmed or changed. Deployment entries include the date and a brief description if available. Manual validation: Review Confluence page to confirm upcoming deployment dates are listed.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T10:52:05.000-0400",
+    "updated": "2025-09-09T14:05:40.000-0400"
+  },
+  {
+    "id": "4705688",
+    "key": "BIP-26077",
+    "summary": "Creation - Deploy SCC KB to preprod so that I can validate knowledge retrieval and integration before production use.",
+    "description": "Value Statement\r\n\r\nAs a BIP AI Tenant who manages SCC applications, I need the ability to deploy an AWS Bedrock Knowledge Base in the preprod environment so that I can validate knowledge retrieval and integration before production use.\r\n\r\nAcceptance Criteria\r\n\r\nWhen a user initiates deployment, an AWS Bedrock Knowledge Base for SCC is created and available in the preprod environment. The knowledge base is accessible for testing by the tenant team. Documentation is updated here: [link to deployment or KB documentation] Manual validation: Confirm the knowledge base is present and accessible in preprod via the AWS Bedrock console or API.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jorge Martinez",
+      "name": "Jorge Martinez",
+      "email": "Jorge.Martinez4@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER70809&avatarId=50702"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:09:11.000-0400",
+    "updated": "2025-07-10T16:18:55.000-0400"
+  },
+  {
+    "id": "4705695",
+    "key": "BIP-26081",
+    "summary": "Modify TERA Jenkins build and deploy pipelines to enable slack alerts on PREPROD",
+    "description": "Initiative:\r\nAC: * Configure Slack alerts for BIP AI stable Jenkins build and deployment pipelines in PREPROD",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jee Vang",
+      "name": "Jee Vang",
+      "email": "Jee.Vang@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER63239&avatarId=50218"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:14:01.000-0400",
+    "updated": "2025-10-02T11:04:31.000-0400"
+  },
+  {
+    "id": "4705805",
+    "key": "BIP-26083",
+    "summary": "Update stage and preprod Jenkins service role to use new IaC IAM roles",
+    "description": "Value Statement As a BIP AI cloud infra engineer who manages Jenkins, I need the ability to update Jenkins service role to use new IaC IAM role so that most updated policies in IAM role is used by Jenkins.\r\n\r\nAcceptance Criteria\r\n\r\n1 When a cloud infra engineer updates stage and preprod Jenkins service role, Jenkins uses the new IaC IAM role to run jobs properly.\r\n\r\n2 The old CFT IAM role is decommissioned.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Qiao Chen",
+      "name": "Qiao Chen",
+      "email": "Qiao.Chen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER60431&avatarId=43618"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:19:00.000-0400",
+    "updated": "2025-07-07T16:59:21.000-0400"
+  },
+  {
+    "id": "4705873",
+    "key": "BIP-26085",
+    "summary": "On-Call, MLE Service Desk Q4.1 A",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "John Bonfardeci",
+      "name": "John Bonfardeci",
+      "email": "JOHN.BONFARDECI@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER71651&avatarId=53504"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:45:36.000-0400",
+    "updated": "2025-09-09T13:54:11.000-0400"
+  },
+  {
+    "id": "4705881",
+    "key": "BIP-26086",
+    "summary": "On-Call, MLE Service Desk Q4.1 B",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Carter Burns",
+      "name": "Carter Burns",
+      "email": "Carter.Burns1@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10351"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:48:16.000-0400",
+    "updated": "2025-09-09T13:54:01.000-0400"
+  },
+  {
+    "id": "4705891",
+    "key": "BIP-26087",
+    "summary": "On-Call, Infra Service Desk Q4.1 A",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Kurt Stohrer",
+      "name": "Kurt Stohrer",
+      "email": "Kurt.Stohrer@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER13239&avatarId=50210"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:51:54.000-0400",
+    "updated": "2025-09-09T13:54:05.000-0400"
+  },
+  {
+    "id": "4705896",
+    "key": "BIP-26088",
+    "summary": "On-Call, Infra Service Desk Q4.1 B",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Odniel Gonzalez Ortiz",
+      "name": "Odniel Gonzalez Ortiz",
+      "email": "Odniel.GonzalezOrtiz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10341"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-06-27T15:52:46.000-0400",
+    "updated": "2025-07-11T16:15:57.000-0400"
+  },
+  {
+    "id": "4715353",
+    "key": "BIP-26146",
+    "summary": "Deploy Release 0.74 to BIP EKS Stage",
+    "description": "A/C: * Complete release in 0.74 per BPS-73663 -\u00a0https://jira.devops.va.gov/browse/BPS-73663\r\n * BPS ticket commented with screenshots and test results for Stage",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-07-01T22:42:26.000-0400",
+    "updated": "2025-07-02T09:27:49.000-0400"
+  },
+  {
+    "id": "4715354",
+    "key": "BIP-26147",
+    "summary": "Deploy Release 0.74 to BIP EKS PreProd",
+    "description": "A/C: * Complete release in 0.74 per BPS-73663 -\u00a0https://jira.devops.va.gov/browse/BPS-73663\r\n * BPS ticket commented with screenshots and test results for PreProd",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-07-01T22:43:59.000-0400",
+    "updated": "2025-07-02T09:28:18.000-0400"
+  },
+  {
+    "id": "4715355",
+    "key": "BIP-26148",
+    "summary": "Deploy Release 0.74 to BIP EKS Prod",
+    "description": "A/C: * Complete release in 0.74 per BPS-73663 -\u00a0https://jira.devops.va.gov/browse/BPS-73663\r\n * BPS ticket commented with screenshots and test results for Prod",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Jason Droz",
+      "name": "Jason Droz",
+      "email": "Jason.Droz@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER47196&avatarId=35001"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "Infra_Cloud",
+      "it_ai"
+    ],
+    "created": "2025-07-01T22:45:04.000-0400",
+    "updated": "2025-07-07T18:19:49.000-0400"
+  },
+  {
+    "id": "4730162",
+    "key": "BIP-26175",
+    "summary": "Add Logging from MLKit to SageMaker Model Lifecycle Notebook to Track Model Events",
+    "description": "*Value Statement:*\r\nAs a BIP AI tenant who develops models in SageMaker, I need the ability to integrate and utilize custom logging from the BIP AI library, MLKit, so that I can monitor and troubleshoot model events effectively across the lifecycle.\r\n\r\n*Acceptance Criteria:*\r\nWhen a user runs any stage of the SageMaker Model Lifecycle notebook (e.g., training, registration, deployment), the user has the ability to capture standardized logs using the BIP AI team's logger from MLKit.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-07T12:52:51.000-0400",
+    "updated": "2025-07-08T17:44:46.000-0400"
+  },
+  {
+    "id": "4730167",
+    "key": "BIP-26176",
+    "summary": "Enable Secure Configuration in SageMaker Model Lifecycle Notebook to Manage Parameters and Secrets",
+    "description": "*Value Statement:*\r\nAs a BIP AI tenant who runs workflows in SageMaker, I need the ability to securely retrieve configuration parameters and secrets from managed services so that I can avoid hardcoding values and protect sensitive information during model development and deployment.\r\n\r\n*Acceptance Criteria:*\r\nWhen a user runs any part of the SageMaker Model Lifecycle notebook, the user has the ability to retrieve parameters from AWS Systems Management Parameter Store and secrets from AWS Secrets Manager securely.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Lila Zapata",
+      "name": "Lila Zapata",
+      "email": "Lila.Zapata@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER61582&avatarId=44291"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-07T12:53:40.000-0400",
+    "updated": "2025-07-08T17:44:39.000-0400"
+  },
+  {
+    "id": "4731370",
+    "key": "BIP-26180",
+    "summary": "Investigate manual pricing data updates for bedrock costing to provide interim cost tracking solution",
+    "description": "*Description:* As a BIP AI platform team, we need to investigate manual pricing data updates for the bedrock costing application to provide accurate cost tracking for our tenants while we develop a more robust programmatic solution. The current web scraping approach for AWS Bedrock pricing is unreliable due to frequent changes in AWS pricing page formats, causing delays in providing cost data to tenants who depend on this information for budget planning and usage monitoring.\r\n*Value Statement:*\u00a0This interim solution will enable us to quickly provide semi-accurate pricing data to tenants, ensuring business continuity for cost tracking while we invest time in developing a more sustainable long-term pricing solution. This approach reduces development overhead and allows us to maintain service reliability.\r\n*Acceptance Criteria:* * *Given*\u00a0the bedrock costing lambda is invoked,\u00a0*when*\u00a0it processes pricing data,\u00a0*then*\u00a0it should bypass the existing web scraping functionality and use manual pricing data stored in the database\r\n * *Given*\u00a0recent GovCloud pricing data is available from AWS pricing pages,\u00a0*when*\u00a0the database is updated with manual pricing data,\u00a0*then*\u00a0it should contain current pricing for Amazon and Anthropic models filtered for GovCloud regions\r\n * *Given*\u00a0manual pricing data needs to be deployed across environments,\u00a0*when*\u00a0database updates are required,\u00a0*then*\u00a0they should be packaged as SQL scripts located in the\u00a0{{postgres-schema}}\u00a0directory to simplify deployment to upper environments\r\n * *Given*\u00a0the updated lambda code is deployed,\u00a0*when*\u00a0tested in SBX environment,\u00a0*then*\u00a0it should successfully calculate costs using the manual pricing data without attempting web scraping\r\n\r\n*Technical Implementation Notes:* * Update lambda function in\u00a0[lambda|vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-sandbox/workbench/workbench.html]\u00a0to bypass\u00a0[get_price_list()|vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-sandbox/workbench/workbench.html]\u00a0web scraping\r\n * Create new SQL script in\u00a0[postgres-schema|vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-sandbox/workbench/workbench.html]\u00a0for manual pricing data insertion\r\n * Pricing data should be sourced from AWS pricing pages with GovCloud filter applied for Amazon and Anthropic models\r\n * Maintain existing database schema and cost calculation logic",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "John Bonfardeci",
+      "name": "John Bonfardeci",
+      "email": "JOHN.BONFARDECI@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?ownerId=JIRAUSER71651&avatarId=53504"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-07T15:42:31.000-0400",
+    "updated": "2025-07-11T17:00:04.000-0400"
+  },
+  {
+    "id": "4737976",
+    "key": "BIP-26238",
+    "summary": "Request AWS Nova Models in Prod from VAEC",
+    "description": "Value Statement:\r\n\r\nAs a tenant I need to be able to access Nova models for my GenAI solutions in Production.\r\n\r\nAcceptance Criteria:\r\n- Create a VAEC ticket to request the rest of the Nova models to be added to the prod AWS account",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Robert Ha",
+      "name": "Robert Ha",
+      "email": "Robert.Ha@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10334"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-09T15:05:05.000-0400",
+    "updated": "2025-10-02T11:54:20.000-0400"
+  },
+  {
+    "id": "4737980",
+    "key": "BIP-26239",
+    "summary": "Request Anthropic Claude 3.7 in Dev/Stage from VAEC",
+    "description": "Value Statement:\r\n\r\nAs a tenant I need to be able to access Claude 3.7 model for my GenAI solutions in dev and stage.\r\n\r\nAcceptance Criteria:\r\n- Create a VAEC ticket to request Claude 3.7\u00a0 to be added to the dev and stage AWS accounts",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Robert Ha",
+      "name": "Robert Ha",
+      "email": "Robert.Ha@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10334"
+    },
+    "reporter": {
+      "display_name": "Matthew Pettersen",
+      "name": "Matthew Pettersen",
+      "email": "Matthew.Pettersen@va.gov",
+      "avatar_url": "https://jira.devops.va.gov/secure/useravatar?avatarId=10345"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-09T15:06:13.000-0400",
+    "updated": "2025-07-11T08:06:23.000-0400"
+  },
+  {
+    "id": "4743361",
+    "key": "BIP-26315",
+    "summary": "Prepare Deck and Talk Track for BIP AI Initiatives Presentation",
+    "description": "For Tushar Dode.",
+    "status": {
+      "name": "Done",
+      "category": "Done",
+      "color": "success"
+    },
+    "priority": {
+      "name": "None"
+    },
+    "assignee": {
+      "display_name": "Erik Holmberg",
+      "name": "Erik Holmberg",
+      "email": "Erik.Holmberg@va.gov",
+      "avatar_url": "https://www.gravatar.com/avatar/032f1bba74b4115d15e450cef8665f24?d=mm&s=48"
+    },
+    "reporter": {
+      "display_name": "Erik Holmberg",
+      "name": "Erik Holmberg",
+      "email": "Erik.Holmberg@va.gov",
+      "avatar_url": "https://www.gravatar.com/avatar/032f1bba74b4115d15e450cef8665f24?d=mm&s=48"
+    },
+    "labels": [
+      "FY25Q4",
+      "MLOps_Eng",
+      "it_ai"
+    ],
+    "created": "2025-07-11T12:08:19.000-0400",
+    "updated": "2025-07-11T17:31:47.000-0400"
+  }
+]
