@@ -139,7 +139,9 @@ def safe_mean(data):
 #   without active work, then batch-moved to Done together on the same day by
 #   the same person.  Not representative of normal work items.
 # BIP-26294 (21d IP across 2 stints with backlog re-entry): similar pattern.
-EXCLUDED_KEYS = {"BIP-25393", "BIP-25703", "BIP-26294"}
+# BIP-26538, BIP-27314, BIP-28723: manually excluded by user.
+EXCLUDED_KEYS = {"BIP-25393", "BIP-25703", "BIP-26294",
+                 "BIP-26538", "BIP-27314", "BIP-28723"}
 
 # ── Load data ────────────────────────────────────────────────────────────────
 with open(ISSUE_DATA) as f:

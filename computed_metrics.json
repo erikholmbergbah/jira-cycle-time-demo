@@ -1,18 +1,18 @@
 {
   "overall": {
-    "sample_size": 97,
-    "with_cycle": 94,
+    "sample_size": 94,
+    "with_cycle": 91,
     "skipped": 3,
-    "cycle_median": 5.01,
-    "cycle_mean": 5.29,
-    "cycle_p85": 8.2,
-    "cycle_p95": 9.15,
+    "cycle_median": 5.0,
+    "cycle_mean": 4.91,
+    "cycle_p85": 8.17,
+    "cycle_p95": 9.0,
     "cycle_min": 0.01,
-    "cycle_max": 18.04,
-    "lead_median": 9.25,
-    "lead_mean": 8.59,
-    "active_median": 7.07,
-    "active_mean": 6.63
+    "cycle_max": 9.93,
+    "lead_median": 9.19,
+    "lead_mean": 8.25,
+    "active_median": 7.02,
+    "active_mean": 6.29
   },
   "sprint_order": [
     "BIP AI FY25Q4.1",
@@ -71,15 +71,15 @@
       "avg_blocked_days": 0.0
     },
     "BIP AI FY25Q4.4": {
-      "sample_count": 6,
-      "with_cycle": 6,
+      "sample_count": 5,
+      "with_cycle": 5,
       "throughput": 69,
-      "cycle_median": 4.01,
-      "cycle_mean": 5.71,
-      "cycle_p85": 8.16,
-      "avg_ip_days": 6.31,
+      "cycle_median": 3.86,
+      "cycle_mean": 3.41,
+      "cycle_p85": 4.55,
+      "avg_ip_days": 3.17,
       "avg_test_days": 0.03,
-      "avg_pr_days": 1.4,
+      "avg_pr_days": 1.44,
       "avg_blocked_days": 0.0
     },
     "BIP AI FY25Q4.5": {
@@ -107,15 +107,15 @@
       "avg_blocked_days": 0.0
     },
     "BIP AI FY25Q4.7": {
-      "sample_count": 6,
-      "with_cycle": 6,
+      "sample_count": 5,
+      "with_cycle": 5,
       "throughput": 53,
-      "cycle_median": 6.17,
-      "cycle_mean": 7.08,
-      "cycle_p85": 11.95,
-      "avg_ip_days": 7.56,
-      "avg_test_days": 1.19,
-      "avg_pr_days": 0.66,
+      "cycle_median": 6.11,
+      "cycle_mean": 4.88,
+      "cycle_p85": 7.7,
+      "avg_ip_days": 4.29,
+      "avg_test_days": 1.43,
+      "avg_pr_days": 0.76,
       "avg_blocked_days": 0.0
     },
     "BIP AI FY26Q1.1": {
@@ -155,15 +155,15 @@
       "avg_blocked_days": 0.0
     },
     "BIP AI FY26Q1.4": {
-      "sample_count": 6,
-      "with_cycle": 6,
+      "sample_count": 5,
+      "with_cycle": 5,
       "throughput": 62,
-      "cycle_median": 3.18,
-      "cycle_mean": 4.78,
-      "cycle_p85": 7.54,
+      "cycle_median": 2.23,
+      "cycle_mean": 2.69,
+      "cycle_p85": 4.46,
       "avg_ip_days": 3.25,
-      "avg_test_days": 0.04,
-      "avg_pr_days": 0.33,
+      "avg_test_days": 0.05,
+      "avg_pr_days": 0.39,
       "avg_blocked_days": 0.0
     },
     "BIP AI FY26Q1.5": {
@@ -258,7 +258,7 @@
     },
     {
       "label": "10-20d",
-      "count": 3
+      "count": 0
     },
     {
       "label": "20-30d",
@@ -270,42 +270,18 @@
     }
   ],
   "status_totals": {
-    "In Progress": 459.2,
+    "In Progress": 410.1,
     "In Testing": 74.5,
-    "Peer Review": 89.2,
+    "Peer Review": 87.8,
     "Blocked": 18.8
   },
   "status_pct": {
-    "In Progress": 71.6,
-    "In Testing": 11.6,
-    "Peer Review": 13.9,
-    "Blocked": 2.9
+    "In Progress": 69.4,
+    "In Testing": 12.6,
+    "Peer Review": 14.9,
+    "Blocked": 3.2
   },
   "top_longest": [
-    {
-      "key": "BIP-27314",
-      "sprint": "BIP AI FY25Q4.7",
-      "cycle_days": 18.04,
-      "ip": 23.9,
-      "test": 0.0,
-      "blocked": 0.0
-    },
-    {
-      "key": "BIP-26538",
-      "sprint": "BIP AI FY25Q4.4",
-      "cycle_days": 17.22,
-      "ip": 22.0,
-      "test": 0.0,
-      "blocked": 0.0
-    },
-    {
-      "key": "BIP-28723",
-      "sprint": "BIP AI FY26Q1.4",
-      "cycle_days": 15.27,
-      "ip": 3.25,
-      "test": 0.0,
-      "blocked": 0.0
-    },
     {
       "key": "BIP-27305",
       "sprint": "BIP AI FY25Q4.7",
@@ -361,6 +337,30 @@
       "ip": 7.99,
       "test": 0.0,
       "blocked": 2.96
+    },
+    {
+      "key": "BIP-30281",
+      "sprint": "BIP AI FY26Q2.1",
+      "cycle_days": 8.3,
+      "ip": 9.99,
+      "test": 1.16,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-28199",
+      "sprint": "BIP AI FY26Q1.1",
+      "cycle_days": 8.29,
+      "ip": 3.0,
+      "test": 0.0,
+      "blocked": 0.0
+    },
+    {
+      "key": "BIP-28698",
+      "sprint": "BIP AI FY26Q1.3",
+      "cycle_days": 8.24,
+      "ip": 11.24,
+      "test": 0.0,
+      "blocked": 0.0
     }
   ],
   "top_blocked": [
@@ -396,14 +396,14 @@
     }
   ],
   "insights": [
-    "Across 94 sampled issues, the median cycle time (In Progress &rarr; Done) is <strong>5.01 days</strong>, with a mean of 5.29 days. The 85th percentile is 8.2 days and 95th percentile is 9.15 days.",
-    "Cycle times range from 0.01 to 18.04 days (spread of 18.0 days), indicating significant variability. High variability reduces predictability of delivery commitments.",
+    "Across 91 sampled issues, the median cycle time (In Progress &rarr; Done) is <strong>5.0 days</strong>, with a mean of 4.91 days. The 85th percentile is 8.17 days and 95th percentile is 9.0 days.",
+    "Cycle times range from 0.01 to 9.93 days (spread of 9.9 days), indicating significant variability. High variability reduces predictability of delivery commitments.",
     "<strong>5 issues</strong> spent more than half a day blocked. Among those, the average blocked time was <strong>3.8 days</strong>. Reducing blocked time is one of the highest-leverage improvements.",
     "3 issue(s) went directly from Backlog to Done without entering In Progress (BIP-26741, BIP-28166, BIP-28438). These were excluded from cycle time calculations.",
-    "Cycle times increased over time: the first 4 sprints averaged 4.6-day median vs 5.0 days in the last 4 (~8% increase). Investigate growing complexity or WIP limits.",
+    "Cycle times increased over time: the first 4 sprints averaged 4.6-day median vs 5.0 days in the last 4 (~9% increase). Investigate growing complexity or WIP limits.",
     "Average throughput: first 4 sprints = 67.0 issues/sprint, last 4 sprints = 62.0 issues/sprint.",
     "Flow efficiency (active work / lead time): median <strong>78%</strong>. Lead time includes backlog wait before work starts. Higher efficiency means less waiting. World-class teams target &gt;40%.",
-    "Median lead time (9.25d) exceeds median cycle time (5.01d) by <strong>4.2 days</strong>, meaning issues sit in Backlog for a median of ~4.2 days before work begins."
+    "Median lead time (9.19d) exceeds median cycle time (5.0d) by <strong>4.2 days</strong>, meaning issues sit in Backlog for a median of ~4.2 days before work begins."
   ],
   "all_issues": [
     {
@@ -583,17 +583,6 @@
       "backlog": 0.0
     },
     {
-      "key": "BIP-26538",
-      "sprint": "BIP AI FY25Q4.4",
-      "cycle": 17.22,
-      "lead": 20.98,
-      "ip": 22.0,
-      "test": 0.0,
-      "pr": 1.23,
-      "blocked": 0.0,
-      "backlog": 5.75
-    },
-    {
       "key": "BIP-26781",
       "sprint": "BIP AI FY25Q4.4",
       "cycle": 3.86,
@@ -746,17 +735,6 @@
       "pr": 0.02,
       "blocked": 0.0,
       "backlog": 0.0
-    },
-    {
-      "key": "BIP-27314",
-      "sprint": "BIP AI FY25Q4.7",
-      "cycle": 18.04,
-      "lead": 20.91,
-      "ip": 23.9,
-      "test": 0.0,
-      "pr": 0.14,
-      "blocked": 0.0,
-      "backlog": 4.87
     },
     {
       "key": "BIP-27305",
@@ -1010,17 +988,6 @@
       "pr": 0.94,
       "blocked": 0.0,
       "backlog": 3.05
-    },
-    {
-      "key": "BIP-28723",
-      "sprint": "BIP AI FY26Q1.4",
-      "cycle": 15.27,
-      "lead": 16.32,
-      "ip": 3.25,
-      "test": 0.0,
-      "pr": 0.02,
-      "blocked": 0.0,
-      "backlog": 22.09
     },
     {
       "key": "BIP-28936",
