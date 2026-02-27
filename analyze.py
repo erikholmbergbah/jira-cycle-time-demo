@@ -2,9 +2,9 @@
 """
 Cycle Time Analysis for BIP AI Sprints
 =======================================
-Reads issue_data_all.json (100 stratified-sampled Done issues with real
-status-transition data) and key_to_sprint.json, computes true cycle time
-and status-duration metrics, then generates an interactive HTML dashboard.
+Reads issue_data_full.json (all Done issues with real status-transition
+data) and key_to_sprint.json, computes true cycle time and status-duration
+metrics, then generates an interactive HTML dashboard.
 """
 
 import json, os, math, statistics
@@ -13,9 +13,10 @@ from collections import defaultdict
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 BASE = os.path.dirname(os.path.abspath(__file__))
-ISSUE_DATA   = os.path.join(BASE, "issue_data_all.json")
+ISSUE_DATA   = os.path.join(BASE, "issue_data_full.json")
 KEY_SPRINT   = os.path.join(BASE, "key_to_sprint.json")
 SPRINT_DIR   = os.path.join(BASE, "sprint_issues")
+RAW_DIR      = BASE  # raw_search_*.json lives here
 OUTPUT_HTML  = os.path.join(BASE, "dashboard.html")
 METRICS_JSON = os.path.join(BASE, "computed_metrics.json")
 
@@ -31,6 +32,8 @@ SPRINT_ORDER = [
 ]
 
 SPRINT_THROUGHPUT = {}  # populated from sprint_issues/*.json
+SPRINT_SP = {}          # populated from sp_values.json + key_to_sprint.json
+SP_VALUES_JSON = os.path.join(BASE, "sp_values.json")
 
 # ── US Federal Holidays (observed dates) ─────────────────────────────────────
 # Covers the data range Jun 2025 – Feb 2026.  When a holiday falls on Saturday
@@ -141,13 +144,60 @@ def safe_mean(data):
 # BIP-26294 (21d IP across 2 stints with backlog re-entry): similar pattern.
 # BIP-26538, BIP-27314, BIP-28723: manually excluded by user.
 EXCLUDED_KEYS = {"BIP-25393", "BIP-25703", "BIP-26294",
-                 "BIP-26538", "BIP-27314", "BIP-28723"}
+                 "BIP-26538", "BIP-27314", "BIP-28723",
+                 # Additional manual outliers
+                 "BIP-26043", "BIP-28160", "BIP-28942", "BIP-27706",
+                 "BIP-29078", "BIP-28906", "BIP-26543", "BIP-26721",
+                 "BIP-26503", "BIP-26502", "BIP-26027",
+                 "BIP-26790", "BIP-26789", "BIP-26788", "BIP-26572",
+                 "BIP-26778", "BIP-26787", "BIP-26793"}
+
+# Issues without Story Points assigned (queried from Jira).
+NO_STORY_POINTS = {
+    "BIP-30535", "BIP-30530", "BIP-30351", "BIP-30306", "BIP-29982",
+    "BIP-29937", "BIP-29936", "BIP-29536", "BIP-29529", "BIP-29147",
+    "BIP-28949", "BIP-28766", "BIP-25707", "BIP-25706", "BIP-25705",
+    "BIP-25704", "BIP-25703", "BIP-25393", "BIP-25392", "BIP-25110",
+    "BIP-24894", "BIP-23877",
+}
+
+# Issues that spent time in "Canceled" status before eventually reaching Done.
+# Their cycle time is inflated by idle canceled time, not representative of work.
+CANCELED_KEYS = {
+    "BIP-26007", "BIP-26049", "BIP-26059", "BIP-26061", "BIP-26085",
+    "BIP-26281", "BIP-26305", "BIP-26321", "BIP-26323", "BIP-26471",
+    "BIP-26509", "BIP-27270", "BIP-27271", "BIP-27304", "BIP-27305",
+    "BIP-27693", "BIP-28217", "BIP-28694", "BIP-28898", "BIP-28941",
+    "BIP-29072", "BIP-29102", "BIP-29172", "BIP-29179", "BIP-30550",
+    "BIP-30901", "BIP-30902",
+}
+
+# Issues reopened (Done → In Progress → Done) where the reopen spanned multiple days.
+# Same-day reopens are kept as they represent minor corrections.
+REOPENED_KEYS = {
+    "BIP-26995", "BIP-27975", "BIP-28231", "BIP-28721", "BIP-30515",
+}
 
 # ── Load data ────────────────────────────────────────────────────────────────
 with open(ISSUE_DATA) as f:
     all_issues = json.load(f)
 
-issues = {k: v for k, v in all_issues.items() if k not in EXCLUDED_KEYS}
+# Exclude non-development work by summary keywords
+SUMMARY_EXCLUDE_KEYS = set()
+for sp in SPRINT_ORDER:
+    fname = sp.replace(" ", "_") + ".json"
+    fpath = os.path.join(SPRINT_DIR, fname)
+    if os.path.exists(fpath):
+        with open(fpath) as f:
+            for iss in json.load(f):
+                s = (iss.get("summary") or "").lower()
+                if "adhoc support" in s or "on call" in s or "shadow" in s:
+                    SUMMARY_EXCLUDE_KEYS.add(iss["key"])
+
+issues = {k: v for k, v in all_issues.items()
+          if k not in EXCLUDED_KEYS and k not in NO_STORY_POINTS
+          and k not in CANCELED_KEYS and k not in REOPENED_KEYS
+          and k not in SUMMARY_EXCLUDE_KEYS}
 
 with open(KEY_SPRINT) as f:
     key_to_sprint = json.load(f)
@@ -162,6 +212,51 @@ for sp in SPRINT_ORDER:
     else:
         SPRINT_THROUGHPUT[sp] = 0
 
+# Load story-point totals per sprint from sp_values.json
+if os.path.exists(SP_VALUES_JSON):
+    with open(SP_VALUES_JSON) as f:
+        _sp_vals = json.load(f)   # key -> SP value
+    for k, v in _sp_vals.items():
+        sprint = key_to_sprint.get(k)
+        if sprint and sprint in SPRINT_THROUGHPUT:
+            SPRINT_SP[sprint] = SPRINT_SP.get(sprint, 0) + v
+for sp in SPRINT_ORDER:
+    SPRINT_SP.setdefault(sp, 0)
+    SPRINT_SP[sp] = int(SPRINT_SP[sp])
+
+# ── Build "last In Progress" lookup from raw changelogs ──────────────────────
+# For cycle time we use the LAST transition into an active status (In Progress,
+# In Testing, Peer Review Needed, Blocked) so that backlog bounces don't inflate
+# the measurement.  We look for the last transition into In Progress that was
+# preceded only by inactive statuses (Backlog / Ready for Dev) since the
+# previous Done (or start).
+import glob as _glob
+LAST_ACTIVE = {}           # key -> ISO timestamp of last "real" start
+ACTIVE_STATUSES = {"In Progress", "In Testing", "Peer Review Needed", "Blocked"}
+for raw_path in sorted(_glob.glob(os.path.join(RAW_DIR, "raw_search_*.json"))) + \
+                sorted(_glob.glob(os.path.join(RAW_DIR, "raw_search_sample_*.json"))):
+    with open(raw_path) as f:
+        raw = json.load(f)
+    for iss in raw.get("issues", []):
+        key = iss["key"]
+        changelogs = iss.get("changelogs", [])
+        # Walk transitions and find the last time the issue entered an active
+        # status after being in Backlog/Ready for Dev (i.e. last restart).
+        last_start = None
+        for cl in changelogs:
+            for item in cl.get("items", []):
+                if item.get("field") != "status":
+                    continue
+                to_s = item.get("to_string", "")
+                from_s = item.get("from_string", "")
+                if to_s in ACTIVE_STATUSES:
+                    if from_s in ("Backlog", "Ready for Dev", ""):
+                        last_start = cl["created"]
+                    elif last_start is None:
+                        last_start = cl["created"]
+        if last_start:
+            LAST_ACTIVE[key] = last_start
+
 
 # ── Compute per-issue metrics ────────────────────────────────────────────────
 records = []
@@ -172,9 +267,14 @@ for key, d in issues.items():
     created      = parse_dt(d.get("created"))
     resolved     = parse_dt(d.get("resolution_date"))
 
-    # Cycle time: first_active -> done_at  (business days)
-    cycle_days = business_days_between(first_active, done_at)
-    if cycle_days == 0.0 and first_active is None:
+    # Use "last active start" when available (handles backlog bounces);
+    # fall back to first_active from the data file.
+    last_active = parse_dt(LAST_ACTIVE.get(key))
+    cycle_start = last_active or first_active
+
+    # Cycle time: last_active -> done_at  (business days)
+    cycle_days = business_days_between(cycle_start, done_at)
+    if cycle_days == 0.0 and cycle_start is None:
         cycle_days = None   # Backlog->Done skip
 
     # Lead time: created -> done_at (business days)
@@ -244,6 +344,7 @@ for sp in SPRINT_ORDER:
         "sample_count": len(sp_recs),
         "with_cycle": len(sp_cycles),
         "throughput": SPRINT_THROUGHPUT.get(sp, 0),
+        "story_points": SPRINT_SP.get(sp, 0),
         "cycle_median": round(safe_median(sp_cycles), 2) if sp_cycles else None,
         "cycle_mean":   round(safe_mean(sp_cycles), 2)   if sp_cycles else None,
         "cycle_p85":    round(percentile(sp_cycles, 85), 2) if sp_cycles else None,
@@ -271,10 +372,10 @@ for label, lo, hi in HIST_BUCKETS:
 
 # ── Status distribution (overall) ───────────────────────────────────────────
 status_totals = {
-    "In Progress": sum(r["ip_days"] for r in records if r["has_cycle"]),
-    "In Testing":  sum(r["test_days"] for r in records if r["has_cycle"]),
-    "Peer Review": sum(r["pr_days"] for r in records if r["has_cycle"]),
-    "Blocked":     sum(r["blocked_days"] for r in records if r["has_cycle"]),
+    "In Progress":        sum(r["ip_days"] for r in records if r["has_cycle"]),
+    "In Testing":         sum(r["test_days"] for r in records if r["has_cycle"]),
+    "Peer Review Needed": sum(r["pr_days"] for r in records if r["has_cycle"]),
+    "Blocked":            sum(r["blocked_days"] for r in records if r["has_cycle"]),
 }
 # Also compute percentage of total tracked time
 total_status_days = sum(status_totals.values())
@@ -295,7 +396,7 @@ insights = []
 
 # 1. Overall summary
 insights.append(
-    f"Across {overall['with_cycle']} sampled issues, the median cycle time "
+    f"Across all {overall['with_cycle']} Done issues, the median cycle time "
     f"(In Progress &rarr; Done) is <strong>{overall['cycle_median']} days</strong>, "
     f"with a mean of {overall['cycle_mean']} days. The 85th percentile is "
     f"{overall['cycle_p85']} days and 95th percentile is {overall['cycle_p95']} days."
@@ -436,6 +537,7 @@ cycle_medians_js   = json.dumps([sprint_data[s]["cycle_median"] for s in SPRINT_
 cycle_means_js     = json.dumps([sprint_data[s]["cycle_mean"] for s in SPRINT_ORDER])
 cycle_p85s_js      = json.dumps([sprint_data[s]["cycle_p85"] for s in SPRINT_ORDER])
 throughputs_js     = json.dumps([sprint_data[s]["throughput"] for s in SPRINT_ORDER])
+story_points_js    = json.dumps([sprint_data[s]["story_points"] for s in SPRINT_ORDER])
 avg_ip_js          = json.dumps([sprint_data[s]["avg_ip_days"] for s in SPRINT_ORDER])
 avg_test_js        = json.dumps([sprint_data[s]["avg_test_days"] for s in SPRINT_ORDER])
 avg_pr_js          = json.dumps([sprint_data[s]["avg_pr_days"] for s in SPRINT_ORDER])
@@ -481,6 +583,7 @@ for sp in SPRINT_ORDER:
     sprint_detail_rows += f"""<tr>
         <td>{label}</td>
         <td>{sd['throughput']}</td>
+        <td>{sd['story_points']}</td>
         <td>{sd['sample_count']}</td>
         <td>{sd['cycle_median'] if sd['cycle_median'] is not None else '&#8212;'}</td>
         <td>{sd['cycle_mean'] if sd['cycle_mean'] is not None else '&#8212;'}</td>
@@ -556,7 +659,7 @@ html = """<!DOCTYPE html>
 <h1>BIP AI &mdash; Cycle Time Dashboard</h1>
 <p class="subtitle">
   True cycle time (In Progress &rarr; Done) in business days (excl. weekends &amp; US holidays) &middot;
-  """ + str(overall['with_cycle']) + """ sampled issues across 17 sprints (FY25Q4.1 &ndash; FY26Q2.3)
+  """ + str(overall['with_cycle']) + """ issues with Story Points across 17 sprints (FY25Q4.1 &ndash; FY26Q2.3)
 </p>
 
 <!-- KPIs -->
@@ -594,7 +697,7 @@ html = """<!DOCTYPE html>
     <canvas id="chartTrend"></canvas>
   </div>
   <div class="card">
-    <h3>Sprint Throughput (Done issues)</h3>
+    <h3>Sprint Throughput (Done issues &amp; Story Points)</h3>
     <canvas id="chartThru"></canvas>
   </div>
 </div>
@@ -637,7 +740,7 @@ html = """<!DOCTYPE html>
   <div style="overflow-x:auto">
   <table>
     <thead><tr>
-      <th>Sprint</th><th>Throughput</th><th>Sample</th>
+      <th>Sprint</th><th>Throughput</th><th>Story Pts</th><th>Analyzed</th>
       <th>Median CT</th><th>Mean CT</th><th>P85 CT</th>
       <th>Avg IP</th><th>Avg Test</th><th>Avg PR</th><th>Avg Blocked</th>
     </tr></thead>
@@ -672,6 +775,7 @@ const cycleMedians = """ + cycle_medians_js + """;
 const cycleMeans   = """ + cycle_means_js + """;
 const cycleP85s    = """ + cycle_p85s_js + """;
 const throughputs  = """ + throughputs_js + """;
+const storyPoints  = """ + story_points_js + """;
 const avgIP        = """ + avg_ip_js + """;
 const avgTest      = """ + avg_test_js + """;
 const avgPR        = """ + avg_pr_js + """;
@@ -715,15 +819,21 @@ new Chart(document.getElementById('chartThru'), {
   type: 'bar',
   data: {
     labels: sprintLabels,
-    datasets: [{ label: 'Done Issues', data: throughputs,
-                 backgroundColor: 'rgba(57,211,83,0.6)', borderColor: '#3fb950', borderWidth: 1 }]
+    datasets: [
+      { label: 'Done Issues', data: throughputs, yAxisID: 'y',
+        backgroundColor: 'rgba(57,211,83,0.6)', borderColor: '#3fb950', borderWidth: 1 },
+      { label: 'Story Points', data: storyPoints, yAxisID: 'y1',
+        backgroundColor: 'rgba(88,166,255,0.45)', borderColor: '#58a6ff', borderWidth: 1 }
+    ]
   },
   options: {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: { legend: { position: 'top', labels: { boxWidth: 14, padding: 12 } } },
     scales: {
       x: { ticks: { maxRotation: 45, font: { size: 10 } } },
-      y: { title: { display: true, text: 'Issues' }, beginAtZero: true }
+      y:  { position: 'left',  title: { display: true, text: 'Issues' }, beginAtZero: true },
+      y1: { position: 'right', title: { display: true, text: 'Story Points' }, beginAtZero: true,
+            grid: { drawOnChartArea: false } }
     }
   }
 });
@@ -771,7 +881,7 @@ new Chart(document.getElementById('chartStacked'), {
     datasets: [
       { label: 'In Progress', data: avgIP, backgroundColor: 'rgba(88,166,255,0.7)' },
       { label: 'In Testing', data: avgTest, backgroundColor: 'rgba(210,153,34,0.7)' },
-      { label: 'Peer Review', data: avgPR, backgroundColor: 'rgba(188,140,255,0.7)' },
+      { label: 'Peer Review Needed', data: avgPR, backgroundColor: 'rgba(188,140,255,0.7)' },
       { label: 'Blocked', data: avgBlocked, backgroundColor: 'rgba(248,81,73,0.7)' },
     ]
   },
@@ -819,7 +929,7 @@ new Chart(document.getElementById('chartScatter'), {
 </script>
 
 <p style="color:var(--muted);text-align:center;margin-top:32px;font-size:0.8rem">
-  Generated from 100 stratified-sampled issues (seed=42) &middot;
+  Generated from all sprint issues &middot;
   Cycle time = first In Progress &rarr; final Done (business days, excl. weekends &amp; US holidays) &middot;
   Status durations from Jira transition histories
 </p>

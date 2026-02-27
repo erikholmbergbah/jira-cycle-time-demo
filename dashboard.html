@@ -62,34 +62,34 @@
 <h1>BIP AI &mdash; Cycle Time Dashboard</h1>
 <p class="subtitle">
   True cycle time (In Progress &rarr; Done) in business days (excl. weekends &amp; US holidays) &middot;
-  91 sampled issues across 17 sprints (FY25Q4.1 &ndash; FY26Q2.3)
+  805 issues with Story Points across 17 sprints (FY25Q4.1 &ndash; FY26Q2.3)
 </p>
 
 <!-- KPIs -->
 <div class="kpi-row">
   <div class="kpi">
     <div class="label">Median Cycle Time</div>
-    <div class="value">5.0<span class="unit"> days</span></div>
+    <div class="value">4.04<span class="unit"> days</span></div>
   </div>
   <div class="kpi">
     <div class="label">Mean Cycle Time</div>
-    <div class="value">4.91<span class="unit"> days</span></div>
+    <div class="value">4.43<span class="unit"> days</span></div>
   </div>
   <div class="kpi">
     <div class="label">85th Percentile</div>
-    <div class="value">8.17<span class="unit"> days</span></div>
+    <div class="value">8.01<span class="unit"> days</span></div>
   </div>
   <div class="kpi">
     <div class="label">95th Percentile</div>
-    <div class="value">9.0<span class="unit"> days</span></div>
+    <div class="value">9.16<span class="unit"> days</span></div>
   </div>
   <div class="kpi">
     <div class="label">Active Work (median)</div>
-    <div class="value">7.02<span class="unit"> days</span></div>
+    <div class="value">5.05<span class="unit"> days</span></div>
   </div>
   <div class="kpi">
     <div class="label">Lead Time (median)</div>
-    <div class="value">9.19<span class="unit"> days</span></div>
+    <div class="value">9.11<span class="unit"> days</span></div>
   </div>
 </div>
 
@@ -100,7 +100,7 @@
     <canvas id="chartTrend"></canvas>
   </div>
   <div class="card">
-    <h3>Sprint Throughput (Done issues)</h3>
+    <h3>Sprint Throughput (Done issues &amp; Story Points)</h3>
     <canvas id="chartThru"></canvas>
   </div>
 </div>
@@ -133,14 +133,12 @@
 <div class="card full" style="margin-bottom:24px">
   <h3>Key Insights</h3>
   <ul class="insights">
-    <li class="insight">Across 91 sampled issues, the median cycle time (In Progress &rarr; Done) is <strong>5.0 days</strong>, with a mean of 4.91 days. The 85th percentile is 8.17 days and 95th percentile is 9.0 days.</li>
-<li class="insight">Cycle times range from 0.01 to 9.93 days (spread of 9.9 days), indicating significant variability. High variability reduces predictability of delivery commitments.</li>
-<li class="insight"><strong>5 issues</strong> spent more than half a day blocked. Among those, the average blocked time was <strong>3.8 days</strong>. Reducing blocked time is one of the highest-leverage improvements.</li>
-<li class="insight">3 issue(s) went directly from Backlog to Done without entering In Progress (BIP-26741, BIP-28166, BIP-28438). These were excluded from cycle time calculations.</li>
-<li class="insight">Cycle times increased over time: the first 4 sprints averaged 4.6-day median vs 5.0 days in the last 4 (~9% increase). Investigate growing complexity or WIP limits.</li>
+    <li class="insight">Across all 805 Done issues, the median cycle time (In Progress &rarr; Done) is <strong>4.04 days</strong>, with a mean of 4.43 days. The 85th percentile is 8.01 days and 95th percentile is 9.16 days.</li>
+<li class="insight"><strong>46 issues</strong> spent more than half a day blocked. Among those, the average blocked time was <strong>3.7 days</strong>. Reducing blocked time is one of the highest-leverage improvements.</li>
+<li class="insight">Cycle times improved over time: the first 4 sprints averaged 4.5-day median vs 4.2 days in the last 4 (~6% improvement).</li>
 <li class="insight">Average throughput: first 4 sprints = 67.0 issues/sprint, last 4 sprints = 62.0 issues/sprint.</li>
-<li class="insight">Flow efficiency (active work / lead time): median <strong>78%</strong>. Lead time includes backlog wait before work starts. Higher efficiency means less waiting. World-class teams target &gt;40%.</li>
-<li class="insight">Median lead time (9.19d) exceeds median cycle time (5.0d) by <strong>4.2 days</strong>, meaning issues sit in Backlog for a median of ~4.2 days before work begins.</li>
+<li class="insight">Flow efficiency (active work / lead time): median <strong>70%</strong>. Lead time includes backlog wait before work starts. Higher efficiency means less waiting. World-class teams target &gt;40%.</li>
+<li class="insight">Median lead time (9.11d) exceeds median cycle time (4.04d) by <strong>5.1 days</strong>, meaning issues sit in Backlog for a median of ~5.1 days before work begins.</li>
   </ul>
 </div>
 
@@ -150,7 +148,7 @@
   <div style="overflow-x:auto">
   <table>
     <thead><tr>
-      <th>Sprint</th><th>Throughput</th><th>Sample</th>
+      <th>Sprint</th><th>Throughput</th><th>Story Pts</th><th>Analyzed</th>
       <th>Median CT</th><th>Mean CT</th><th>P85 CT</th>
       <th>Avg IP</th><th>Avg Test</th><th>Avg PR</th><th>Avg Blocked</th>
     </tr></thead>
@@ -158,205 +156,222 @@
       <tr>
         <td>FY25Q4.1</td>
         <td>63</td>
-        <td>4</td>
-        <td>3.4</td>
-        <td>3.51</td>
-        <td>4.73</td>
-        <td>2.32</td>
-        <td>2.69</td>
+        <td>228</td>
+        <td>46</td>
+        <td>3.7</td>
+        <td>3.97</td>
+        <td>7.21</td>
+        <td>4.37</td>
+        <td>0.95</td>
         <td>0.0</td>
-        <td>0.0</td>
+        <td>0.02</td>
     </tr>
 <tr>
         <td>FY25Q4.2</td>
         <td>61</td>
-        <td>6</td>
-        <td>3.34</td>
-        <td>4.81</td>
-        <td>8.32</td>
-        <td>4.04</td>
-        <td>0.76</td>
-        <td>0.0</td>
-        <td>0.82</td>
+        <td>242</td>
+        <td>41</td>
+        <td>4.16</td>
+        <td>4.85</td>
+        <td>8.95</td>
+        <td>4.33</td>
+        <td>1.25</td>
+        <td>0.1</td>
+        <td>0.28</td>
     </tr>
 <tr>
         <td>FY25Q4.3</td>
         <td>76</td>
-        <td>3</td>
-        <td>7.84</td>
-        <td>7.84</td>
-        <td>8.07</td>
-        <td>6.08</td>
-        <td>0.0</td>
-        <td>3.75</td>
-        <td>0.0</td>
+        <td>272</td>
+        <td>42</td>
+        <td>4.08</td>
+        <td>4.7</td>
+        <td>7.51</td>
+        <td>3.24</td>
+        <td>0.69</td>
+        <td>1.53</td>
+        <td>0.24</td>
     </tr>
 <tr>
         <td>FY25Q4.4</td>
         <td>69</td>
-        <td>5</td>
-        <td>3.86</td>
-        <td>3.41</td>
-        <td>4.55</td>
-        <td>3.17</td>
-        <td>0.03</td>
-        <td>1.44</td>
-        <td>0.0</td>
+        <td>265</td>
+        <td>46</td>
+        <td>6.12</td>
+        <td>5.78</td>
+        <td>10.4</td>
+        <td>3.94</td>
+        <td>0.17</td>
+        <td>1.03</td>
+        <td>0.93</td>
     </tr>
 <tr>
         <td>FY25Q4.5</td>
         <td>70</td>
-        <td>6</td>
-        <td>6.06</td>
-        <td>5.85</td>
-        <td>7.61</td>
-        <td>5.26</td>
-        <td>0.52</td>
-        <td>1.74</td>
-        <td>2.15</td>
+        <td>281</td>
+        <td>54</td>
+        <td>3.81</td>
+        <td>4.26</td>
+        <td>8.13</td>
+        <td>3.65</td>
+        <td>0.24</td>
+        <td>1.43</td>
+        <td>0.61</td>
     </tr>
 <tr>
         <td>FY25Q4.6</td>
         <td>63</td>
-        <td>6</td>
-        <td>4.58</td>
-        <td>4.86</td>
-        <td>9.02</td>
-        <td>4.47</td>
-        <td>0.02</td>
-        <td>1.37</td>
-        <td>0.0</td>
+        <td>261</td>
+        <td>47</td>
+        <td>4.08</td>
+        <td>4.45</td>
+        <td>8.13</td>
+        <td>3.17</td>
+        <td>0.7</td>
+        <td>1.55</td>
+        <td>0.15</td>
     </tr>
 <tr>
         <td>FY25Q4.7</td>
         <td>53</td>
-        <td>5</td>
-        <td>6.11</td>
-        <td>4.88</td>
-        <td>7.7</td>
-        <td>4.29</td>
-        <td>1.43</td>
-        <td>0.76</td>
-        <td>0.0</td>
+        <td>233</td>
+        <td>29</td>
+        <td>6.0</td>
+        <td>5.75</td>
+        <td>9.17</td>
+        <td>5.51</td>
+        <td>1.05</td>
+        <td>0.42</td>
+        <td>0.21</td>
     </tr>
 <tr>
         <td>FY26Q1.1</td>
         <td>66</td>
-        <td>6</td>
-        <td>6.3</td>
-        <td>5.83</td>
-        <td>8.24</td>
-        <td>5.96</td>
-        <td>0.0</td>
-        <td>1.67</td>
+        <td>258</td>
+        <td>50</td>
+        <td>4.09</td>
+        <td>4.86</td>
+        <td>8.19</td>
+        <td>4.74</td>
+        <td>0.89</td>
+        <td>0.95</td>
         <td>0.0</td>
     </tr>
 <tr>
         <td>FY26Q1.2</td>
         <td>62</td>
-        <td>6</td>
-        <td>6.27</td>
-        <td>6.14</td>
-        <td>7.97</td>
-        <td>5.73</td>
-        <td>1.61</td>
-        <td>0.59</td>
-        <td>0.2</td>
+        <td>245</td>
+        <td>49</td>
+        <td>4.76</td>
+        <td>4.53</td>
+        <td>7.14</td>
+        <td>4.08</td>
+        <td>0.69</td>
+        <td>0.66</td>
+        <td>0.29</td>
     </tr>
 <tr>
         <td>FY26Q1.3</td>
         <td>70</td>
-        <td>6</td>
-        <td>5.39</td>
-        <td>5.53</td>
-        <td>7.48</td>
-        <td>5.22</td>
-        <td>1.69</td>
-        <td>0.85</td>
-        <td>0.0</td>
+        <td>257</td>
+        <td>56</td>
+        <td>3.29</td>
+        <td>3.76</td>
+        <td>6.26</td>
+        <td>3.32</td>
+        <td>0.81</td>
+        <td>1.25</td>
+        <td>0.56</td>
     </tr>
 <tr>
         <td>FY26Q1.4</td>
         <td>62</td>
-        <td>5</td>
-        <td>2.23</td>
-        <td>2.69</td>
-        <td>4.46</td>
-        <td>3.25</td>
-        <td>0.05</td>
-        <td>0.39</td>
-        <td>0.0</td>
+        <td>244</td>
+        <td>46</td>
+        <td>3.19</td>
+        <td>3.75</td>
+        <td>6.22</td>
+        <td>3.53</td>
+        <td>0.43</td>
+        <td>0.93</td>
+        <td>0.12</td>
     </tr>
 <tr>
         <td>FY26Q1.5</td>
         <td>70</td>
-        <td>6</td>
-        <td>5.55</td>
-        <td>6.11</td>
-        <td>9.02</td>
-        <td>5.66</td>
-        <td>0.36</td>
-        <td>1.41</td>
+        <td>274</td>
+        <td>51</td>
+        <td>4.2</td>
+        <td>4.41</td>
+        <td>7.66</td>
+        <td>4.02</td>
+        <td>0.83</td>
+        <td>0.92</td>
         <td>0.0</td>
     </tr>
 <tr>
         <td>FY26Q1.6</td>
         <td>61</td>
-        <td>6</td>
-        <td>2.72</td>
-        <td>3.67</td>
-        <td>6.61</td>
-        <td>3.48</td>
-        <td>0.0</td>
-        <td>1.52</td>
-        <td>0.0</td>
+        <td>210</td>
+        <td>49</td>
+        <td>4.0</td>
+        <td>4.18</td>
+        <td>6.93</td>
+        <td>3.75</td>
+        <td>0.65</td>
+        <td>1.36</td>
+        <td>0.06</td>
     </tr>
 <tr>
         <td>FY26Q1.7</td>
         <td>56</td>
-        <td>6</td>
-        <td>4.48</td>
-        <td>4.43</td>
-        <td>5.53</td>
-        <td>4.69</td>
-        <td>1.02</td>
-        <td>0.05</td>
-        <td>0.0</td>
+        <td>225</td>
+        <td>43</td>
+        <td>5.0</td>
+        <td>4.59</td>
+        <td>7.17</td>
+        <td>3.9</td>
+        <td>1.57</td>
+        <td>0.45</td>
+        <td>0.12</td>
     </tr>
 <tr>
         <td>FY26Q2.1</td>
         <td>61</td>
-        <td>6</td>
-        <td>5.08</td>
-        <td>4.97</td>
-        <td>8.15</td>
-        <td>6.05</td>
-        <td>0.38</td>
-        <td>0.03</td>
+        <td>212</td>
+        <td>49</td>
+        <td>3.93</td>
+        <td>3.9</td>
+        <td>6.21</td>
+        <td>3.66</td>
+        <td>0.66</td>
+        <td>1.11</td>
         <td>0.0</td>
     </tr>
 <tr>
         <td>FY26Q2.2</td>
         <td>67</td>
-        <td>6</td>
-        <td>3.62</td>
-        <td>4.03</td>
-        <td>5.72</td>
-        <td>2.55</td>
-        <td>0.74</td>
-        <td>1.41</td>
+        <td>242</td>
+        <td>55</td>
+        <td>4.0</td>
+        <td>4.4</td>
+        <td>8.12</td>
+        <td>2.65</td>
+        <td>0.94</td>
+        <td>1.38</td>
         <td>0.0</td>
     </tr>
 <tr>
         <td>FY26Q2.3</td>
         <td>65</td>
-        <td>6</td>
-        <td>6.91</td>
-        <td>6.2</td>
-        <td>8.18</td>
-        <td>4.68</td>
-        <td>2.56</td>
-        <td>0.96</td>
+        <td>228</td>
+        <td>52</td>
+        <td>4.02</td>
+        <td>4.0</td>
+        <td>6.82</td>
+        <td>3.22</td>
+        <td>1.84</td>
+        <td>0.69</td>
         <td>0.0</td>
     </tr>
 
@@ -372,54 +387,54 @@
     <table>
       <thead><tr><th>Key</th><th>Sprint</th><th>Cycle (d)</th><th>IP (d)</th><th>Test (d)</th><th>Blocked (d)</th></tr></thead>
       <tbody><tr>
-        <td>BIP-27305</td><td>FY25Q4.7</td>
-        <td>9.9</td><td>10.2</td>
+        <td>BIP-26786</td><td>FY25Q4.4</td>
+        <td>16.2</td><td>0.3</td>
         <td>0.0</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-28424</td><td>FY26Q1.2</td>
-        <td>9.3</td><td>4.3</td>
-        <td>7.0</td><td>0.0</td>
+        <td>BIP-26791</td><td>FY25Q4.4</td>
+        <td>13.3</td><td>3.2</td>
+        <td>0.0</td><td>4.0</td>
     </tr>
 <tr>
-        <td>BIP-29115</td><td>FY26Q1.5</td>
-        <td>9.1</td><td>11.1</td>
+        <td>BIP-26808</td><td>FY25Q4.4</td>
+        <td>13.0</td><td>8.2</td>
         <td>0.0</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-27273</td><td>FY25Q4.6</td>
-        <td>9.1</td><td>9.0</td>
+        <td>BIP-26865</td><td>FY25Q4.4</td>
+        <td>12.2</td><td>7.2</td>
         <td>0.0</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-29101</td><td>FY26Q1.5</td>
-        <td>9.0</td><td>4.0</td>
+        <td>BIP-30297</td><td>FY26Q2.2</td>
+        <td>12.1</td><td>8.0</td>
         <td>0.0</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-27311</td><td>FY25Q4.6</td>
-        <td>9.0</td><td>11.0</td>
+        <td>BIP-26759</td><td>FY25Q4.4</td>
+        <td>12.0</td><td>10.0</td>
         <td>0.0</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-26275</td><td>FY25Q4.2</td>
-        <td>9.0</td><td>8.0</td>
-        <td>0.0</td><td>3.0</td>
+        <td>BIP-26985</td><td>FY25Q4.6</td>
+        <td>12.0</td><td>6.0</td>
+        <td>4.9</td><td>3.0</td>
     </tr>
 <tr>
-        <td>BIP-30281</td><td>FY26Q2.1</td>
-        <td>8.3</td><td>10.0</td>
-        <td>1.2</td><td>0.0</td>
+        <td>BIP-27277</td><td>FY26Q1.1</td>
+        <td>11.3</td><td>15.5</td>
+        <td>0.8</td><td>0.0</td>
     </tr>
 <tr>
-        <td>BIP-28199</td><td>FY26Q1.1</td>
-        <td>8.3</td><td>3.0</td>
-        <td>0.0</td><td>0.0</td>
+        <td>BIP-26518</td><td>FY25Q4.4</td>
+        <td>11.2</td><td>7.9</td>
+        <td>0.0</td><td>7.0</td>
     </tr>
 <tr>
-        <td>BIP-28698</td><td>FY26Q1.3</td>
-        <td>8.2</td><td>11.2</td>
-        <td>0.0</td><td>0.0</td>
+        <td>BIP-26885</td><td>FY25Q4.4</td>
+        <td>10.9</td><td>2.0</td>
+        <td>1.0</td><td>1.1</td>
     </tr>
 </tbody>
     </table>
@@ -430,23 +445,43 @@
       <thead><tr><th>Key</th><th>Sprint</th><th>Blocked (d)</th><th>Cycle (d)</th></tr></thead>
       <tbody><tr>
         <td>BIP-26769</td><td>FY25Q4.5</td>
-        <td>12.9</td><td>5.2</td>
+        <td>12.9</td><td>1.1</td>
     </tr>
 <tr>
-        <td>BIP-26275</td><td>FY25Q4.2</td>
-        <td>3.0</td><td>9.0</td>
+        <td>BIP-26818</td><td>FY25Q4.4</td>
+        <td>9.1</td><td>9.1</td>
     </tr>
 <tr>
-        <td>BIP-28475</td><td>FY26Q1.2</td>
-        <td>1.0</td><td>6.3</td>
+        <td>BIP-28743</td><td>FY26Q1.3</td>
+        <td>9.0</td><td>8.2</td>
     </tr>
 <tr>
-        <td>BIP-26265</td><td>FY25Q4.2</td>
-        <td>1.0</td><td>3.0</td>
+        <td>BIP-28717</td><td>FY26Q1.3</td>
+        <td>8.4</td><td>7.1</td>
     </tr>
 <tr>
-        <td>BIP-26319</td><td>FY25Q4.2</td>
-        <td>1.0</td><td>3.2</td>
+        <td>BIP-27045</td><td>FY25Q4.5</td>
+        <td>8.2</td><td>8.2</td>
+    </tr>
+<tr>
+        <td>BIP-26768</td><td>FY25Q4.4</td>
+        <td>8.0</td><td>7.6</td>
+    </tr>
+<tr>
+        <td>BIP-26766</td><td>FY25Q4.4</td>
+        <td>7.9</td><td>7.5</td>
+    </tr>
+<tr>
+        <td>BIP-28769</td><td>FY26Q1.3</td>
+        <td>7.8</td><td>6.2</td>
+    </tr>
+<tr>
+        <td>BIP-26518</td><td>FY25Q4.4</td>
+        <td>7.0</td><td>11.2</td>
+    </tr>
+<tr>
+        <td>BIP-28427</td><td>FY26Q1.2</td>
+        <td>5.2</td><td>6.2</td>
     </tr>
 </tbody>
     </table>
@@ -455,19 +490,20 @@
 
 <script>
 const sprintLabels = ["FY25Q4.1", "FY25Q4.2", "FY25Q4.3", "FY25Q4.4", "FY25Q4.5", "FY25Q4.6", "FY25Q4.7", "FY26Q1.1", "FY26Q1.2", "FY26Q1.3", "FY26Q1.4", "FY26Q1.5", "FY26Q1.6", "FY26Q1.7", "FY26Q2.1", "FY26Q2.2", "FY26Q2.3"];
-const cycleMedians = [3.4, 3.34, 7.84, 3.86, 6.06, 4.58, 6.11, 6.3, 6.27, 5.39, 2.23, 5.55, 2.72, 4.48, 5.08, 3.62, 6.91];
-const cycleMeans   = [3.51, 4.81, 7.84, 3.41, 5.85, 4.86, 4.88, 5.83, 6.14, 5.53, 2.69, 6.11, 3.67, 4.43, 4.97, 4.03, 6.2];
-const cycleP85s    = [4.73, 8.32, 8.07, 4.55, 7.61, 9.02, 7.7, 8.24, 7.97, 7.48, 4.46, 9.02, 6.61, 5.53, 8.15, 5.72, 8.18];
+const cycleMedians = [3.7, 4.16, 4.08, 6.12, 3.81, 4.08, 6.0, 4.09, 4.76, 3.29, 3.19, 4.2, 4.0, 5.0, 3.93, 4.0, 4.02];
+const cycleMeans   = [3.97, 4.85, 4.7, 5.78, 4.26, 4.45, 5.75, 4.86, 4.53, 3.76, 3.75, 4.41, 4.18, 4.59, 3.9, 4.4, 4.0];
+const cycleP85s    = [7.21, 8.95, 7.51, 10.4, 8.13, 8.13, 9.17, 8.19, 7.14, 6.26, 6.22, 7.66, 6.93, 7.17, 6.21, 8.12, 6.82];
 const throughputs  = [63, 61, 76, 69, 70, 63, 53, 66, 62, 70, 62, 70, 61, 56, 61, 67, 65];
-const avgIP        = [2.32, 4.04, 6.08, 3.17, 5.26, 4.47, 4.29, 5.96, 5.73, 5.22, 3.25, 5.66, 3.48, 4.69, 6.05, 2.55, 4.68];
-const avgTest      = [2.69, 0.76, 0.0, 0.03, 0.52, 0.02, 1.43, 0.0, 1.61, 1.69, 0.05, 0.36, 0.0, 1.02, 0.38, 0.74, 2.56];
-const avgPR        = [0.0, 0.0, 3.75, 1.44, 1.74, 1.37, 0.76, 1.67, 0.59, 0.85, 0.39, 1.41, 1.52, 0.05, 0.03, 1.41, 0.96];
-const avgBlocked   = [0.0, 0.82, 0.0, 0.0, 2.15, 0.0, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+const storyPoints  = [228, 242, 272, 265, 281, 261, 233, 258, 245, 257, 244, 274, 210, 225, 212, 242, 228];
+const avgIP        = [4.37, 4.33, 3.24, 3.94, 3.65, 3.17, 5.51, 4.74, 4.08, 3.32, 3.53, 4.02, 3.75, 3.9, 3.66, 2.65, 3.22];
+const avgTest      = [0.95, 1.25, 0.69, 0.17, 0.24, 0.7, 1.05, 0.89, 0.69, 0.81, 0.43, 0.83, 0.65, 1.57, 0.66, 0.94, 1.84];
+const avgPR        = [0.0, 0.1, 1.53, 1.03, 1.43, 1.55, 0.42, 0.95, 0.66, 1.25, 0.93, 0.92, 1.36, 0.45, 1.11, 1.38, 0.69];
+const avgBlocked   = [0.02, 0.28, 0.24, 0.93, 0.61, 0.15, 0.21, 0.0, 0.29, 0.56, 0.12, 0.0, 0.06, 0.12, 0.0, 0.0, 0.0];
 const histLabels   = ["0-1d", "1-2d", "2-5d", "5-10d", "10-20d", "20-30d", "30d+"];
-const histCounts   = [4, 8, 35, 44, 0, 0, 0];
-const statusLabels = ["In Progress", "In Testing", "Peer Review", "Blocked"];
-const statusValues = [69.4, 12.6, 14.9, 3.2];
-const scatterData  = [{"x": 1, "y": 2.15, "key": "BIP-26025", "sprint": "BIP AI FY25Q4.1"}, {"x": 2, "y": 2.52, "key": "BIP-26028", "sprint": "BIP AI FY25Q4.1"}, {"x": 3, "y": 4.27, "key": "BIP-26056", "sprint": "BIP AI FY25Q4.1"}, {"x": 4, "y": 5.1, "key": "BIP-26081", "sprint": "BIP AI FY25Q4.1"}, {"x": 5, "y": 2.12, "key": "BIP-26471", "sprint": "BIP AI FY25Q4.2"}, {"x": 6, "y": 3.02, "key": "BIP-26265", "sprint": "BIP AI FY25Q4.2"}, {"x": 7, "y": 3.19, "key": "BIP-26319", "sprint": "BIP AI FY25Q4.2"}, {"x": 8, "y": 3.5, "key": "BIP-26267", "sprint": "BIP AI FY25Q4.2"}, {"x": 9, "y": 8.11, "key": "BIP-26311", "sprint": "BIP AI FY25Q4.2"}, {"x": 10, "y": 8.95, "key": "BIP-26275", "sprint": "BIP AI FY25Q4.2"}, {"x": 11, "y": 7.51, "key": "BIP-26583", "sprint": "BIP AI FY25Q4.3"}, {"x": 12, "y": 8.17, "key": "BIP-26554", "sprint": "BIP AI FY25Q4.3"}, {"x": 13, "y": 0.05, "key": "BIP-26929", "sprint": "BIP AI FY25Q4.4"}, {"x": 14, "y": 3.86, "key": "BIP-26783", "sprint": "BIP AI FY25Q4.4"}, {"x": 15, "y": 3.86, "key": "BIP-26781", "sprint": "BIP AI FY25Q4.4"}, {"x": 16, "y": 4.16, "key": "BIP-26815", "sprint": "BIP AI FY25Q4.4"}, {"x": 17, "y": 5.13, "key": "BIP-26786", "sprint": "BIP AI FY25Q4.4"}, {"x": 18, "y": 2.14, "key": "BIP-27034", "sprint": "BIP AI FY25Q4.5"}, {"x": 19, "y": 5.22, "key": "BIP-26769", "sprint": "BIP AI FY25Q4.5"}, {"x": 20, "y": 5.95, "key": "BIP-26980", "sprint": "BIP AI FY25Q4.5"}, {"x": 21, "y": 6.18, "key": "BIP-27039", "sprint": "BIP AI FY25Q4.5"}, {"x": 22, "y": 7.42, "key": "BIP-26970", "sprint": "BIP AI FY25Q4.5"}, {"x": 23, "y": 8.17, "key": "BIP-26988", "sprint": "BIP AI FY25Q4.5"}, {"x": 24, "y": 0.02, "key": "BIP-27767", "sprint": "BIP AI FY25Q4.6"}, {"x": 25, "y": 1.93, "key": "BIP-27268", "sprint": "BIP AI FY25Q4.6"}, {"x": 26, "y": 3.09, "key": "BIP-27279", "sprint": "BIP AI FY25Q4.6"}, {"x": 27, "y": 6.06, "key": "BIP-27264", "sprint": "BIP AI FY25Q4.6"}, {"x": 28, "y": 9.0, "key": "BIP-27311", "sprint": "BIP AI FY25Q4.6"}, {"x": 29, "y": 9.07, "key": "BIP-27273", "sprint": "BIP AI FY25Q4.6"}, {"x": 30, "y": 0.01, "key": "BIP-28248", "sprint": "BIP AI FY25Q4.7"}, {"x": 31, "y": 2.14, "key": "BIP-27704", "sprint": "BIP AI FY25Q4.7"}, {"x": 32, "y": 6.11, "key": "BIP-27907", "sprint": "BIP AI FY25Q4.7"}, {"x": 33, "y": 6.22, "key": "BIP-27702", "sprint": "BIP AI FY25Q4.7"}, {"x": 34, "y": 9.93, "key": "BIP-27305", "sprint": "BIP AI FY25Q4.7"}, {"x": 35, "y": 3.09, "key": "BIP-28243", "sprint": "BIP AI FY26Q1.1"}, {"x": 36, "y": 3.26, "key": "BIP-28244", "sprint": "BIP AI FY26Q1.1"}, {"x": 37, "y": 6.3, "key": "BIP-28164", "sprint": "BIP AI FY26Q1.1"}, {"x": 38, "y": 8.2, "key": "BIP-28201", "sprint": "BIP AI FY26Q1.1"}, {"x": 39, "y": 8.29, "key": "BIP-28199", "sprint": "BIP AI FY26Q1.1"}, {"x": 40, "y": 3.05, "key": "BIP-28414", "sprint": "BIP AI FY26Q1.2"}, {"x": 41, "y": 5.0, "key": "BIP-28399", "sprint": "BIP AI FY26Q1.2"}, {"x": 42, "y": 6.27, "key": "BIP-28475", "sprint": "BIP AI FY26Q1.2"}, {"x": 43, "y": 7.09, "key": "BIP-28446", "sprint": "BIP AI FY26Q1.2"}, {"x": 44, "y": 9.28, "key": "BIP-28424", "sprint": "BIP AI FY26Q1.2"}, {"x": 45, "y": 2.0, "key": "BIP-28666", "sprint": "BIP AI FY26Q1.3"}, {"x": 46, "y": 4.94, "key": "BIP-28689", "sprint": "BIP AI FY26Q1.3"}, {"x": 47, "y": 5.17, "key": "BIP-28669", "sprint": "BIP AI FY26Q1.3"}, {"x": 48, "y": 5.61, "key": "BIP-28706", "sprint": "BIP AI FY26Q1.3"}, {"x": 49, "y": 7.23, "key": "BIP-28716", "sprint": "BIP AI FY26Q1.3"}, {"x": 50, "y": 8.24, "key": "BIP-28698", "sprint": "BIP AI FY26Q1.3"}, {"x": 51, "y": 0.9, "key": "BIP-28904", "sprint": "BIP AI FY26Q1.4"}, {"x": 52, "y": 1.22, "key": "BIP-28884", "sprint": "BIP AI FY26Q1.4"}, {"x": 53, "y": 2.23, "key": "BIP-28936", "sprint": "BIP AI FY26Q1.4"}, {"x": 54, "y": 4.12, "key": "BIP-28937", "sprint": "BIP AI FY26Q1.4"}, {"x": 55, "y": 4.96, "key": "BIP-28894", "sprint": "BIP AI FY26Q1.4"}, {"x": 56, "y": 3.25, "key": "BIP-29075", "sprint": "BIP AI FY26Q1.5"}, {"x": 57, "y": 4.21, "key": "BIP-29102", "sprint": "BIP AI FY26Q1.5"}, {"x": 58, "y": 5.26, "key": "BIP-29091", "sprint": "BIP AI FY26Q1.5"}, {"x": 59, "y": 5.84, "key": "BIP-29103", "sprint": "BIP AI FY26Q1.5"}, {"x": 60, "y": 9.0, "key": "BIP-29101", "sprint": "BIP AI FY26Q1.5"}, {"x": 61, "y": 9.08, "key": "BIP-29115", "sprint": "BIP AI FY26Q1.5"}, {"x": 62, "y": 1.01, "key": "BIP-29515", "sprint": "BIP AI FY26Q1.6"}, {"x": 63, "y": 1.27, "key": "BIP-29482", "sprint": "BIP AI FY26Q1.6"}, {"x": 64, "y": 1.45, "key": "BIP-29516", "sprint": "BIP AI FY26Q1.6"}, {"x": 65, "y": 4.0, "key": "BIP-29514", "sprint": "BIP AI FY26Q1.6"}, {"x": 66, "y": 6.08, "key": "BIP-29513", "sprint": "BIP AI FY26Q1.6"}, {"x": 67, "y": 8.19, "key": "BIP-29474", "sprint": "BIP AI FY26Q1.6"}, {"x": 68, "y": 2.77, "key": "BIP-29967", "sprint": "BIP AI FY26Q1.7"}, {"x": 69, "y": 2.77, "key": "BIP-29971", "sprint": "BIP AI FY26Q1.7"}, {"x": 70, "y": 3.97, "key": "BIP-29973", "sprint": "BIP AI FY26Q1.7"}, {"x": 71, "y": 5.0, "key": "BIP-29979", "sprint": "BIP AI FY26Q1.7"}, {"x": 72, "y": 5.04, "key": "BIP-29903", "sprint": "BIP AI FY26Q1.7"}, {"x": 73, "y": 7.01, "key": "BIP-29910", "sprint": "BIP AI FY26Q1.7"}, {"x": 74, "y": 1.16, "key": "BIP-30300", "sprint": "BIP AI FY26Q2.1"}, {"x": 75, "y": 2.08, "key": "BIP-30265", "sprint": "BIP AI FY26Q2.1"}, {"x": 76, "y": 2.13, "key": "BIP-30286", "sprint": "BIP AI FY26Q2.1"}, {"x": 77, "y": 8.02, "key": "BIP-30271", "sprint": "BIP AI FY26Q2.1"}, {"x": 78, "y": 8.1, "key": "BIP-30273", "sprint": "BIP AI FY26Q2.1"}, {"x": 79, "y": 8.3, "key": "BIP-30281", "sprint": "BIP AI FY26Q2.1"}, {"x": 80, "y": 1.1, "key": "BIP-30571", "sprint": "BIP AI FY26Q2.2"}, {"x": 81, "y": 2.99, "key": "BIP-30584", "sprint": "BIP AI FY26Q2.2"}, {"x": 82, "y": 3.24, "key": "BIP-30554", "sprint": "BIP AI FY26Q2.2"}, {"x": 83, "y": 4.0, "key": "BIP-30555", "sprint": "BIP AI FY26Q2.2"}, {"x": 84, "y": 5.02, "key": "BIP-30523", "sprint": "BIP AI FY26Q2.2"}, {"x": 85, "y": 7.82, "key": "BIP-30531", "sprint": "BIP AI FY26Q2.2"}, {"x": 86, "y": 2.98, "key": "BIP-30897", "sprint": "BIP AI FY26Q2.3"}, {"x": 87, "y": 3.99, "key": "BIP-30939", "sprint": "BIP AI FY26Q2.3"}, {"x": 88, "y": 5.67, "key": "BIP-30978", "sprint": "BIP AI FY26Q2.3"}, {"x": 89, "y": 8.15, "key": "BIP-30911", "sprint": "BIP AI FY26Q2.3"}, {"x": 90, "y": 8.17, "key": "BIP-30951", "sprint": "BIP AI FY26Q2.3"}, {"x": 91, "y": 8.23, "key": "BIP-30907", "sprint": "BIP AI FY26Q2.3"}];
+const histCounts   = [75, 89, 324, 305, 12, 0, 0];
+const statusLabels = ["In Progress", "In Testing", "Peer Review Needed", "Blocked"];
+const statusValues = [65.3, 14.5, 16.5, 3.7];
+const scatterData  = [{"x": 1, "y": 0.0, "key": "BIP-26315", "sprint": "BIP AI FY25Q4.1"}, {"x": 2, "y": 0.03, "key": "BIP-26014", "sprint": "BIP AI FY25Q4.1"}, {"x": 3, "y": 0.21, "key": "BIP-26077", "sprint": "BIP AI FY25Q4.1"}, {"x": 4, "y": 0.66, "key": "BIP-26083", "sprint": "BIP AI FY25Q4.1"}, {"x": 5, "y": 0.87, "key": "BIP-26238", "sprint": "BIP AI FY25Q4.1"}, {"x": 6, "y": 0.87, "key": "BIP-26239", "sprint": "BIP AI FY25Q4.1"}, {"x": 7, "y": 0.99, "key": "BIP-26039", "sprint": "BIP AI FY25Q4.1"}, {"x": 8, "y": 1.06, "key": "BIP-26176", "sprint": "BIP AI FY25Q4.1"}, {"x": 9, "y": 1.06, "key": "BIP-26175", "sprint": "BIP AI FY25Q4.1"}, {"x": 10, "y": 1.23, "key": "BIP-26023", "sprint": "BIP AI FY25Q4.1"}, {"x": 11, "y": 1.8, "key": "BIP-26037", "sprint": "BIP AI FY25Q4.1"}, {"x": 12, "y": 2.0, "key": "BIP-26033", "sprint": "BIP AI FY25Q4.1"}, {"x": 13, "y": 2.11, "key": "BIP-26148", "sprint": "BIP AI FY25Q4.1"}, {"x": 14, "y": 2.12, "key": "BIP-26046", "sprint": "BIP AI FY25Q4.1"}, {"x": 15, "y": 2.15, "key": "BIP-26025", "sprint": "BIP AI FY25Q4.1"}, {"x": 16, "y": 2.52, "key": "BIP-26028", "sprint": "BIP AI FY25Q4.1"}, {"x": 17, "y": 2.77, "key": "BIP-26012", "sprint": "BIP AI FY25Q4.1"}, {"x": 18, "y": 2.98, "key": "BIP-26042", "sprint": "BIP AI FY25Q4.1"}, {"x": 19, "y": 3.1, "key": "BIP-26026", "sprint": "BIP AI FY25Q4.1"}, {"x": 20, "y": 3.19, "key": "BIP-26029", "sprint": "BIP AI FY25Q4.1"}, {"x": 21, "y": 3.26, "key": "BIP-26180", "sprint": "BIP AI FY25Q4.1"}, {"x": 22, "y": 3.26, "key": "BIP-26011", "sprint": "BIP AI FY25Q4.1"}, {"x": 23, "y": 3.58, "key": "BIP-26018", "sprint": "BIP AI FY25Q4.1"}, {"x": 24, "y": 3.83, "key": "BIP-26038", "sprint": "BIP AI FY25Q4.1"}, {"x": 25, "y": 3.98, "key": "BIP-26058", "sprint": "BIP AI FY25Q4.1"}, {"x": 26, "y": 4.14, "key": "BIP-26086", "sprint": "BIP AI FY25Q4.1"}, {"x": 27, "y": 4.19, "key": "BIP-26036", "sprint": "BIP AI FY25Q4.1"}, {"x": 28, "y": 4.21, "key": "BIP-26035", "sprint": "BIP AI FY25Q4.1"}, {"x": 29, "y": 4.22, "key": "BIP-26013", "sprint": "BIP AI FY25Q4.1"}, {"x": 30, "y": 4.22, "key": "BIP-26009", "sprint": "BIP AI FY25Q4.1"}, {"x": 31, "y": 4.27, "key": "BIP-26056", "sprint": "BIP AI FY25Q4.1"}, {"x": 32, "y": 4.28, "key": "BIP-26088", "sprint": "BIP AI FY25Q4.1"}, {"x": 33, "y": 5.1, "key": "BIP-26081", "sprint": "BIP AI FY25Q4.1"}, {"x": 34, "y": 6.31, "key": "BIP-26047", "sprint": "BIP AI FY25Q4.1"}, {"x": 35, "y": 6.97, "key": "BIP-26087", "sprint": "BIP AI FY25Q4.1"}, {"x": 36, "y": 7.08, "key": "BIP-26017", "sprint": "BIP AI FY25Q4.1"}, {"x": 37, "y": 7.21, "key": "BIP-26050", "sprint": "BIP AI FY25Q4.1"}, {"x": 38, "y": 7.21, "key": "BIP-26030", "sprint": "BIP AI FY25Q4.1"}, {"x": 39, "y": 7.21, "key": "BIP-26010", "sprint": "BIP AI FY25Q4.1"}, {"x": 40, "y": 7.22, "key": "BIP-26008", "sprint": "BIP AI FY25Q4.1"}, {"x": 41, "y": 8.03, "key": "BIP-26015", "sprint": "BIP AI FY25Q4.1"}, {"x": 42, "y": 8.16, "key": "BIP-26034", "sprint": "BIP AI FY25Q4.1"}, {"x": 43, "y": 8.18, "key": "BIP-26021", "sprint": "BIP AI FY25Q4.1"}, {"x": 44, "y": 8.18, "key": "BIP-26031", "sprint": "BIP AI FY25Q4.1"}, {"x": 45, "y": 8.28, "key": "BIP-26045", "sprint": "BIP AI FY25Q4.1"}, {"x": 46, "y": 8.37, "key": "BIP-26016", "sprint": "BIP AI FY25Q4.1"}, {"x": 47, "y": 0.0, "key": "BIP-26576", "sprint": "BIP AI FY25Q4.2"}, {"x": 48, "y": 0.01, "key": "BIP-26574", "sprint": "BIP AI FY25Q4.2"}, {"x": 49, "y": 0.8, "key": "BIP-26354", "sprint": "BIP AI FY25Q4.2"}, {"x": 50, "y": 0.81, "key": "BIP-26355", "sprint": "BIP AI FY25Q4.2"}, {"x": 51, "y": 1.29, "key": "BIP-26292", "sprint": "BIP AI FY25Q4.2"}, {"x": 52, "y": 2.01, "key": "BIP-26278", "sprint": "BIP AI FY25Q4.2"}, {"x": 53, "y": 2.02, "key": "BIP-26268", "sprint": "BIP AI FY25Q4.2"}, {"x": 54, "y": 2.05, "key": "BIP-26406", "sprint": "BIP AI FY25Q4.2"}, {"x": 55, "y": 2.12, "key": "BIP-26299", "sprint": "BIP AI FY25Q4.2"}, {"x": 56, "y": 2.22, "key": "BIP-26316", "sprint": "BIP AI FY25Q4.2"}, {"x": 57, "y": 2.24, "key": "BIP-26322", "sprint": "BIP AI FY25Q4.2"}, {"x": 58, "y": 2.26, "key": "BIP-26288", "sprint": "BIP AI FY25Q4.2"}, {"x": 59, "y": 3.0, "key": "BIP-26264", "sprint": "BIP AI FY25Q4.2"}, {"x": 60, "y": 3.5, "key": "BIP-26267", "sprint": "BIP AI FY25Q4.2"}, {"x": 61, "y": 3.91, "key": "BIP-26270", "sprint": "BIP AI FY25Q4.2"}, {"x": 62, "y": 4.0, "key": "BIP-26298", "sprint": "BIP AI FY25Q4.2"}, {"x": 63, "y": 4.01, "key": "BIP-26265", "sprint": "BIP AI FY25Q4.2"}, {"x": 64, "y": 4.04, "key": "BIP-26280", "sprint": "BIP AI FY25Q4.2"}, {"x": 65, "y": 4.09, "key": "BIP-26283", "sprint": "BIP AI FY25Q4.2"}, {"x": 66, "y": 4.15, "key": "BIP-26286", "sprint": "BIP AI FY25Q4.2"}, {"x": 67, "y": 4.16, "key": "BIP-26319", "sprint": "BIP AI FY25Q4.2"}, {"x": 68, "y": 4.2, "key": "BIP-26279", "sprint": "BIP AI FY25Q4.2"}, {"x": 69, "y": 5.09, "key": "BIP-26271", "sprint": "BIP AI FY25Q4.2"}, {"x": 70, "y": 5.25, "key": "BIP-26379", "sprint": "BIP AI FY25Q4.2"}, {"x": 71, "y": 6.05, "key": "BIP-26317", "sprint": "BIP AI FY25Q4.2"}, {"x": 72, "y": 6.06, "key": "BIP-26297", "sprint": "BIP AI FY25Q4.2"}, {"x": 73, "y": 6.17, "key": "BIP-26276", "sprint": "BIP AI FY25Q4.2"}, {"x": 74, "y": 6.19, "key": "BIP-26284", "sprint": "BIP AI FY25Q4.2"}, {"x": 75, "y": 6.23, "key": "BIP-26266", "sprint": "BIP AI FY25Q4.2"}, {"x": 76, "y": 6.69, "key": "BIP-26269", "sprint": "BIP AI FY25Q4.2"}, {"x": 77, "y": 7.13, "key": "BIP-26262", "sprint": "BIP AI FY25Q4.2"}, {"x": 78, "y": 7.17, "key": "BIP-26263", "sprint": "BIP AI FY25Q4.2"}, {"x": 79, "y": 7.93, "key": "BIP-26285", "sprint": "BIP AI FY25Q4.2"}, {"x": 80, "y": 8.41, "key": "BIP-26296", "sprint": "BIP AI FY25Q4.2"}, {"x": 81, "y": 8.95, "key": "BIP-26275", "sprint": "BIP AI FY25Q4.2"}, {"x": 82, "y": 8.97, "key": "BIP-26261", "sprint": "BIP AI FY25Q4.2"}, {"x": 83, "y": 9.0, "key": "BIP-26289", "sprint": "BIP AI FY25Q4.2"}, {"x": 84, "y": 9.12, "key": "BIP-26300", "sprint": "BIP AI FY25Q4.2"}, {"x": 85, "y": 9.19, "key": "BIP-26290", "sprint": "BIP AI FY25Q4.2"}, {"x": 86, "y": 9.23, "key": "BIP-26273", "sprint": "BIP AI FY25Q4.2"}, {"x": 87, "y": 9.3, "key": "BIP-26277", "sprint": "BIP AI FY25Q4.2"}, {"x": 88, "y": 1.04, "key": "BIP-26573", "sprint": "BIP AI FY25Q4.3"}, {"x": 89, "y": 1.07, "key": "BIP-26617", "sprint": "BIP AI FY25Q4.3"}, {"x": 90, "y": 1.47, "key": "BIP-26541", "sprint": "BIP AI FY25Q4.3"}, {"x": 91, "y": 1.61, "key": "BIP-26537", "sprint": "BIP AI FY25Q4.3"}, {"x": 92, "y": 1.78, "key": "BIP-26507", "sprint": "BIP AI FY25Q4.3"}, {"x": 93, "y": 2.0, "key": "BIP-26508", "sprint": "BIP AI FY25Q4.3"}, {"x": 94, "y": 2.2, "key": "BIP-26542", "sprint": "BIP AI FY25Q4.3"}, {"x": 95, "y": 2.5, "key": "BIP-26523", "sprint": "BIP AI FY25Q4.3"}, {"x": 96, "y": 2.5, "key": "BIP-26525", "sprint": "BIP AI FY25Q4.3"}, {"x": 97, "y": 2.56, "key": "BIP-26500", "sprint": "BIP AI FY25Q4.3"}, {"x": 98, "y": 2.73, "key": "BIP-26568", "sprint": "BIP AI FY25Q4.3"}, {"x": 99, "y": 3.01, "key": "BIP-26514", "sprint": "BIP AI FY25Q4.3"}, {"x": 100, "y": 3.17, "key": "BIP-26555", "sprint": "BIP AI FY25Q4.3"}, {"x": 101, "y": 3.18, "key": "BIP-26528", "sprint": "BIP AI FY25Q4.3"}, {"x": 102, "y": 3.21, "key": "BIP-26536", "sprint": "BIP AI FY25Q4.3"}, {"x": 103, "y": 3.26, "key": "BIP-26533", "sprint": "BIP AI FY25Q4.3"}, {"x": 104, "y": 3.34, "key": "BIP-26535", "sprint": "BIP AI FY25Q4.3"}, {"x": 105, "y": 3.74, "key": "BIP-26641", "sprint": "BIP AI FY25Q4.3"}, {"x": 106, "y": 3.93, "key": "BIP-26534", "sprint": "BIP AI FY25Q4.3"}, {"x": 107, "y": 3.93, "key": "BIP-26569", "sprint": "BIP AI FY25Q4.3"}, {"x": 108, "y": 4.04, "key": "BIP-26571", "sprint": "BIP AI FY25Q4.3"}, {"x": 109, "y": 4.11, "key": "BIP-26515", "sprint": "BIP AI FY25Q4.3"}, {"x": 110, "y": 4.16, "key": "BIP-26516", "sprint": "BIP AI FY25Q4.3"}, {"x": 111, "y": 4.16, "key": "BIP-26510", "sprint": "BIP AI FY25Q4.3"}, {"x": 112, "y": 4.26, "key": "BIP-26532", "sprint": "BIP AI FY25Q4.3"}, {"x": 113, "y": 5.07, "key": "BIP-26531", "sprint": "BIP AI FY25Q4.3"}, {"x": 114, "y": 5.33, "key": "BIP-26582", "sprint": "BIP AI FY25Q4.3"}, {"x": 115, "y": 5.95, "key": "BIP-26519", "sprint": "BIP AI FY25Q4.3"}, {"x": 116, "y": 6.0, "key": "BIP-26501", "sprint": "BIP AI FY25Q4.3"}, {"x": 117, "y": 6.09, "key": "BIP-26513", "sprint": "BIP AI FY25Q4.3"}, {"x": 118, "y": 6.13, "key": "BIP-26505", "sprint": "BIP AI FY25Q4.3"}, {"x": 119, "y": 6.4, "key": "BIP-26567", "sprint": "BIP AI FY25Q4.3"}, {"x": 120, "y": 6.45, "key": "BIP-26526", "sprint": "BIP AI FY25Q4.3"}, {"x": 121, "y": 7.06, "key": "BIP-26506", "sprint": "BIP AI FY25Q4.3"}, {"x": 122, "y": 7.51, "key": "BIP-26527", "sprint": "BIP AI FY25Q4.3"}, {"x": 123, "y": 7.51, "key": "BIP-26583", "sprint": "BIP AI FY25Q4.3"}, {"x": 124, "y": 8.04, "key": "BIP-26512", "sprint": "BIP AI FY25Q4.3"}, {"x": 125, "y": 9.12, "key": "BIP-26504", "sprint": "BIP AI FY25Q4.3"}, {"x": 126, "y": 9.17, "key": "BIP-26570", "sprint": "BIP AI FY25Q4.3"}, {"x": 127, "y": 9.24, "key": "BIP-26524", "sprint": "BIP AI FY25Q4.3"}, {"x": 128, "y": 9.37, "key": "BIP-26540", "sprint": "BIP AI FY25Q4.3"}, {"x": 129, "y": 9.99, "key": "BIP-26291", "sprint": "BIP AI FY25Q4.3"}, {"x": 130, "y": 0.05, "key": "BIP-26929", "sprint": "BIP AI FY25Q4.4"}, {"x": 131, "y": 0.08, "key": "BIP-26782", "sprint": "BIP AI FY25Q4.4"}, {"x": 132, "y": 0.08, "key": "BIP-26767", "sprint": "BIP AI FY25Q4.4"}, {"x": 133, "y": 0.96, "key": "BIP-26936", "sprint": "BIP AI FY25Q4.4"}, {"x": 134, "y": 1.1, "key": "BIP-26761", "sprint": "BIP AI FY25Q4.4"}, {"x": 135, "y": 1.11, "key": "BIP-26773", "sprint": "BIP AI FY25Q4.4"}, {"x": 136, "y": 1.13, "key": "BIP-26847", "sprint": "BIP AI FY25Q4.4"}, {"x": 137, "y": 1.17, "key": "BIP-26760", "sprint": "BIP AI FY25Q4.4"}, {"x": 138, "y": 1.17, "key": "BIP-26762", "sprint": "BIP AI FY25Q4.4"}, {"x": 139, "y": 1.18, "key": "BIP-26753", "sprint": "BIP AI FY25Q4.4"}, {"x": 140, "y": 1.54, "key": "BIP-26517", "sprint": "BIP AI FY25Q4.4"}, {"x": 141, "y": 2.23, "key": "BIP-26784", "sprint": "BIP AI FY25Q4.4"}, {"x": 142, "y": 2.8, "key": "BIP-26849", "sprint": "BIP AI FY25Q4.4"}, {"x": 143, "y": 3.06, "key": "BIP-26764", "sprint": "BIP AI FY25Q4.4"}, {"x": 144, "y": 3.12, "key": "BIP-26816", "sprint": "BIP AI FY25Q4.4"}, {"x": 145, "y": 3.19, "key": "BIP-26801", "sprint": "BIP AI FY25Q4.4"}, {"x": 146, "y": 3.22, "key": "BIP-26804", "sprint": "BIP AI FY25Q4.4"}, {"x": 147, "y": 3.52, "key": "BIP-26774", "sprint": "BIP AI FY25Q4.4"}, {"x": 148, "y": 3.86, "key": "BIP-26783", "sprint": "BIP AI FY25Q4.4"}, {"x": 149, "y": 3.86, "key": "BIP-26781", "sprint": "BIP AI FY25Q4.4"}, {"x": 150, "y": 4.99, "key": "BIP-26771", "sprint": "BIP AI FY25Q4.4"}, {"x": 151, "y": 5.0, "key": "BIP-26765", "sprint": "BIP AI FY25Q4.4"}, {"x": 152, "y": 6.09, "key": "BIP-26754", "sprint": "BIP AI FY25Q4.4"}, {"x": 153, "y": 6.16, "key": "BIP-26758", "sprint": "BIP AI FY25Q4.4"}, {"x": 154, "y": 6.17, "key": "BIP-26756", "sprint": "BIP AI FY25Q4.4"}, {"x": 155, "y": 6.28, "key": "BIP-26823", "sprint": "BIP AI FY25Q4.4"}, {"x": 156, "y": 6.28, "key": "BIP-26822", "sprint": "BIP AI FY25Q4.4"}, {"x": 157, "y": 6.97, "key": "BIP-26757", "sprint": "BIP AI FY25Q4.4"}, {"x": 158, "y": 6.99, "key": "BIP-26780", "sprint": "BIP AI FY25Q4.4"}, {"x": 159, "y": 7.48, "key": "BIP-26766", "sprint": "BIP AI FY25Q4.4"}, {"x": 160, "y": 7.51, "key": "BIP-26775", "sprint": "BIP AI FY25Q4.4"}, {"x": 161, "y": 7.56, "key": "BIP-26768", "sprint": "BIP AI FY25Q4.4"}, {"x": 162, "y": 7.98, "key": "BIP-26295", "sprint": "BIP AI FY25Q4.4"}, {"x": 163, "y": 8.11, "key": "BIP-26819", "sprint": "BIP AI FY25Q4.4"}, {"x": 164, "y": 8.15, "key": "BIP-26809", "sprint": "BIP AI FY25Q4.4"}, {"x": 165, "y": 8.84, "key": "BIP-26755", "sprint": "BIP AI FY25Q4.4"}, {"x": 166, "y": 8.88, "key": "BIP-26792", "sprint": "BIP AI FY25Q4.4"}, {"x": 167, "y": 9.07, "key": "BIP-26818", "sprint": "BIP AI FY25Q4.4"}, {"x": 168, "y": 10.22, "key": "BIP-26539", "sprint": "BIP AI FY25Q4.4"}, {"x": 169, "y": 10.94, "key": "BIP-26885", "sprint": "BIP AI FY25Q4.4"}, {"x": 170, "y": 11.19, "key": "BIP-26518", "sprint": "BIP AI FY25Q4.4"}, {"x": 171, "y": 12.0, "key": "BIP-26759", "sprint": "BIP AI FY25Q4.4"}, {"x": 172, "y": 12.23, "key": "BIP-26865", "sprint": "BIP AI FY25Q4.4"}, {"x": 173, "y": 13.02, "key": "BIP-26808", "sprint": "BIP AI FY25Q4.4"}, {"x": 174, "y": 13.26, "key": "BIP-26791", "sprint": "BIP AI FY25Q4.4"}, {"x": 175, "y": 16.18, "key": "BIP-26786", "sprint": "BIP AI FY25Q4.4"}, {"x": 176, "y": 0.0, "key": "BIP-26989", "sprint": "BIP AI FY25Q4.5"}, {"x": 177, "y": 0.14, "key": "BIP-26976", "sprint": "BIP AI FY25Q4.5"}, {"x": 178, "y": 0.18, "key": "BIP-27320", "sprint": "BIP AI FY25Q4.5"}, {"x": 179, "y": 0.18, "key": "BIP-27322", "sprint": "BIP AI FY25Q4.5"}, {"x": 180, "y": 0.24, "key": "BIP-27321", "sprint": "BIP AI FY25Q4.5"}, {"x": 181, "y": 0.25, "key": "BIP-26962", "sprint": "BIP AI FY25Q4.5"}, {"x": 182, "y": 0.91, "key": "BIP-27079", "sprint": "BIP AI FY25Q4.5"}, {"x": 183, "y": 0.93, "key": "BIP-27031", "sprint": "BIP AI FY25Q4.5"}, {"x": 184, "y": 1.04, "key": "BIP-26981", "sprint": "BIP AI FY25Q4.5"}, {"x": 185, "y": 1.09, "key": "BIP-26769", "sprint": "BIP AI FY25Q4.5"}, {"x": 186, "y": 1.68, "key": "BIP-26958", "sprint": "BIP AI FY25Q4.5"}, {"x": 187, "y": 1.99, "key": "BIP-27042", "sprint": "BIP AI FY25Q4.5"}, {"x": 188, "y": 2.03, "key": "BIP-26843", "sprint": "BIP AI FY25Q4.5"}, {"x": 189, "y": 2.08, "key": "BIP-26973", "sprint": "BIP AI FY25Q4.5"}, {"x": 190, "y": 2.12, "key": "BIP-26982", "sprint": "BIP AI FY25Q4.5"}, {"x": 191, "y": 2.14, "key": "BIP-27034", "sprint": "BIP AI FY25Q4.5"}, {"x": 192, "y": 2.22, "key": "BIP-26960", "sprint": "BIP AI FY25Q4.5"}, {"x": 193, "y": 2.28, "key": "BIP-27164", "sprint": "BIP AI FY25Q4.5"}, {"x": 194, "y": 2.29, "key": "BIP-26975", "sprint": "BIP AI FY25Q4.5"}, {"x": 195, "y": 2.29, "key": "BIP-26983", "sprint": "BIP AI FY25Q4.5"}, {"x": 196, "y": 2.31, "key": "BIP-26963", "sprint": "BIP AI FY25Q4.5"}, {"x": 197, "y": 2.93, "key": "BIP-26955", "sprint": "BIP AI FY25Q4.5"}, {"x": 198, "y": 3.11, "key": "BIP-26969", "sprint": "BIP AI FY25Q4.5"}, {"x": 199, "y": 3.17, "key": "BIP-27044", "sprint": "BIP AI FY25Q4.5"}, {"x": 200, "y": 3.22, "key": "BIP-26986", "sprint": "BIP AI FY25Q4.5"}, {"x": 201, "y": 3.54, "key": "BIP-26971", "sprint": "BIP AI FY25Q4.5"}, {"x": 202, "y": 3.78, "key": "BIP-26987", "sprint": "BIP AI FY25Q4.5"}, {"x": 203, "y": 3.84, "key": "BIP-26956", "sprint": "BIP AI FY25Q4.5"}, {"x": 204, "y": 3.89, "key": "BIP-26953", "sprint": "BIP AI FY25Q4.5"}, {"x": 205, "y": 3.99, "key": "BIP-27037", "sprint": "BIP AI FY25Q4.5"}, {"x": 206, "y": 4.19, "key": "BIP-26950", "sprint": "BIP AI FY25Q4.5"}, {"x": 207, "y": 4.91, "key": "BIP-26966", "sprint": "BIP AI FY25Q4.5"}, {"x": 208, "y": 5.09, "key": "BIP-26957", "sprint": "BIP AI FY25Q4.5"}, {"x": 209, "y": 5.12, "key": "BIP-26949", "sprint": "BIP AI FY25Q4.5"}, {"x": 210, "y": 5.95, "key": "BIP-26980", "sprint": "BIP AI FY25Q4.5"}, {"x": 211, "y": 6.02, "key": "BIP-26999", "sprint": "BIP AI FY25Q4.5"}, {"x": 212, "y": 6.9, "key": "BIP-26961", "sprint": "BIP AI FY25Q4.5"}, {"x": 213, "y": 6.97, "key": "BIP-26967", "sprint": "BIP AI FY25Q4.5"}, {"x": 214, "y": 6.98, "key": "BIP-27046", "sprint": "BIP AI FY25Q4.5"}, {"x": 215, "y": 7.13, "key": "BIP-27068", "sprint": "BIP AI FY25Q4.5"}, {"x": 216, "y": 7.13, "key": "BIP-27067", "sprint": "BIP AI FY25Q4.5"}, {"x": 217, "y": 7.2, "key": "BIP-26947", "sprint": "BIP AI FY25Q4.5"}, {"x": 218, "y": 7.21, "key": "BIP-26951", "sprint": "BIP AI FY25Q4.5"}, {"x": 219, "y": 7.42, "key": "BIP-26970", "sprint": "BIP AI FY25Q4.5"}, {"x": 220, "y": 8.0, "key": "BIP-27038", "sprint": "BIP AI FY25Q4.5"}, {"x": 221, "y": 8.13, "key": "BIP-26946", "sprint": "BIP AI FY25Q4.5"}, {"x": 222, "y": 8.17, "key": "BIP-26964", "sprint": "BIP AI FY25Q4.5"}, {"x": 223, "y": 8.17, "key": "BIP-26988", "sprint": "BIP AI FY25Q4.5"}, {"x": 224, "y": 8.18, "key": "BIP-26998", "sprint": "BIP AI FY25Q4.5"}, {"x": 225, "y": 8.19, "key": "BIP-26984", "sprint": "BIP AI FY25Q4.5"}, {"x": 226, "y": 8.19, "key": "BIP-26972", "sprint": "BIP AI FY25Q4.5"}, {"x": 227, "y": 8.24, "key": "BIP-27045", "sprint": "BIP AI FY25Q4.5"}, {"x": 228, "y": 8.28, "key": "BIP-26979", "sprint": "BIP AI FY25Q4.5"}, {"x": 229, "y": 8.29, "key": "BIP-26974", "sprint": "BIP AI FY25Q4.5"}, {"x": 230, "y": 0.0, "key": "BIP-27283", "sprint": "BIP AI FY25Q4.6"}, {"x": 231, "y": 0.02, "key": "BIP-27767", "sprint": "BIP AI FY25Q4.6"}, {"x": 232, "y": 0.02, "key": "BIP-27765", "sprint": "BIP AI FY25Q4.6"}, {"x": 233, "y": 0.14, "key": "BIP-27679", "sprint": "BIP AI FY25Q4.6"}, {"x": 234, "y": 0.21, "key": "BIP-27300", "sprint": "BIP AI FY25Q4.6"}, {"x": 235, "y": 0.23, "key": "BIP-27301", "sprint": "BIP AI FY25Q4.6"}, {"x": 236, "y": 0.23, "key": "BIP-27299", "sprint": "BIP AI FY25Q4.6"}, {"x": 237, "y": 1.01, "key": "BIP-27281", "sprint": "BIP AI FY25Q4.6"}, {"x": 238, "y": 1.09, "key": "BIP-27675", "sprint": "BIP AI FY25Q4.6"}, {"x": 239, "y": 1.11, "key": "BIP-27260", "sprint": "BIP AI FY25Q4.6"}, {"x": 240, "y": 1.25, "key": "BIP-27285", "sprint": "BIP AI FY25Q4.6"}, {"x": 241, "y": 1.85, "key": "BIP-27297", "sprint": "BIP AI FY25Q4.6"}, {"x": 242, "y": 1.93, "key": "BIP-27268", "sprint": "BIP AI FY25Q4.6"}, {"x": 243, "y": 2.06, "key": "BIP-27294", "sprint": "BIP AI FY25Q4.6"}, {"x": 244, "y": 2.1, "key": "BIP-27257", "sprint": "BIP AI FY25Q4.6"}, {"x": 245, "y": 2.12, "key": "BIP-27276", "sprint": "BIP AI FY25Q4.6"}, {"x": 246, "y": 2.13, "key": "BIP-27303", "sprint": "BIP AI FY25Q4.6"}, {"x": 247, "y": 2.89, "key": "BIP-27582", "sprint": "BIP AI FY25Q4.6"}, {"x": 248, "y": 3.02, "key": "BIP-27291", "sprint": "BIP AI FY25Q4.6"}, {"x": 249, "y": 3.09, "key": "BIP-27279", "sprint": "BIP AI FY25Q4.6"}, {"x": 250, "y": 3.93, "key": "BIP-27296", "sprint": "BIP AI FY25Q4.6"}, {"x": 251, "y": 3.93, "key": "BIP-27290", "sprint": "BIP AI FY25Q4.6"}, {"x": 252, "y": 4.01, "key": "BIP-27275", "sprint": "BIP AI FY25Q4.6"}, {"x": 253, "y": 4.08, "key": "BIP-27256", "sprint": "BIP AI FY25Q4.6"}, {"x": 254, "y": 4.13, "key": "BIP-27280", "sprint": "BIP AI FY25Q4.6"}, {"x": 255, "y": 4.91, "key": "BIP-27284", "sprint": "BIP AI FY25Q4.6"}, {"x": 256, "y": 4.91, "key": "BIP-27261", "sprint": "BIP AI FY25Q4.6"}, {"x": 257, "y": 5.05, "key": "BIP-27255", "sprint": "BIP AI FY25Q4.6"}, {"x": 258, "y": 5.07, "key": "BIP-27293", "sprint": "BIP AI FY25Q4.6"}, {"x": 259, "y": 5.09, "key": "BIP-27259", "sprint": "BIP AI FY25Q4.6"}, {"x": 260, "y": 6.06, "key": "BIP-27264", "sprint": "BIP AI FY25Q4.6"}, {"x": 261, "y": 6.11, "key": "BIP-27288", "sprint": "BIP AI FY25Q4.6"}, {"x": 262, "y": 6.24, "key": "BIP-27298", "sprint": "BIP AI FY25Q4.6"}, {"x": 263, "y": 7.1, "key": "BIP-27265", "sprint": "BIP AI FY25Q4.6"}, {"x": 264, "y": 7.13, "key": "BIP-27344", "sprint": "BIP AI FY25Q4.6"}, {"x": 265, "y": 7.22, "key": "BIP-27302", "sprint": "BIP AI FY25Q4.6"}, {"x": 266, "y": 7.23, "key": "BIP-27295", "sprint": "BIP AI FY25Q4.6"}, {"x": 267, "y": 7.34, "key": "BIP-27267", "sprint": "BIP AI FY25Q4.6"}, {"x": 268, "y": 7.92, "key": "BIP-27289", "sprint": "BIP AI FY25Q4.6"}, {"x": 269, "y": 8.02, "key": "BIP-27292", "sprint": "BIP AI FY25Q4.6"}, {"x": 270, "y": 9.07, "key": "BIP-27269", "sprint": "BIP AI FY25Q4.6"}, {"x": 271, "y": 9.07, "key": "BIP-27273", "sprint": "BIP AI FY25Q4.6"}, {"x": 272, "y": 9.17, "key": "BIP-27254", "sprint": "BIP AI FY25Q4.6"}, {"x": 273, "y": 9.21, "key": "BIP-27266", "sprint": "BIP AI FY25Q4.6"}, {"x": 274, "y": 9.24, "key": "BIP-27262", "sprint": "BIP AI FY25Q4.6"}, {"x": 275, "y": 9.24, "key": "BIP-27278", "sprint": "BIP AI FY25Q4.6"}, {"x": 276, "y": 11.98, "key": "BIP-26985", "sprint": "BIP AI FY25Q4.6"}, {"x": 277, "y": 0.01, "key": "BIP-28248", "sprint": "BIP AI FY25Q4.7"}, {"x": 278, "y": 0.21, "key": "BIP-27710", "sprint": "BIP AI FY25Q4.7"}, {"x": 279, "y": 1.0, "key": "BIP-27687", "sprint": "BIP AI FY25Q4.7"}, {"x": 280, "y": 1.21, "key": "BIP-27696", "sprint": "BIP AI FY25Q4.7"}, {"x": 281, "y": 2.01, "key": "BIP-27703", "sprint": "BIP AI FY25Q4.7"}, {"x": 282, "y": 2.14, "key": "BIP-28048", "sprint": "BIP AI FY25Q4.7"}, {"x": 283, "y": 2.14, "key": "BIP-27704", "sprint": "BIP AI FY25Q4.7"}, {"x": 284, "y": 4.0, "key": "BIP-27686", "sprint": "BIP AI FY25Q4.7"}, {"x": 285, "y": 4.04, "key": "BIP-27252", "sprint": "BIP AI FY25Q4.7"}, {"x": 286, "y": 4.09, "key": "BIP-27694", "sprint": "BIP AI FY25Q4.7"}, {"x": 287, "y": 4.16, "key": "BIP-27251", "sprint": "BIP AI FY25Q4.7"}, {"x": 288, "y": 4.98, "key": "BIP-27695", "sprint": "BIP AI FY25Q4.7"}, {"x": 289, "y": 6.0, "key": "BIP-27688", "sprint": "BIP AI FY25Q4.7"}, {"x": 290, "y": 6.0, "key": "BIP-27689", "sprint": "BIP AI FY25Q4.7"}, {"x": 291, "y": 6.0, "key": "BIP-27908", "sprint": "BIP AI FY25Q4.7"}, {"x": 292, "y": 6.11, "key": "BIP-27907", "sprint": "BIP AI FY25Q4.7"}, {"x": 293, "y": 6.22, "key": "BIP-27702", "sprint": "BIP AI FY25Q4.7"}, {"x": 294, "y": 7.21, "key": "BIP-27692", "sprint": "BIP AI FY25Q4.7"}, {"x": 295, "y": 7.36, "key": "BIP-27697", "sprint": "BIP AI FY25Q4.7"}, {"x": 296, "y": 9.11, "key": "BIP-27766", "sprint": "BIP AI FY25Q4.7"}, {"x": 297, "y": 9.14, "key": "BIP-27717", "sprint": "BIP AI FY25Q4.7"}, {"x": 298, "y": 9.14, "key": "BIP-27701", "sprint": "BIP AI FY25Q4.7"}, {"x": 299, "y": 9.15, "key": "BIP-27708", "sprint": "BIP AI FY25Q4.7"}, {"x": 300, "y": 9.16, "key": "BIP-27709", "sprint": "BIP AI FY25Q4.7"}, {"x": 301, "y": 9.18, "key": "BIP-27282", "sprint": "BIP AI FY25Q4.7"}, {"x": 302, "y": 9.19, "key": "BIP-27700", "sprint": "BIP AI FY25Q4.7"}, {"x": 303, "y": 9.2, "key": "BIP-27699", "sprint": "BIP AI FY25Q4.7"}, {"x": 304, "y": 9.23, "key": "BIP-27698", "sprint": "BIP AI FY25Q4.7"}, {"x": 305, "y": 9.27, "key": "BIP-27690", "sprint": "BIP AI FY25Q4.7"}, {"x": 306, "y": 0.0, "key": "BIP-28498", "sprint": "BIP AI FY26Q1.1"}, {"x": 307, "y": 0.05, "key": "BIP-28488", "sprint": "BIP AI FY26Q1.1"}, {"x": 308, "y": 0.25, "key": "BIP-28167", "sprint": "BIP AI FY26Q1.1"}, {"x": 309, "y": 0.47, "key": "BIP-28188", "sprint": "BIP AI FY26Q1.1"}, {"x": 310, "y": 0.99, "key": "BIP-28213", "sprint": "BIP AI FY26Q1.1"}, {"x": 311, "y": 1.14, "key": "BIP-28211", "sprint": "BIP AI FY26Q1.1"}, {"x": 312, "y": 1.76, "key": "BIP-28182", "sprint": "BIP AI FY26Q1.1"}, {"x": 313, "y": 1.81, "key": "BIP-28185", "sprint": "BIP AI FY26Q1.1"}, {"x": 314, "y": 2.12, "key": "BIP-28171", "sprint": "BIP AI FY26Q1.1"}, {"x": 315, "y": 2.18, "key": "BIP-28181", "sprint": "BIP AI FY26Q1.1"}, {"x": 316, "y": 2.21, "key": "BIP-28210", "sprint": "BIP AI FY26Q1.1"}, {"x": 317, "y": 2.21, "key": "BIP-28187", "sprint": "BIP AI FY26Q1.1"}, {"x": 318, "y": 2.63, "key": "BIP-28178", "sprint": "BIP AI FY26Q1.1"}, {"x": 319, "y": 2.63, "key": "BIP-28177", "sprint": "BIP AI FY26Q1.1"}, {"x": 320, "y": 2.68, "key": "BIP-28212", "sprint": "BIP AI FY26Q1.1"}, {"x": 321, "y": 2.99, "key": "BIP-28162", "sprint": "BIP AI FY26Q1.1"}, {"x": 322, "y": 3.05, "key": "BIP-28170", "sprint": "BIP AI FY26Q1.1"}, {"x": 323, "y": 3.1, "key": "BIP-28304", "sprint": "BIP AI FY26Q1.1"}, {"x": 324, "y": 3.14, "key": "BIP-28222", "sprint": "BIP AI FY26Q1.1"}, {"x": 325, "y": 3.22, "key": "BIP-28190", "sprint": "BIP AI FY26Q1.1"}, {"x": 326, "y": 3.58, "key": "BIP-28174", "sprint": "BIP AI FY26Q1.1"}, {"x": 327, "y": 3.85, "key": "BIP-28203", "sprint": "BIP AI FY26Q1.1"}, {"x": 328, "y": 3.91, "key": "BIP-28184", "sprint": "BIP AI FY26Q1.1"}, {"x": 329, "y": 3.92, "key": "BIP-28186", "sprint": "BIP AI FY26Q1.1"}, {"x": 330, "y": 4.09, "key": "BIP-28209", "sprint": "BIP AI FY26Q1.1"}, {"x": 331, "y": 4.09, "key": "BIP-28194", "sprint": "BIP AI FY26Q1.1"}, {"x": 332, "y": 4.1, "key": "BIP-28161", "sprint": "BIP AI FY26Q1.1"}, {"x": 333, "y": 4.27, "key": "BIP-28218", "sprint": "BIP AI FY26Q1.1"}, {"x": 334, "y": 5.01, "key": "BIP-28191", "sprint": "BIP AI FY26Q1.1"}, {"x": 335, "y": 6.05, "key": "BIP-28163", "sprint": "BIP AI FY26Q1.1"}, {"x": 336, "y": 6.3, "key": "BIP-28164", "sprint": "BIP AI FY26Q1.1"}, {"x": 337, "y": 6.92, "key": "BIP-28208", "sprint": "BIP AI FY26Q1.1"}, {"x": 338, "y": 7.18, "key": "BIP-28169", "sprint": "BIP AI FY26Q1.1"}, {"x": 339, "y": 7.2, "key": "BIP-28202", "sprint": "BIP AI FY26Q1.1"}, {"x": 340, "y": 7.98, "key": "BIP-28253", "sprint": "BIP AI FY26Q1.1"}, {"x": 341, "y": 7.99, "key": "BIP-28216", "sprint": "BIP AI FY26Q1.1"}, {"x": 342, "y": 8.01, "key": "BIP-28189", "sprint": "BIP AI FY26Q1.1"}, {"x": 343, "y": 8.08, "key": "BIP-28159", "sprint": "BIP AI FY26Q1.1"}, {"x": 344, "y": 8.12, "key": "BIP-28165", "sprint": "BIP AI FY26Q1.1"}, {"x": 345, "y": 8.13, "key": "BIP-28173", "sprint": "BIP AI FY26Q1.1"}, {"x": 346, "y": 8.15, "key": "BIP-28221", "sprint": "BIP AI FY26Q1.1"}, {"x": 347, "y": 8.16, "key": "BIP-28192", "sprint": "BIP AI FY26Q1.1"}, {"x": 348, "y": 8.2, "key": "BIP-28201", "sprint": "BIP AI FY26Q1.1"}, {"x": 349, "y": 8.22, "key": "BIP-28180", "sprint": "BIP AI FY26Q1.1"}, {"x": 350, "y": 8.23, "key": "BIP-28220", "sprint": "BIP AI FY26Q1.1"}, {"x": 351, "y": 8.25, "key": "BIP-28179", "sprint": "BIP AI FY26Q1.1"}, {"x": 352, "y": 8.26, "key": "BIP-28193", "sprint": "BIP AI FY26Q1.1"}, {"x": 353, "y": 8.29, "key": "BIP-28199", "sprint": "BIP AI FY26Q1.1"}, {"x": 354, "y": 8.29, "key": "BIP-28197", "sprint": "BIP AI FY26Q1.1"}, {"x": 355, "y": 11.3, "key": "BIP-27277", "sprint": "BIP AI FY26Q1.1"}, {"x": 356, "y": 0.03, "key": "BIP-28552", "sprint": "BIP AI FY26Q1.2"}, {"x": 357, "y": 0.1, "key": "BIP-28412", "sprint": "BIP AI FY26Q1.2"}, {"x": 358, "y": 0.99, "key": "BIP-28398", "sprint": "BIP AI FY26Q1.2"}, {"x": 359, "y": 1.03, "key": "BIP-28394", "sprint": "BIP AI FY26Q1.2"}, {"x": 360, "y": 1.03, "key": "BIP-28396", "sprint": "BIP AI FY26Q1.2"}, {"x": 361, "y": 1.18, "key": "BIP-28413", "sprint": "BIP AI FY26Q1.2"}, {"x": 362, "y": 1.25, "key": "BIP-28430", "sprint": "BIP AI FY26Q1.2"}, {"x": 363, "y": 1.36, "key": "BIP-28408", "sprint": "BIP AI FY26Q1.2"}, {"x": 364, "y": 1.88, "key": "BIP-28400", "sprint": "BIP AI FY26Q1.2"}, {"x": 365, "y": 2.0, "key": "BIP-28443", "sprint": "BIP AI FY26Q1.2"}, {"x": 366, "y": 2.09, "key": "BIP-28425", "sprint": "BIP AI FY26Q1.2"}, {"x": 367, "y": 2.1, "key": "BIP-28402", "sprint": "BIP AI FY26Q1.2"}, {"x": 368, "y": 2.13, "key": "BIP-28420", "sprint": "BIP AI FY26Q1.2"}, {"x": 369, "y": 2.14, "key": "BIP-28456", "sprint": "BIP AI FY26Q1.2"}, {"x": 370, "y": 2.14, "key": "BIP-28431", "sprint": "BIP AI FY26Q1.2"}, {"x": 371, "y": 2.23, "key": "BIP-28395", "sprint": "BIP AI FY26Q1.2"}, {"x": 372, "y": 2.25, "key": "BIP-28442", "sprint": "BIP AI FY26Q1.2"}, {"x": 373, "y": 2.9, "key": "BIP-28404", "sprint": "BIP AI FY26Q1.2"}, {"x": 374, "y": 2.95, "key": "BIP-28405", "sprint": "BIP AI FY26Q1.2"}, {"x": 375, "y": 2.99, "key": "BIP-28407", "sprint": "BIP AI FY26Q1.2"}, {"x": 376, "y": 3.22, "key": "BIP-28414", "sprint": "BIP AI FY26Q1.2"}, {"x": 377, "y": 4.02, "key": "BIP-28489", "sprint": "BIP AI FY26Q1.2"}, {"x": 378, "y": 4.18, "key": "BIP-28441", "sprint": "BIP AI FY26Q1.2"}, {"x": 379, "y": 4.22, "key": "BIP-28426", "sprint": "BIP AI FY26Q1.2"}, {"x": 380, "y": 4.76, "key": "BIP-28428", "sprint": "BIP AI FY26Q1.2"}, {"x": 381, "y": 4.97, "key": "BIP-28423", "sprint": "BIP AI FY26Q1.2"}, {"x": 382, "y": 5.0, "key": "BIP-28497", "sprint": "BIP AI FY26Q1.2"}, {"x": 383, "y": 5.0, "key": "BIP-28399", "sprint": "BIP AI FY26Q1.2"}, {"x": 384, "y": 5.18, "key": "BIP-28403", "sprint": "BIP AI FY26Q1.2"}, {"x": 385, "y": 5.28, "key": "BIP-28429", "sprint": "BIP AI FY26Q1.2"}, {"x": 386, "y": 5.99, "key": "BIP-28457", "sprint": "BIP AI FY26Q1.2"}, {"x": 387, "y": 5.99, "key": "BIP-28491", "sprint": "BIP AI FY26Q1.2"}, {"x": 388, "y": 6.04, "key": "BIP-28401", "sprint": "BIP AI FY26Q1.2"}, {"x": 389, "y": 6.17, "key": "BIP-28427", "sprint": "BIP AI FY26Q1.2"}, {"x": 390, "y": 6.25, "key": "BIP-28434", "sprint": "BIP AI FY26Q1.2"}, {"x": 391, "y": 6.27, "key": "BIP-28475", "sprint": "BIP AI FY26Q1.2"}, {"x": 392, "y": 6.49, "key": "BIP-28490", "sprint": "BIP AI FY26Q1.2"}, {"x": 393, "y": 6.65, "key": "BIP-28406", "sprint": "BIP AI FY26Q1.2"}, {"x": 394, "y": 7.0, "key": "BIP-28501", "sprint": "BIP AI FY26Q1.2"}, {"x": 395, "y": 7.04, "key": "BIP-28506", "sprint": "BIP AI FY26Q1.2"}, {"x": 396, "y": 7.14, "key": "BIP-28415", "sprint": "BIP AI FY26Q1.2"}, {"x": 397, "y": 7.14, "key": "BIP-28539", "sprint": "BIP AI FY26Q1.2"}, {"x": 398, "y": 8.18, "key": "BIP-28411", "sprint": "BIP AI FY26Q1.2"}, {"x": 399, "y": 9.04, "key": "BIP-28436", "sprint": "BIP AI FY26Q1.2"}, {"x": 400, "y": 9.14, "key": "BIP-28440", "sprint": "BIP AI FY26Q1.2"}, {"x": 401, "y": 9.18, "key": "BIP-28421", "sprint": "BIP AI FY26Q1.2"}, {"x": 402, "y": 9.23, "key": "BIP-28433", "sprint": "BIP AI FY26Q1.2"}, {"x": 403, "y": 9.28, "key": "BIP-28424", "sprint": "BIP AI FY26Q1.2"}, {"x": 404, "y": 9.32, "key": "BIP-28418", "sprint": "BIP AI FY26Q1.2"}, {"x": 405, "y": 0.0, "key": "BIP-28695", "sprint": "BIP AI FY26Q1.3"}, {"x": 406, "y": 0.18, "key": "BIP-28746", "sprint": "BIP AI FY26Q1.3"}, {"x": 407, "y": 0.18, "key": "BIP-28867", "sprint": "BIP AI FY26Q1.3"}, {"x": 408, "y": 0.22, "key": "BIP-28709", "sprint": "BIP AI FY26Q1.3"}, {"x": 409, "y": 0.23, "key": "BIP-28742", "sprint": "BIP AI FY26Q1.3"}, {"x": 410, "y": 0.26, "key": "BIP-28700", "sprint": "BIP AI FY26Q1.3"}, {"x": 411, "y": 0.69, "key": "BIP-28703", "sprint": "BIP AI FY26Q1.3"}, {"x": 412, "y": 1.09, "key": "BIP-28668", "sprint": "BIP AI FY26Q1.3"}, {"x": 413, "y": 1.12, "key": "BIP-28745", "sprint": "BIP AI FY26Q1.3"}, {"x": 414, "y": 1.18, "key": "BIP-28710", "sprint": "BIP AI FY26Q1.3"}, {"x": 415, "y": 1.24, "key": "BIP-28701", "sprint": "BIP AI FY26Q1.3"}, {"x": 416, "y": 1.61, "key": "BIP-28707", "sprint": "BIP AI FY26Q1.3"}, {"x": 417, "y": 1.75, "key": "BIP-28685", "sprint": "BIP AI FY26Q1.3"}, {"x": 418, "y": 1.99, "key": "BIP-28676", "sprint": "BIP AI FY26Q1.3"}, {"x": 419, "y": 2.0, "key": "BIP-28666", "sprint": "BIP AI FY26Q1.3"}, {"x": 420, "y": 2.04, "key": "BIP-28419", "sprint": "BIP AI FY26Q1.3"}, {"x": 421, "y": 2.06, "key": "BIP-28690", "sprint": "BIP AI FY26Q1.3"}, {"x": 422, "y": 2.06, "key": "BIP-28681", "sprint": "BIP AI FY26Q1.3"}, {"x": 423, "y": 2.11, "key": "BIP-28702", "sprint": "BIP AI FY26Q1.3"}, {"x": 424, "y": 2.12, "key": "BIP-28724", "sprint": "BIP AI FY26Q1.3"}, {"x": 425, "y": 2.19, "key": "BIP-28705", "sprint": "BIP AI FY26Q1.3"}, {"x": 426, "y": 3.0, "key": "BIP-28670", "sprint": "BIP AI FY26Q1.3"}, {"x": 427, "y": 3.02, "key": "BIP-28679", "sprint": "BIP AI FY26Q1.3"}, {"x": 428, "y": 3.02, "key": "BIP-28699", "sprint": "BIP AI FY26Q1.3"}, {"x": 429, "y": 3.07, "key": "BIP-28708", "sprint": "BIP AI FY26Q1.3"}, {"x": 430, "y": 3.09, "key": "BIP-28416", "sprint": "BIP AI FY26Q1.3"}, {"x": 431, "y": 3.16, "key": "BIP-28797", "sprint": "BIP AI FY26Q1.3"}, {"x": 432, "y": 3.2, "key": "BIP-28671", "sprint": "BIP AI FY26Q1.3"}, {"x": 433, "y": 3.39, "key": "BIP-28692", "sprint": "BIP AI FY26Q1.3"}, {"x": 434, "y": 3.88, "key": "BIP-28796", "sprint": "BIP AI FY26Q1.3"}, {"x": 435, "y": 3.91, "key": "BIP-28667", "sprint": "BIP AI FY26Q1.3"}, {"x": 436, "y": 3.97, "key": "BIP-28672", "sprint": "BIP AI FY26Q1.3"}, {"x": 437, "y": 4.05, "key": "BIP-28680", "sprint": "BIP AI FY26Q1.3"}, {"x": 438, "y": 4.11, "key": "BIP-28704", "sprint": "BIP AI FY26Q1.3"}, {"x": 439, "y": 4.29, "key": "BIP-28697", "sprint": "BIP AI FY26Q1.3"}, {"x": 440, "y": 4.46, "key": "BIP-28673", "sprint": "BIP AI FY26Q1.3"}, {"x": 441, "y": 4.82, "key": "BIP-28713", "sprint": "BIP AI FY26Q1.3"}, {"x": 442, "y": 4.94, "key": "BIP-28689", "sprint": "BIP AI FY26Q1.3"}, {"x": 443, "y": 4.98, "key": "BIP-28715", "sprint": "BIP AI FY26Q1.3"}, {"x": 444, "y": 5.0, "key": "BIP-28686", "sprint": "BIP AI FY26Q1.3"}, {"x": 445, "y": 5.17, "key": "BIP-28669", "sprint": "BIP AI FY26Q1.3"}, {"x": 446, "y": 5.24, "key": "BIP-28678", "sprint": "BIP AI FY26Q1.3"}, {"x": 447, "y": 5.61, "key": "BIP-28706", "sprint": "BIP AI FY26Q1.3"}, {"x": 448, "y": 5.93, "key": "BIP-28714", "sprint": "BIP AI FY26Q1.3"}, {"x": 449, "y": 5.99, "key": "BIP-28675", "sprint": "BIP AI FY26Q1.3"}, {"x": 450, "y": 6.12, "key": "BIP-28712", "sprint": "BIP AI FY26Q1.3"}, {"x": 451, "y": 6.15, "key": "BIP-28769", "sprint": "BIP AI FY26Q1.3"}, {"x": 452, "y": 6.29, "key": "BIP-28684", "sprint": "BIP AI FY26Q1.3"}, {"x": 453, "y": 7.06, "key": "BIP-28717", "sprint": "BIP AI FY26Q1.3"}, {"x": 454, "y": 7.23, "key": "BIP-28716", "sprint": "BIP AI FY26Q1.3"}, {"x": 455, "y": 7.33, "key": "BIP-28682", "sprint": "BIP AI FY26Q1.3"}, {"x": 456, "y": 8.08, "key": "BIP-28688", "sprint": "BIP AI FY26Q1.3"}, {"x": 457, "y": 8.16, "key": "BIP-28743", "sprint": "BIP AI FY26Q1.3"}, {"x": 458, "y": 8.24, "key": "BIP-28698", "sprint": "BIP AI FY26Q1.3"}, {"x": 459, "y": 8.24, "key": "BIP-28720", "sprint": "BIP AI FY26Q1.3"}, {"x": 460, "y": 10.13, "key": "BIP-28422", "sprint": "BIP AI FY26Q1.3"}, {"x": 461, "y": 0.05, "key": "BIP-28911", "sprint": "BIP AI FY26Q1.4"}, {"x": 462, "y": 0.9, "key": "BIP-28904", "sprint": "BIP AI FY26Q1.4"}, {"x": 463, "y": 1.01, "key": "BIP-28890", "sprint": "BIP AI FY26Q1.4"}, {"x": 464, "y": 1.22, "key": "BIP-28933", "sprint": "BIP AI FY26Q1.4"}, {"x": 465, "y": 1.22, "key": "BIP-28884", "sprint": "BIP AI FY26Q1.4"}, {"x": 466, "y": 1.22, "key": "BIP-28886", "sprint": "BIP AI FY26Q1.4"}, {"x": 467, "y": 1.23, "key": "BIP-28887", "sprint": "BIP AI FY26Q1.4"}, {"x": 468, "y": 2.01, "key": "BIP-28897", "sprint": "BIP AI FY26Q1.4"}, {"x": 469, "y": 2.08, "key": "BIP-28893", "sprint": "BIP AI FY26Q1.4"}, {"x": 470, "y": 2.11, "key": "BIP-28885", "sprint": "BIP AI FY26Q1.4"}, {"x": 471, "y": 2.22, "key": "BIP-28921", "sprint": "BIP AI FY26Q1.4"}, {"x": 472, "y": 2.23, "key": "BIP-28936", "sprint": "BIP AI FY26Q1.4"}, {"x": 473, "y": 2.33, "key": "BIP-28892", "sprint": "BIP AI FY26Q1.4"}, {"x": 474, "y": 2.55, "key": "BIP-28913", "sprint": "BIP AI FY26Q1.4"}, {"x": 475, "y": 2.64, "key": "BIP-28912", "sprint": "BIP AI FY26Q1.4"}, {"x": 476, "y": 2.8, "key": "BIP-28917", "sprint": "BIP AI FY26Q1.4"}, {"x": 477, "y": 2.93, "key": "BIP-28920", "sprint": "BIP AI FY26Q1.4"}, {"x": 478, "y": 2.99, "key": "BIP-28938", "sprint": "BIP AI FY26Q1.4"}, {"x": 479, "y": 3.12, "key": "BIP-28932", "sprint": "BIP AI FY26Q1.4"}, {"x": 480, "y": 3.14, "key": "BIP-28916", "sprint": "BIP AI FY26Q1.4"}, {"x": 481, "y": 3.14, "key": "BIP-28895", "sprint": "BIP AI FY26Q1.4"}, {"x": 482, "y": 3.14, "key": "BIP-28910", "sprint": "BIP AI FY26Q1.4"}, {"x": 483, "y": 3.18, "key": "BIP-28908", "sprint": "BIP AI FY26Q1.4"}, {"x": 484, "y": 3.2, "key": "BIP-28902", "sprint": "BIP AI FY26Q1.4"}, {"x": 485, "y": 3.26, "key": "BIP-28907", "sprint": "BIP AI FY26Q1.4"}, {"x": 486, "y": 3.73, "key": "BIP-28900", "sprint": "BIP AI FY26Q1.4"}, {"x": 487, "y": 3.88, "key": "BIP-28677", "sprint": "BIP AI FY26Q1.4"}, {"x": 488, "y": 3.92, "key": "BIP-28896", "sprint": "BIP AI FY26Q1.4"}, {"x": 489, "y": 4.03, "key": "BIP-28909", "sprint": "BIP AI FY26Q1.4"}, {"x": 490, "y": 4.12, "key": "BIP-28937", "sprint": "BIP AI FY26Q1.4"}, {"x": 491, "y": 4.13, "key": "BIP-28719", "sprint": "BIP AI FY26Q1.4"}, {"x": 492, "y": 4.17, "key": "BIP-28889", "sprint": "BIP AI FY26Q1.4"}, {"x": 493, "y": 4.21, "key": "BIP-28437", "sprint": "BIP AI FY26Q1.4"}, {"x": 494, "y": 4.89, "key": "BIP-28915", "sprint": "BIP AI FY26Q1.4"}, {"x": 495, "y": 4.96, "key": "BIP-28894", "sprint": "BIP AI FY26Q1.4"}, {"x": 496, "y": 5.18, "key": "BIP-28940", "sprint": "BIP AI FY26Q1.4"}, {"x": 497, "y": 6.01, "key": "BIP-28901", "sprint": "BIP AI FY26Q1.4"}, {"x": 498, "y": 6.05, "key": "BIP-28943", "sprint": "BIP AI FY26Q1.4"}, {"x": 499, "y": 6.21, "key": "BIP-28903", "sprint": "BIP AI FY26Q1.4"}, {"x": 500, "y": 6.27, "key": "BIP-28934", "sprint": "BIP AI FY26Q1.4"}, {"x": 501, "y": 6.28, "key": "BIP-28905", "sprint": "BIP AI FY26Q1.4"}, {"x": 502, "y": 7.02, "key": "BIP-28914", "sprint": "BIP AI FY26Q1.4"}, {"x": 503, "y": 7.23, "key": "BIP-28935", "sprint": "BIP AI FY26Q1.4"}, {"x": 504, "y": 8.03, "key": "BIP-28687", "sprint": "BIP AI FY26Q1.4"}, {"x": 505, "y": 8.03, "key": "BIP-28899", "sprint": "BIP AI FY26Q1.4"}, {"x": 506, "y": 8.2, "key": "BIP-28919", "sprint": "BIP AI FY26Q1.4"}, {"x": 507, "y": 0.0, "key": "BIP-29267", "sprint": "BIP AI FY26Q1.5"}, {"x": 508, "y": 0.03, "key": "BIP-29099", "sprint": "BIP AI FY26Q1.5"}, {"x": 509, "y": 0.04, "key": "BIP-29442", "sprint": "BIP AI FY26Q1.5"}, {"x": 510, "y": 0.35, "key": "BIP-29093", "sprint": "BIP AI FY26Q1.5"}, {"x": 511, "y": 1.0, "key": "BIP-29062", "sprint": "BIP AI FY26Q1.5"}, {"x": 512, "y": 1.05, "key": "BIP-29190", "sprint": "BIP AI FY26Q1.5"}, {"x": 513, "y": 1.1, "key": "BIP-29077", "sprint": "BIP AI FY26Q1.5"}, {"x": 514, "y": 1.92, "key": "BIP-29081", "sprint": "BIP AI FY26Q1.5"}, {"x": 515, "y": 1.92, "key": "BIP-29094", "sprint": "BIP AI FY26Q1.5"}, {"x": 516, "y": 1.97, "key": "BIP-29096", "sprint": "BIP AI FY26Q1.5"}, {"x": 517, "y": 2.0, "key": "BIP-29060", "sprint": "BIP AI FY26Q1.5"}, {"x": 518, "y": 2.03, "key": "BIP-29070", "sprint": "BIP AI FY26Q1.5"}, {"x": 519, "y": 2.07, "key": "BIP-29058", "sprint": "BIP AI FY26Q1.5"}, {"x": 520, "y": 2.13, "key": "BIP-28944", "sprint": "BIP AI FY26Q1.5"}, {"x": 521, "y": 2.73, "key": "BIP-29098", "sprint": "BIP AI FY26Q1.5"}, {"x": 522, "y": 2.74, "key": "BIP-29087", "sprint": "BIP AI FY26Q1.5"}, {"x": 523, "y": 3.0, "key": "BIP-29133", "sprint": "BIP AI FY26Q1.5"}, {"x": 524, "y": 3.09, "key": "BIP-29057", "sprint": "BIP AI FY26Q1.5"}, {"x": 525, "y": 3.25, "key": "BIP-29075", "sprint": "BIP AI FY26Q1.5"}, {"x": 526, "y": 3.3, "key": "BIP-29080", "sprint": "BIP AI FY26Q1.5"}, {"x": 527, "y": 3.34, "key": "BIP-29066", "sprint": "BIP AI FY26Q1.5"}, {"x": 528, "y": 4.0, "key": "BIP-29065", "sprint": "BIP AI FY26Q1.5"}, {"x": 529, "y": 4.0, "key": "BIP-29105", "sprint": "BIP AI FY26Q1.5"}, {"x": 530, "y": 4.04, "key": "BIP-29100", "sprint": "BIP AI FY26Q1.5"}, {"x": 531, "y": 4.18, "key": "BIP-29076", "sprint": "BIP AI FY26Q1.5"}, {"x": 532, "y": 4.2, "key": "BIP-29088", "sprint": "BIP AI FY26Q1.5"}, {"x": 533, "y": 4.26, "key": "BIP-29085", "sprint": "BIP AI FY26Q1.5"}, {"x": 534, "y": 4.68, "key": "BIP-29079", "sprint": "BIP AI FY26Q1.5"}, {"x": 535, "y": 4.8, "key": "BIP-29068", "sprint": "BIP AI FY26Q1.5"}, {"x": 536, "y": 4.88, "key": "BIP-28888", "sprint": "BIP AI FY26Q1.5"}, {"x": 537, "y": 5.0, "key": "BIP-29082", "sprint": "BIP AI FY26Q1.5"}, {"x": 538, "y": 5.04, "key": "BIP-29092", "sprint": "BIP AI FY26Q1.5"}, {"x": 539, "y": 5.08, "key": "BIP-29106", "sprint": "BIP AI FY26Q1.5"}, {"x": 540, "y": 5.15, "key": "BIP-29064", "sprint": "BIP AI FY26Q1.5"}, {"x": 541, "y": 5.21, "key": "BIP-29134", "sprint": "BIP AI FY26Q1.5"}, {"x": 542, "y": 5.26, "key": "BIP-29091", "sprint": "BIP AI FY26Q1.5"}, {"x": 543, "y": 5.84, "key": "BIP-29103", "sprint": "BIP AI FY26Q1.5"}, {"x": 544, "y": 6.02, "key": "BIP-29086", "sprint": "BIP AI FY26Q1.5"}, {"x": 545, "y": 6.09, "key": "BIP-29089", "sprint": "BIP AI FY26Q1.5"}, {"x": 546, "y": 6.12, "key": "BIP-29084", "sprint": "BIP AI FY26Q1.5"}, {"x": 547, "y": 6.18, "key": "BIP-29073", "sprint": "BIP AI FY26Q1.5"}, {"x": 548, "y": 6.29, "key": "BIP-29063", "sprint": "BIP AI FY26Q1.5"}, {"x": 549, "y": 7.22, "key": "BIP-29097", "sprint": "BIP AI FY26Q1.5"}, {"x": 550, "y": 8.09, "key": "BIP-29056", "sprint": "BIP AI FY26Q1.5"}, {"x": 551, "y": 9.0, "key": "BIP-29101", "sprint": "BIP AI FY26Q1.5"}, {"x": 552, "y": 9.11, "key": "BIP-29071", "sprint": "BIP AI FY26Q1.5"}, {"x": 553, "y": 9.18, "key": "BIP-29180", "sprint": "BIP AI FY26Q1.5"}, {"x": 554, "y": 9.22, "key": "BIP-29095", "sprint": "BIP AI FY26Q1.5"}, {"x": 555, "y": 9.24, "key": "BIP-29083", "sprint": "BIP AI FY26Q1.5"}, {"x": 556, "y": 9.25, "key": "BIP-29061", "sprint": "BIP AI FY26Q1.5"}, {"x": 557, "y": 9.29, "key": "BIP-29182", "sprint": "BIP AI FY26Q1.5"}, {"x": 558, "y": 0.0, "key": "BIP-30030", "sprint": "BIP AI FY26Q1.6"}, {"x": 559, "y": 0.85, "key": "BIP-29470", "sprint": "BIP AI FY26Q1.6"}, {"x": 560, "y": 1.01, "key": "BIP-29515", "sprint": "BIP AI FY26Q1.6"}, {"x": 561, "y": 1.17, "key": "BIP-29512", "sprint": "BIP AI FY26Q1.6"}, {"x": 562, "y": 1.25, "key": "BIP-29466", "sprint": "BIP AI FY26Q1.6"}, {"x": 563, "y": 1.27, "key": "BIP-29482", "sprint": "BIP AI FY26Q1.6"}, {"x": 564, "y": 1.3, "key": "BIP-29485", "sprint": "BIP AI FY26Q1.6"}, {"x": 565, "y": 1.45, "key": "BIP-29516", "sprint": "BIP AI FY26Q1.6"}, {"x": 566, "y": 1.59, "key": "BIP-29495", "sprint": "BIP AI FY26Q1.6"}, {"x": 567, "y": 1.77, "key": "BIP-29497", "sprint": "BIP AI FY26Q1.6"}, {"x": 568, "y": 1.97, "key": "BIP-29597", "sprint": "BIP AI FY26Q1.6"}, {"x": 569, "y": 2.24, "key": "BIP-29460", "sprint": "BIP AI FY26Q1.6"}, {"x": 570, "y": 2.73, "key": "BIP-29506", "sprint": "BIP AI FY26Q1.6"}, {"x": 571, "y": 2.85, "key": "BIP-29055", "sprint": "BIP AI FY26Q1.6"}, {"x": 572, "y": 2.93, "key": "BIP-29593", "sprint": "BIP AI FY26Q1.6"}, {"x": 573, "y": 2.95, "key": "BIP-29478", "sprint": "BIP AI FY26Q1.6"}, {"x": 574, "y": 2.96, "key": "BIP-29522", "sprint": "BIP AI FY26Q1.6"}, {"x": 575, "y": 2.96, "key": "BIP-29521", "sprint": "BIP AI FY26Q1.6"}, {"x": 576, "y": 3.06, "key": "BIP-29511", "sprint": "BIP AI FY26Q1.6"}, {"x": 577, "y": 3.15, "key": "BIP-29494", "sprint": "BIP AI FY26Q1.6"}, {"x": 578, "y": 3.35, "key": "BIP-29471", "sprint": "BIP AI FY26Q1.6"}, {"x": 579, "y": 3.84, "key": "BIP-29492", "sprint": "BIP AI FY26Q1.6"}, {"x": 580, "y": 3.98, "key": "BIP-29503", "sprint": "BIP AI FY26Q1.6"}, {"x": 581, "y": 4.0, "key": "BIP-29514", "sprint": "BIP AI FY26Q1.6"}, {"x": 582, "y": 4.0, "key": "BIP-29469", "sprint": "BIP AI FY26Q1.6"}, {"x": 583, "y": 4.01, "key": "BIP-29517", "sprint": "BIP AI FY26Q1.6"}, {"x": 584, "y": 4.01, "key": "BIP-29483", "sprint": "BIP AI FY26Q1.6"}, {"x": 585, "y": 4.03, "key": "BIP-29810", "sprint": "BIP AI FY26Q1.6"}, {"x": 586, "y": 4.12, "key": "BIP-29498", "sprint": "BIP AI FY26Q1.6"}, {"x": 587, "y": 4.19, "key": "BIP-29493", "sprint": "BIP AI FY26Q1.6"}, {"x": 588, "y": 4.83, "key": "BIP-29520", "sprint": "BIP AI FY26Q1.6"}, {"x": 589, "y": 4.99, "key": "BIP-29481", "sprint": "BIP AI FY26Q1.6"}, {"x": 590, "y": 4.99, "key": "BIP-29104", "sprint": "BIP AI FY26Q1.6"}, {"x": 591, "y": 5.1, "key": "BIP-29507", "sprint": "BIP AI FY26Q1.6"}, {"x": 592, "y": 5.18, "key": "BIP-29501", "sprint": "BIP AI FY26Q1.6"}, {"x": 593, "y": 6.0, "key": "BIP-29524", "sprint": "BIP AI FY26Q1.6"}, {"x": 594, "y": 6.01, "key": "BIP-29528", "sprint": "BIP AI FY26Q1.6"}, {"x": 595, "y": 6.04, "key": "BIP-29592", "sprint": "BIP AI FY26Q1.6"}, {"x": 596, "y": 6.08, "key": "BIP-29513", "sprint": "BIP AI FY26Q1.6"}, {"x": 597, "y": 6.08, "key": "BIP-29499", "sprint": "BIP AI FY26Q1.6"}, {"x": 598, "y": 6.83, "key": "BIP-29484", "sprint": "BIP AI FY26Q1.6"}, {"x": 599, "y": 6.95, "key": "BIP-29519", "sprint": "BIP AI FY26Q1.6"}, {"x": 600, "y": 7.96, "key": "BIP-29090", "sprint": "BIP AI FY26Q1.6"}, {"x": 601, "y": 8.03, "key": "BIP-29496", "sprint": "BIP AI FY26Q1.6"}, {"x": 602, "y": 8.09, "key": "BIP-29526", "sprint": "BIP AI FY26Q1.6"}, {"x": 603, "y": 8.15, "key": "BIP-29463", "sprint": "BIP AI FY26Q1.6"}, {"x": 604, "y": 8.18, "key": "BIP-29504", "sprint": "BIP AI FY26Q1.6"}, {"x": 605, "y": 8.18, "key": "BIP-29527", "sprint": "BIP AI FY26Q1.6"}, {"x": 606, "y": 8.22, "key": "BIP-29177", "sprint": "BIP AI FY26Q1.6"}, {"x": 607, "y": 0.0, "key": "BIP-30100", "sprint": "BIP AI FY26Q1.7"}, {"x": 608, "y": 0.0, "key": "BIP-30348", "sprint": "BIP AI FY26Q1.7"}, {"x": 609, "y": 0.12, "key": "BIP-30325", "sprint": "BIP AI FY26Q1.7"}, {"x": 610, "y": 0.15, "key": "BIP-29968", "sprint": "BIP AI FY26Q1.7"}, {"x": 611, "y": 1.71, "key": "BIP-29972", "sprint": "BIP AI FY26Q1.7"}, {"x": 612, "y": 2.06, "key": "BIP-29977", "sprint": "BIP AI FY26Q1.7"}, {"x": 613, "y": 2.76, "key": "BIP-29965", "sprint": "BIP AI FY26Q1.7"}, {"x": 614, "y": 2.76, "key": "BIP-30101", "sprint": "BIP AI FY26Q1.7"}, {"x": 615, "y": 2.77, "key": "BIP-30099", "sprint": "BIP AI FY26Q1.7"}, {"x": 616, "y": 2.77, "key": "BIP-29967", "sprint": "BIP AI FY26Q1.7"}, {"x": 617, "y": 2.77, "key": "BIP-29971", "sprint": "BIP AI FY26Q1.7"}, {"x": 618, "y": 2.77, "key": "BIP-29961", "sprint": "BIP AI FY26Q1.7"}, {"x": 619, "y": 2.77, "key": "BIP-29969", "sprint": "BIP AI FY26Q1.7"}, {"x": 620, "y": 2.77, "key": "BIP-29966", "sprint": "BIP AI FY26Q1.7"}, {"x": 621, "y": 3.83, "key": "BIP-30102", "sprint": "BIP AI FY26Q1.7"}, {"x": 622, "y": 3.97, "key": "BIP-29973", "sprint": "BIP AI FY26Q1.7"}, {"x": 623, "y": 4.01, "key": "BIP-29970", "sprint": "BIP AI FY26Q1.7"}, {"x": 624, "y": 4.05, "key": "BIP-29918", "sprint": "BIP AI FY26Q1.7"}, {"x": 625, "y": 4.15, "key": "BIP-29930", "sprint": "BIP AI FY26Q1.7"}, {"x": 626, "y": 4.16, "key": "BIP-29901", "sprint": "BIP AI FY26Q1.7"}, {"x": 627, "y": 4.98, "key": "BIP-29925", "sprint": "BIP AI FY26Q1.7"}, {"x": 628, "y": 5.0, "key": "BIP-29979", "sprint": "BIP AI FY26Q1.7"}, {"x": 629, "y": 5.0, "key": "BIP-29976", "sprint": "BIP AI FY26Q1.7"}, {"x": 630, "y": 5.0, "key": "BIP-29978", "sprint": "BIP AI FY26Q1.7"}, {"x": 631, "y": 5.0, "key": "BIP-29975", "sprint": "BIP AI FY26Q1.7"}, {"x": 632, "y": 5.0, "key": "BIP-29980", "sprint": "BIP AI FY26Q1.7"}, {"x": 633, "y": 5.0, "key": "BIP-29974", "sprint": "BIP AI FY26Q1.7"}, {"x": 634, "y": 5.04, "key": "BIP-29903", "sprint": "BIP AI FY26Q1.7"}, {"x": 635, "y": 5.28, "key": "BIP-29931", "sprint": "BIP AI FY26Q1.7"}, {"x": 636, "y": 5.98, "key": "BIP-29900", "sprint": "BIP AI FY26Q1.7"}, {"x": 637, "y": 6.0, "key": "BIP-29924", "sprint": "BIP AI FY26Q1.7"}, {"x": 638, "y": 6.28, "key": "BIP-29926", "sprint": "BIP AI FY26Q1.7"}, {"x": 639, "y": 6.76, "key": "BIP-29921", "sprint": "BIP AI FY26Q1.7"}, {"x": 640, "y": 7.0, "key": "BIP-29932", "sprint": "BIP AI FY26Q1.7"}, {"x": 641, "y": 7.01, "key": "BIP-29910", "sprint": "BIP AI FY26Q1.7"}, {"x": 642, "y": 7.16, "key": "BIP-29935", "sprint": "BIP AI FY26Q1.7"}, {"x": 643, "y": 7.18, "key": "BIP-29929", "sprint": "BIP AI FY26Q1.7"}, {"x": 644, "y": 7.98, "key": "BIP-29898", "sprint": "BIP AI FY26Q1.7"}, {"x": 645, "y": 8.0, "key": "BIP-29902", "sprint": "BIP AI FY26Q1.7"}, {"x": 646, "y": 8.01, "key": "BIP-29928", "sprint": "BIP AI FY26Q1.7"}, {"x": 647, "y": 8.06, "key": "BIP-30033", "sprint": "BIP AI FY26Q1.7"}, {"x": 648, "y": 8.14, "key": "BIP-29922", "sprint": "BIP AI FY26Q1.7"}, {"x": 649, "y": 8.2, "key": "BIP-29909", "sprint": "BIP AI FY26Q1.7"}, {"x": 650, "y": 0.93, "key": "BIP-29897", "sprint": "BIP AI FY26Q2.1"}, {"x": 651, "y": 0.96, "key": "BIP-30317", "sprint": "BIP AI FY26Q2.1"}, {"x": 652, "y": 1.06, "key": "BIP-30313", "sprint": "BIP AI FY26Q2.1"}, {"x": 653, "y": 1.1, "key": "BIP-29508", "sprint": "BIP AI FY26Q2.1"}, {"x": 654, "y": 1.13, "key": "BIP-30345", "sprint": "BIP AI FY26Q2.1"}, {"x": 655, "y": 1.16, "key": "BIP-30300", "sprint": "BIP AI FY26Q2.1"}, {"x": 656, "y": 1.24, "key": "BIP-30283", "sprint": "BIP AI FY26Q2.1"}, {"x": 657, "y": 1.59, "key": "BIP-30262", "sprint": "BIP AI FY26Q2.1"}, {"x": 658, "y": 1.96, "key": "BIP-30282", "sprint": "BIP AI FY26Q2.1"}, {"x": 659, "y": 2.0, "key": "BIP-30288", "sprint": "BIP AI FY26Q2.1"}, {"x": 660, "y": 2.07, "key": "BIP-30294", "sprint": "BIP AI FY26Q2.1"}, {"x": 661, "y": 2.08, "key": "BIP-30265", "sprint": "BIP AI FY26Q2.1"}, {"x": 662, "y": 2.08, "key": "BIP-30257", "sprint": "BIP AI FY26Q2.1"}, {"x": 663, "y": 2.11, "key": "BIP-30267", "sprint": "BIP AI FY26Q2.1"}, {"x": 664, "y": 2.11, "key": "BIP-30260", "sprint": "BIP AI FY26Q2.1"}, {"x": 665, "y": 2.13, "key": "BIP-30341", "sprint": "BIP AI FY26Q2.1"}, {"x": 666, "y": 2.13, "key": "BIP-30286", "sprint": "BIP AI FY26Q2.1"}, {"x": 667, "y": 2.15, "key": "BIP-30279", "sprint": "BIP AI FY26Q2.1"}, {"x": 668, "y": 2.21, "key": "BIP-30319", "sprint": "BIP AI FY26Q2.1"}, {"x": 669, "y": 2.21, "key": "BIP-30318", "sprint": "BIP AI FY26Q2.1"}, {"x": 670, "y": 2.94, "key": "BIP-30312", "sprint": "BIP AI FY26Q2.1"}, {"x": 671, "y": 3.1, "key": "BIP-30287", "sprint": "BIP AI FY26Q2.1"}, {"x": 672, "y": 3.26, "key": "BIP-30293", "sprint": "BIP AI FY26Q2.1"}, {"x": 673, "y": 3.87, "key": "BIP-30289", "sprint": "BIP AI FY26Q2.1"}, {"x": 674, "y": 3.93, "key": "BIP-30266", "sprint": "BIP AI FY26Q2.1"}, {"x": 675, "y": 3.99, "key": "BIP-30344", "sprint": "BIP AI FY26Q2.1"}, {"x": 676, "y": 4.0, "key": "BIP-30290", "sprint": "BIP AI FY26Q2.1"}, {"x": 677, "y": 4.0, "key": "BIP-30259", "sprint": "BIP AI FY26Q2.1"}, {"x": 678, "y": 4.2, "key": "BIP-30261", "sprint": "BIP AI FY26Q2.1"}, {"x": 679, "y": 4.63, "key": "BIP-30315", "sprint": "BIP AI FY26Q2.1"}, {"x": 680, "y": 4.88, "key": "BIP-30296", "sprint": "BIP AI FY26Q2.1"}, {"x": 681, "y": 4.99, "key": "BIP-30291", "sprint": "BIP AI FY26Q2.1"}, {"x": 682, "y": 5.03, "key": "BIP-30302", "sprint": "BIP AI FY26Q2.1"}, {"x": 683, "y": 5.08, "key": "BIP-30256", "sprint": "BIP AI FY26Q2.1"}, {"x": 684, "y": 5.1, "key": "BIP-30342", "sprint": "BIP AI FY26Q2.1"}, {"x": 685, "y": 5.16, "key": "BIP-30340", "sprint": "BIP AI FY26Q2.1"}, {"x": 686, "y": 5.6, "key": "BIP-30280", "sprint": "BIP AI FY26Q2.1"}, {"x": 687, "y": 5.76, "key": "BIP-30299", "sprint": "BIP AI FY26Q2.1"}, {"x": 688, "y": 5.85, "key": "BIP-30295", "sprint": "BIP AI FY26Q2.1"}, {"x": 689, "y": 6.13, "key": "BIP-30258", "sprint": "BIP AI FY26Q2.1"}, {"x": 690, "y": 6.15, "key": "BIP-30314", "sprint": "BIP AI FY26Q2.1"}, {"x": 691, "y": 6.22, "key": "BIP-30346", "sprint": "BIP AI FY26Q2.1"}, {"x": 692, "y": 6.97, "key": "BIP-30264", "sprint": "BIP AI FY26Q2.1"}, {"x": 693, "y": 7.05, "key": "BIP-30301", "sprint": "BIP AI FY26Q2.1"}, {"x": 694, "y": 7.21, "key": "BIP-30307", "sprint": "BIP AI FY26Q2.1"}, {"x": 695, "y": 7.25, "key": "BIP-30285", "sprint": "BIP AI FY26Q2.1"}, {"x": 696, "y": 8.0, "key": "BIP-30316", "sprint": "BIP AI FY26Q2.1"}, {"x": 697, "y": 8.21, "key": "BIP-30284", "sprint": "BIP AI FY26Q2.1"}, {"x": 698, "y": 8.3, "key": "BIP-30281", "sprint": "BIP AI FY26Q2.1"}, {"x": 699, "y": 0.0, "key": "BIP-30589", "sprint": "BIP AI FY26Q2.2"}, {"x": 700, "y": 0.06, "key": "BIP-30975", "sprint": "BIP AI FY26Q2.2"}, {"x": 701, "y": 0.06, "key": "BIP-30870", "sprint": "BIP AI FY26Q2.2"}, {"x": 702, "y": 0.1, "key": "BIP-30526", "sprint": "BIP AI FY26Q2.2"}, {"x": 703, "y": 0.1, "key": "BIP-30527", "sprint": "BIP AI FY26Q2.2"}, {"x": 704, "y": 0.83, "key": "BIP-30542", "sprint": "BIP AI FY26Q2.2"}, {"x": 705, "y": 0.86, "key": "BIP-30583", "sprint": "BIP AI FY26Q2.2"}, {"x": 706, "y": 0.97, "key": "BIP-30560", "sprint": "BIP AI FY26Q2.2"}, {"x": 707, "y": 1.0, "key": "BIP-30591", "sprint": "BIP AI FY26Q2.2"}, {"x": 708, "y": 1.05, "key": "BIP-30868", "sprint": "BIP AI FY26Q2.2"}, {"x": 709, "y": 1.18, "key": "BIP-30565", "sprint": "BIP AI FY26Q2.2"}, {"x": 710, "y": 1.2, "key": "BIP-30553", "sprint": "BIP AI FY26Q2.2"}, {"x": 711, "y": 1.28, "key": "BIP-30562", "sprint": "BIP AI FY26Q2.2"}, {"x": 712, "y": 1.9, "key": "BIP-30568", "sprint": "BIP AI FY26Q2.2"}, {"x": 713, "y": 1.95, "key": "BIP-30590", "sprint": "BIP AI FY26Q2.2"}, {"x": 714, "y": 2.0, "key": "BIP-30592", "sprint": "BIP AI FY26Q2.2"}, {"x": 715, "y": 2.01, "key": "BIP-30557", "sprint": "BIP AI FY26Q2.2"}, {"x": 716, "y": 2.08, "key": "BIP-30577", "sprint": "BIP AI FY26Q2.2"}, {"x": 717, "y": 2.08, "key": "BIP-30585", "sprint": "BIP AI FY26Q2.2"}, {"x": 718, "y": 2.99, "key": "BIP-30584", "sprint": "BIP AI FY26Q2.2"}, {"x": 719, "y": 3.04, "key": "BIP-30659", "sprint": "BIP AI FY26Q2.2"}, {"x": 720, "y": 3.1, "key": "BIP-30587", "sprint": "BIP AI FY26Q2.2"}, {"x": 721, "y": 3.11, "key": "BIP-30588", "sprint": "BIP AI FY26Q2.2"}, {"x": 722, "y": 3.14, "key": "BIP-30573", "sprint": "BIP AI FY26Q2.2"}, {"x": 723, "y": 3.18, "key": "BIP-30559", "sprint": "BIP AI FY26Q2.2"}, {"x": 724, "y": 3.24, "key": "BIP-30554", "sprint": "BIP AI FY26Q2.2"}, {"x": 725, "y": 3.26, "key": "BIP-30556", "sprint": "BIP AI FY26Q2.2"}, {"x": 726, "y": 4.0, "key": "BIP-30555", "sprint": "BIP AI FY26Q2.2"}, {"x": 727, "y": 4.0, "key": "BIP-30534", "sprint": "BIP AI FY26Q2.2"}, {"x": 728, "y": 4.97, "key": "BIP-30575", "sprint": "BIP AI FY26Q2.2"}, {"x": 729, "y": 4.97, "key": "BIP-30571", "sprint": "BIP AI FY26Q2.2"}, {"x": 730, "y": 4.99, "key": "BIP-30572", "sprint": "BIP AI FY26Q2.2"}, {"x": 731, "y": 5.0, "key": "BIP-30586", "sprint": "BIP AI FY26Q2.2"}, {"x": 732, "y": 5.02, "key": "BIP-30523", "sprint": "BIP AI FY26Q2.2"}, {"x": 733, "y": 5.02, "key": "BIP-30524", "sprint": "BIP AI FY26Q2.2"}, {"x": 734, "y": 5.17, "key": "BIP-30558", "sprint": "BIP AI FY26Q2.2"}, {"x": 735, "y": 5.25, "key": "BIP-30292", "sprint": "BIP AI FY26Q2.2"}, {"x": 736, "y": 5.68, "key": "BIP-30790", "sprint": "BIP AI FY26Q2.2"}, {"x": 737, "y": 5.95, "key": "BIP-30789", "sprint": "BIP AI FY26Q2.2"}, {"x": 738, "y": 6.98, "key": "BIP-30579", "sprint": "BIP AI FY26Q2.2"}, {"x": 739, "y": 6.99, "key": "BIP-30539", "sprint": "BIP AI FY26Q2.2"}, {"x": 740, "y": 7.0, "key": "BIP-30566", "sprint": "BIP AI FY26Q2.2"}, {"x": 741, "y": 7.08, "key": "BIP-30561", "sprint": "BIP AI FY26Q2.2"}, {"x": 742, "y": 7.82, "key": "BIP-30531", "sprint": "BIP AI FY26Q2.2"}, {"x": 743, "y": 8.0, "key": "BIP-30533", "sprint": "BIP AI FY26Q2.2"}, {"x": 744, "y": 8.02, "key": "BIP-30578", "sprint": "BIP AI FY26Q2.2"}, {"x": 745, "y": 8.13, "key": "BIP-30580", "sprint": "BIP AI FY26Q2.2"}, {"x": 746, "y": 8.93, "key": "BIP-30536", "sprint": "BIP AI FY26Q2.2"}, {"x": 747, "y": 9.01, "key": "BIP-30540", "sprint": "BIP AI FY26Q2.2"}, {"x": 748, "y": 9.05, "key": "BIP-30581", "sprint": "BIP AI FY26Q2.2"}, {"x": 749, "y": 9.13, "key": "BIP-30541", "sprint": "BIP AI FY26Q2.2"}, {"x": 750, "y": 9.22, "key": "BIP-30563", "sprint": "BIP AI FY26Q2.2"}, {"x": 751, "y": 9.24, "key": "BIP-30582", "sprint": "BIP AI FY26Q2.2"}, {"x": 752, "y": 9.24, "key": "BIP-30532", "sprint": "BIP AI FY26Q2.2"}, {"x": 753, "y": 12.1, "key": "BIP-30297", "sprint": "BIP AI FY26Q2.2"}, {"x": 754, "y": 0.0, "key": "BIP-30947", "sprint": "BIP AI FY26Q2.3"}, {"x": 755, "y": 0.0, "key": "BIP-31100", "sprint": "BIP AI FY26Q2.3"}, {"x": 756, "y": 0.03, "key": "BIP-30893", "sprint": "BIP AI FY26Q2.3"}, {"x": 757, "y": 0.29, "key": "BIP-30959", "sprint": "BIP AI FY26Q2.3"}, {"x": 758, "y": 0.99, "key": "BIP-30916", "sprint": "BIP AI FY26Q2.3"}, {"x": 759, "y": 1.0, "key": "BIP-30938", "sprint": "BIP AI FY26Q2.3"}, {"x": 760, "y": 1.13, "key": "BIP-31113", "sprint": "BIP AI FY26Q2.3"}, {"x": 761, "y": 1.13, "key": "BIP-31112", "sprint": "BIP AI FY26Q2.3"}, {"x": 762, "y": 1.15, "key": "BIP-30926", "sprint": "BIP AI FY26Q2.3"}, {"x": 763, "y": 1.53, "key": "BIP-30958", "sprint": "BIP AI FY26Q2.3"}, {"x": 764, "y": 2.0, "key": "BIP-30957", "sprint": "BIP AI FY26Q2.3"}, {"x": 765, "y": 2.06, "key": "BIP-30919", "sprint": "BIP AI FY26Q2.3"}, {"x": 766, "y": 2.15, "key": "BIP-30953", "sprint": "BIP AI FY26Q2.3"}, {"x": 767, "y": 2.18, "key": "BIP-30933", "sprint": "BIP AI FY26Q2.3"}, {"x": 768, "y": 2.23, "key": "BIP-30927", "sprint": "BIP AI FY26Q2.3"}, {"x": 769, "y": 2.29, "key": "BIP-30949", "sprint": "BIP AI FY26Q2.3"}, {"x": 770, "y": 2.41, "key": "BIP-30908", "sprint": "BIP AI FY26Q2.3"}, {"x": 771, "y": 2.48, "key": "BIP-30311", "sprint": "BIP AI FY26Q2.3"}, {"x": 772, "y": 2.73, "key": "BIP-30899", "sprint": "BIP AI FY26Q2.3"}, {"x": 773, "y": 2.98, "key": "BIP-30897", "sprint": "BIP AI FY26Q2.3"}, {"x": 774, "y": 3.07, "key": "BIP-30943", "sprint": "BIP AI FY26Q2.3"}, {"x": 775, "y": 3.25, "key": "BIP-30900", "sprint": "BIP AI FY26Q2.3"}, {"x": 776, "y": 3.32, "key": "BIP-31072", "sprint": "BIP AI FY26Q2.3"}, {"x": 777, "y": 3.91, "key": "BIP-30920", "sprint": "BIP AI FY26Q2.3"}, {"x": 778, "y": 3.99, "key": "BIP-30939", "sprint": "BIP AI FY26Q2.3"}, {"x": 779, "y": 4.01, "key": "BIP-30921", "sprint": "BIP AI FY26Q2.3"}, {"x": 780, "y": 4.03, "key": "BIP-30918", "sprint": "BIP AI FY26Q2.3"}, {"x": 781, "y": 4.05, "key": "BIP-30922", "sprint": "BIP AI FY26Q2.3"}, {"x": 782, "y": 4.3, "key": "BIP-30917", "sprint": "BIP AI FY26Q2.3"}, {"x": 783, "y": 4.75, "key": "BIP-30896", "sprint": "BIP AI FY26Q2.3"}, {"x": 784, "y": 5.01, "key": "BIP-30941", "sprint": "BIP AI FY26Q2.3"}, {"x": 785, "y": 5.01, "key": "BIP-30937", "sprint": "BIP AI FY26Q2.3"}, {"x": 786, "y": 5.06, "key": "BIP-30954", "sprint": "BIP AI FY26Q2.3"}, {"x": 787, "y": 5.06, "key": "BIP-30955", "sprint": "BIP AI FY26Q2.3"}, {"x": 788, "y": 5.08, "key": "BIP-30935", "sprint": "BIP AI FY26Q2.3"}, {"x": 789, "y": 5.24, "key": "BIP-30942", "sprint": "BIP AI FY26Q2.3"}, {"x": 790, "y": 5.24, "key": "BIP-30945", "sprint": "BIP AI FY26Q2.3"}, {"x": 791, "y": 5.67, "key": "BIP-30978", "sprint": "BIP AI FY26Q2.3"}, {"x": 792, "y": 5.88, "key": "BIP-30944", "sprint": "BIP AI FY26Q2.3"}, {"x": 793, "y": 5.89, "key": "BIP-30929", "sprint": "BIP AI FY26Q2.3"}, {"x": 794, "y": 5.91, "key": "BIP-30932", "sprint": "BIP AI FY26Q2.3"}, {"x": 795, "y": 5.97, "key": "BIP-31052", "sprint": "BIP AI FY26Q2.3"}, {"x": 796, "y": 5.97, "key": "BIP-30925", "sprint": "BIP AI FY26Q2.3"}, {"x": 797, "y": 6.76, "key": "BIP-30898", "sprint": "BIP AI FY26Q2.3"}, {"x": 798, "y": 6.92, "key": "BIP-30915", "sprint": "BIP AI FY26Q2.3"}, {"x": 799, "y": 7.01, "key": "BIP-30940", "sprint": "BIP AI FY26Q2.3"}, {"x": 800, "y": 7.01, "key": "BIP-30930", "sprint": "BIP AI FY26Q2.3"}, {"x": 801, "y": 7.16, "key": "BIP-30914", "sprint": "BIP AI FY26Q2.3"}, {"x": 802, "y": 7.99, "key": "BIP-30894", "sprint": "BIP AI FY26Q2.3"}, {"x": 803, "y": 8.17, "key": "BIP-30950", "sprint": "BIP AI FY26Q2.3"}, {"x": 804, "y": 8.17, "key": "BIP-30951", "sprint": "BIP AI FY26Q2.3"}, {"x": 805, "y": 8.21, "key": "BIP-30946", "sprint": "BIP AI FY26Q2.3"}];
 
 Chart.defaults.color = '#8b949e';
 Chart.defaults.borderColor = '#30363d';
@@ -502,15 +538,21 @@ new Chart(document.getElementById('chartThru'), {
   type: 'bar',
   data: {
     labels: sprintLabels,
-    datasets: [{ label: 'Done Issues', data: throughputs,
-                 backgroundColor: 'rgba(57,211,83,0.6)', borderColor: '#3fb950', borderWidth: 1 }]
+    datasets: [
+      { label: 'Done Issues', data: throughputs, yAxisID: 'y',
+        backgroundColor: 'rgba(57,211,83,0.6)', borderColor: '#3fb950', borderWidth: 1 },
+      { label: 'Story Points', data: storyPoints, yAxisID: 'y1',
+        backgroundColor: 'rgba(88,166,255,0.45)', borderColor: '#58a6ff', borderWidth: 1 }
+    ]
   },
   options: {
     responsive: true,
-    plugins: { legend: { display: false } },
+    plugins: { legend: { position: 'top', labels: { boxWidth: 14, padding: 12 } } },
     scales: {
       x: { ticks: { maxRotation: 45, font: { size: 10 } } },
-      y: { title: { display: true, text: 'Issues' }, beginAtZero: true }
+      y:  { position: 'left',  title: { display: true, text: 'Issues' }, beginAtZero: true },
+      y1: { position: 'right', title: { display: true, text: 'Story Points' }, beginAtZero: true,
+            grid: { drawOnChartArea: false } }
     }
   }
 });
@@ -558,7 +600,7 @@ new Chart(document.getElementById('chartStacked'), {
     datasets: [
       { label: 'In Progress', data: avgIP, backgroundColor: 'rgba(88,166,255,0.7)' },
       { label: 'In Testing', data: avgTest, backgroundColor: 'rgba(210,153,34,0.7)' },
-      { label: 'Peer Review', data: avgPR, backgroundColor: 'rgba(188,140,255,0.7)' },
+      { label: 'Peer Review Needed', data: avgPR, backgroundColor: 'rgba(188,140,255,0.7)' },
       { label: 'Blocked', data: avgBlocked, backgroundColor: 'rgba(248,81,73,0.7)' },
     ]
   },
@@ -606,7 +648,7 @@ new Chart(document.getElementById('chartScatter'), {
 </script>
 
 <p style="color:var(--muted);text-align:center;margin-top:32px;font-size:0.8rem">
-  Generated from 100 stratified-sampled issues (seed=42) &middot;
+  Generated from all sprint issues &middot;
   Cycle time = first In Progress &rarr; final Done (business days, excl. weekends &amp; US holidays) &middot;
   Status durations from Jira transition histories
 </p>
