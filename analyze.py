@@ -518,7 +518,6 @@ metrics = {
     "insights": insights,
     "all_issues": [{"key": r["key"], "sprint": r["sprint"],
                     "cycle": round(r["cycle_days"], 2) if r["cycle_days"] else None,
-                    "lead": round(r["lead_days"], 2) if r["lead_days"] else None,
                     "ip": round(r["ip_days"], 2),
                     "test": round(r["test_days"], 2),
                     "pr": round(r["pr_days"], 2),
@@ -683,10 +682,6 @@ html = """<!DOCTYPE html>
   <div class="kpi">
     <div class="label">Active Work (median)</div>
     <div class="value">""" + str(overall['active_median']) + """<span class="unit"> days</span></div>
-  </div>
-  <div class="kpi">
-    <div class="label">Lead Time (median)</div>
-    <div class="value">""" + str(overall['lead_median']) + """<span class="unit"> days</span></div>
   </div>
 </div>
 
