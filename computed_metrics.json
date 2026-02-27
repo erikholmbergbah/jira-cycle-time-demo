@@ -1,16 +1,16 @@
 {
   "overall": {
-    "sample_size": 805,
-    "with_cycle": 805,
+    "sample_size": 804,
+    "with_cycle": 804,
     "skipped": 0,
-    "cycle_median": 4.04,
-    "cycle_mean": 4.43,
+    "cycle_median": 4.03,
+    "cycle_mean": 4.42,
     "cycle_p85": 8.01,
-    "cycle_p95": 9.16,
+    "cycle_p95": 9.15,
     "cycle_min": 0.0,
-    "cycle_max": 16.18,
+    "cycle_max": 13.26,
     "lead_median": 9.11,
-    "lead_mean": 8.46,
+    "lead_mean": 8.45,
     "active_median": 5.05,
     "active_mean": 5.56
   },
@@ -74,17 +74,17 @@
       "avg_blocked_days": 0.24
     },
     "BIP AI FY25Q4.4": {
-      "sample_count": 46,
-      "with_cycle": 46,
+      "sample_count": 45,
+      "with_cycle": 45,
       "throughput": 69,
       "story_points": 265,
-      "cycle_median": 6.12,
-      "cycle_mean": 5.78,
-      "cycle_p85": 10.4,
-      "avg_ip_days": 3.94,
-      "avg_test_days": 0.17,
-      "avg_pr_days": 1.03,
-      "avg_blocked_days": 0.93
+      "cycle_median": 6.09,
+      "cycle_mean": 5.55,
+      "cycle_p85": 9.53,
+      "avg_ip_days": 4.02,
+      "avg_test_days": 0.18,
+      "avg_pr_days": 0.89,
+      "avg_blocked_days": 0.95
     },
     "BIP AI FY25Q4.5": {
       "sample_count": 54,
@@ -275,7 +275,7 @@
     },
     {
       "label": "10-20d",
-      "count": 12
+      "count": 11
     },
     {
       "label": "20-30d",
@@ -287,26 +287,18 @@
     }
   ],
   "status_totals": {
-    "In Progress": 3035.8,
+    "In Progress": 3035.5,
     "In Testing": 673.6,
-    "Peer Review Needed": 769.0,
+    "Peer Review Needed": 762.0,
     "Blocked": 170.7
   },
   "status_pct": {
-    "In Progress": 65.3,
+    "In Progress": 65.4,
     "In Testing": 14.5,
-    "Peer Review Needed": 16.5,
+    "Peer Review Needed": 16.4,
     "Blocked": 3.7
   },
   "top_longest": [
-    {
-      "key": "BIP-26786",
-      "sprint": "BIP AI FY25Q4.4",
-      "cycle_days": 16.18,
-      "ip": 0.3,
-      "test": 0.0,
-      "blocked": 0.0
-    },
     {
       "key": "BIP-26791",
       "sprint": "BIP AI FY25Q4.4",
@@ -378,6 +370,14 @@
       "ip": 1.95,
       "test": 1.0,
       "blocked": 1.07
+    },
+    {
+      "key": "BIP-26539",
+      "sprint": "BIP AI FY25Q4.4",
+      "cycle_days": 10.22,
+      "ip": 13.0,
+      "test": 0.0,
+      "blocked": 0.0
     }
   ],
   "top_blocked": [
@@ -443,12 +443,12 @@
     }
   ],
   "insights": [
-    "Across all 805 Done issues, the median cycle time (In Progress &rarr; Done) is <strong>4.04 days</strong>, with a mean of 4.43 days. The 85th percentile is 8.01 days and 95th percentile is 9.16 days.",
+    "Across all 804 Done issues, the median cycle time (In Progress &rarr; Done) is <strong>4.03 days</strong>, with a mean of 4.42 days. The 85th percentile is 8.01 days and 95th percentile is 9.15 days.",
     "<strong>46 issues</strong> spent more than half a day blocked. Among those, the average blocked time was <strong>3.7 days</strong>. Reducing blocked time is one of the highest-leverage improvements.",
     "Cycle times improved over time: the first 4 sprints averaged 4.5-day median vs 4.2 days in the last 4 (~6% improvement).",
     "Average throughput: first 4 sprints = 67.0 issues/sprint, last 4 sprints = 62.0 issues/sprint.",
     "Flow efficiency (active work / lead time): median <strong>70%</strong>. Lead time includes backlog wait before work starts. Higher efficiency means less waiting. World-class teams target &gt;40%.",
-    "Median lead time (9.11d) exceeds median cycle time (4.04d) by <strong>5.1 days</strong>, meaning issues sit in Backlog for a median of ~5.1 days before work begins."
+    "Median lead time (9.11d) exceeds median cycle time (4.03d) by <strong>5.1 days</strong>, meaning issues sit in Backlog for a median of ~5.1 days before work begins."
   ],
   "all_issues": [
     {
@@ -2170,16 +2170,6 @@
       "pr": 0.05,
       "blocked": 0.0,
       "backlog": 0.0
-    },
-    {
-      "key": "BIP-26786",
-      "sprint": "BIP AI FY25Q4.4",
-      "cycle": 16.18,
-      "ip": 0.3,
-      "test": 0.0,
-      "pr": 6.97,
-      "blocked": 0.0,
-      "backlog": 3.96
     },
     {
       "key": "BIP-26783",

@@ -150,7 +150,7 @@ EXCLUDED_KEYS = {"BIP-25393", "BIP-25703", "BIP-26294",
                  "BIP-29078", "BIP-28906", "BIP-26543", "BIP-26721",
                  "BIP-26503", "BIP-26502", "BIP-26027",
                  "BIP-26790", "BIP-26789", "BIP-26788", "BIP-26572",
-                 "BIP-26778", "BIP-26787", "BIP-26793"}
+                 "BIP-26778", "BIP-26787", "BIP-26793", "BIP-26786"}
 
 # Issues without Story Points assigned (queried from Jira).
 NO_STORY_POINTS = {
